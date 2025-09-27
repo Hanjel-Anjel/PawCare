@@ -12,21 +12,23 @@ namespace PawCare
 {
     public partial class CustomerContactForm : Form
     {
-        public CustomerContactForm()
+        private CustomerRegistrationData customerData;
+        public CustomerContactForm(CustomerRegistrationData customerData)
         {
             InitializeComponent();
+            this.customerData = customerData;
         }
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            CustomerPetForm customerPetForm = new CustomerPetForm();
+            CustomerPetForm customerPetForm = new CustomerPetForm(customerData);
             customerPetForm.Show();
             this.Hide();
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            CustomerAddressForm customerAddressForm = new CustomerAddressForm();
+            CustomerAddressForm customerAddressForm = new CustomerAddressForm(customerData);
             customerAddressForm.Show();
             this.Hide();
         }

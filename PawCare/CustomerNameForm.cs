@@ -14,12 +14,12 @@ namespace PawCare
 {
     public partial class CustomerNameForm : Form
     {
-
-        string connectionString = @"Server=.\SQLEXPRESS;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;";
+        private CustomerRegistrationData customerData;
 
         public CustomerNameForm()
         {
             InitializeComponent();
+            customerData = new CustomerRegistrationData();
         }
 
         private void suffixCbox_SelectedIndexChanged(object sender, EventArgs e)
@@ -34,57 +34,25 @@ namespace PawCare
 
         private void CancelBtn_Click(object sender, EventArgs e)
         {
+            
             EmployeeDashboard employeeDashboard = new EmployeeDashboard();
             employeeDashboard.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            // Collect values from your form controls
-            string firstName = FnametxtBox.Content.Trim();
-            string middleName = MnametxtBox.Content.Trim();
-            string lastName = LnametxtBox.Content.Trim();
-            string suffix = suffixCbox.SelectedItem?.ToString();
+           customerData.FirstName = FnametxtBox.Content;
+           customerData.MiddleName = MnametxtBox.Content;
+           customerData.LastName = LnametxtBox.Content;
+           customerData.Suffix = suffixCbox.SelectedItem?.ToString();
 
-            // Database connection string
-            string connectionString = @"Server=.\SQLEXPRESS;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;";
+            CustomerAddressForm customerAddressForm = new CustomerAddressForm(customerData);
+           customerAddressForm.Show();
+           this.Hide();
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-
-                    string query = "INSERT INTO Customer (FirstName, MiddleName, LastName, Suffix) " +
-                                   "VALUES (@FirstName, @MiddleName, @LastName, @Suffix)";
-
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@FirstName", firstName);
-                        cmd.Parameters.AddWithValue("@MiddleName", string.IsNullOrEmpty(middleName) ? (object)DBNull.Value : middleName);
-                        cmd.Parameters.AddWithValue("@LastName", lastName);
-                        cmd.Parameters.AddWithValue("@Suffix", string.IsNullOrEmpty(suffix) ? (object)DBNull.Value : suffix);
-
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    MessageBox.Show("Customer saved successfully!");
-
-                    // Proceed to Address Form
-                    CustomerAddressForm addressForm = new CustomerAddressForm();
-                    addressForm.Show();
-                    this.Hide();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-            }
-
-
-            
         }
+
 
         private void FnametxtBox_ContentChanged(object sender, EventArgs e)
         {

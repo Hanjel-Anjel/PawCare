@@ -29,57 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerPetForm2));
-            NextBtn = new CuoreUI.Controls.cuiButton();
             BackBtn = new CuoreUI.Controls.cuiButton();
             PetGendertxtBox = new CuoreUI.Controls.cuiComboBox();
             cuiLabel4 = new CuoreUI.Controls.cuiLabel();
             cuiLabel3 = new CuoreUI.Controls.cuiLabel();
             cuiLabel2 = new CuoreUI.Controls.cuiLabel();
-            cuiLabel1 = new CuoreUI.Controls.cuiLabel();
             CustomerNameLabel = new CuoreUI.Controls.cuiLabel();
             cuiComboBox1 = new CuoreUI.Controls.cuiComboBox();
             cuiLabel6 = new CuoreUI.Controls.cuiLabel();
             cuiTextBox1 = new CuoreUI.Controls.cuiTextBox();
             PetPicBox = new CuoreUI.Controls.cuiPictureBox();
+            SaveBtn = new CuoreUI.Controls.cuiButton();
             SuspendLayout();
-            // 
-            // NextBtn
-            // 
-            NextBtn.CheckButton = false;
-            NextBtn.Checked = false;
-            NextBtn.CheckedBackground = Color.FromArgb(15, 28, 243);
-            NextBtn.CheckedForeColor = Color.White;
-            NextBtn.CheckedImageTint = Color.White;
-            NextBtn.CheckedOutline = Color.FromArgb(15, 28, 243);
-            NextBtn.Content = "Next";
-            NextBtn.DialogResult = DialogResult.None;
-            NextBtn.Font = new Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NextBtn.ForeColor = Color.White;
-            NextBtn.HoverBackground = Color.FromArgb(15, 28, 243);
-            NextBtn.HoverForeColor = Color.Black;
-            NextBtn.HoverImageTint = Color.White;
-            NextBtn.HoverOutline = Color.Black;
-            NextBtn.Image = null;
-            NextBtn.ImageAutoCenter = true;
-            NextBtn.ImageExpand = new Point(0, 0);
-            NextBtn.ImageOffset = new Point(0, 0);
-            NextBtn.Location = new Point(348, 649);
-            NextBtn.Name = "NextBtn";
-            NextBtn.NormalBackground = Color.FromArgb(15, 28, 243);
-            NextBtn.NormalForeColor = Color.White;
-            NextBtn.NormalImageTint = Color.White;
-            NextBtn.NormalOutline = Color.Black;
-            NextBtn.OutlineThickness = 1F;
-            NextBtn.PressedBackground = Color.WhiteSmoke;
-            NextBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
-            NextBtn.PressedImageTint = Color.White;
-            NextBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            NextBtn.Rounding = new Padding(20);
-            NextBtn.Size = new Size(156, 50);
-            NextBtn.TabIndex = 40;
-            NextBtn.TextAlignment = StringAlignment.Center;
-            NextBtn.TextOffset = new Point(0, 0);
-            NextBtn.Click += NextBtn_Click;
             // 
             // BackBtn
             // 
@@ -181,17 +142,6 @@
             cuiLabel2.TabIndex = 33;
             cuiLabel2.VerticalAlignment = StringAlignment.Near;
             // 
-            // cuiLabel1
-            // 
-            cuiLabel1.Content = "Your\\ text\\ here!";
-            cuiLabel1.HorizontalAlignment = StringAlignment.Center;
-            cuiLabel1.Location = new Point(0, 0);
-            cuiLabel1.Margin = new Padding(4, 3, 4, 3);
-            cuiLabel1.Name = "cuiLabel1";
-            cuiLabel1.Size = new Size(245, 54);
-            cuiLabel1.TabIndex = 45;
-            cuiLabel1.VerticalAlignment = StringAlignment.Near;
-            // 
             // CustomerNameLabel
             // 
             CustomerNameLabel.Content = "Customer\\ Pet\\ Information";
@@ -286,23 +236,60 @@
             PetPicBox.Size = new Size(224, 151);
             PetPicBox.TabIndex = 48;
             // 
+            // SaveBtn
+            // 
+            SaveBtn.CheckButton = false;
+            SaveBtn.Checked = false;
+            SaveBtn.CheckedBackground = Color.FromArgb(15, 28, 243);
+            SaveBtn.CheckedForeColor = Color.White;
+            SaveBtn.CheckedImageTint = Color.White;
+            SaveBtn.CheckedOutline = Color.FromArgb(15, 28, 243);
+            SaveBtn.Content = "Save";
+            SaveBtn.DialogResult = DialogResult.None;
+            SaveBtn.Font = new Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SaveBtn.ForeColor = Color.White;
+            SaveBtn.HoverBackground = Color.FromArgb(15, 28, 243);
+            SaveBtn.HoverForeColor = Color.Black;
+            SaveBtn.HoverImageTint = Color.White;
+            SaveBtn.HoverOutline = Color.Black;
+            SaveBtn.Image = null;
+            SaveBtn.ImageAutoCenter = true;
+            SaveBtn.ImageExpand = new Point(0, 0);
+            SaveBtn.ImageOffset = new Point(0, 0);
+            SaveBtn.Location = new Point(342, 649);
+            SaveBtn.Name = "SaveBtn";
+            SaveBtn.NormalBackground = Color.FromArgb(15, 28, 243);
+            SaveBtn.NormalForeColor = Color.White;
+            SaveBtn.NormalImageTint = Color.White;
+            SaveBtn.NormalOutline = Color.Black;
+            SaveBtn.OutlineThickness = 1F;
+            SaveBtn.PressedBackground = Color.WhiteSmoke;
+            SaveBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
+            SaveBtn.PressedImageTint = Color.White;
+            SaveBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            SaveBtn.Rounding = new Padding(20);
+            SaveBtn.Size = new Size(156, 50);
+            SaveBtn.TabIndex = 49;
+            SaveBtn.TextAlignment = StringAlignment.Center;
+            SaveBtn.TextOffset = new Point(0, 0);
+            SaveBtn.Click += SaveBtn_Click;
+            // 
             // CustomerPetForm2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(629, 727);
+            Controls.Add(SaveBtn);
             Controls.Add(PetPicBox);
             Controls.Add(cuiTextBox1);
             Controls.Add(cuiLabel6);
             Controls.Add(cuiComboBox1);
-            Controls.Add(NextBtn);
             Controls.Add(BackBtn);
             Controls.Add(PetGendertxtBox);
             Controls.Add(cuiLabel4);
             Controls.Add(cuiLabel3);
             Controls.Add(cuiLabel2);
-            Controls.Add(cuiLabel1);
             Controls.Add(CustomerNameLabel);
             Name = "CustomerPetForm2";
             Text = "CustomerPetForm2";
@@ -310,17 +297,16 @@
         }
 
         #endregion
-        private CuoreUI.Controls.cuiButton NextBtn;
         private CuoreUI.Controls.cuiButton BackBtn;
         private CuoreUI.Controls.cuiComboBox PetGendertxtBox;
         private CuoreUI.Controls.cuiLabel cuiLabel4;
         private CuoreUI.Controls.cuiLabel cuiLabel3;
         private CuoreUI.Controls.cuiLabel cuiLabel2;
-        private CuoreUI.Controls.cuiLabel cuiLabel1;
         private CuoreUI.Controls.cuiLabel CustomerNameLabel;
         private CuoreUI.Controls.cuiComboBox cuiComboBox1;
         private CuoreUI.Controls.cuiLabel cuiLabel6;
         private CuoreUI.Controls.cuiTextBox cuiTextBox1;
         private CuoreUI.Controls.cuiPictureBox PetPicBox;
+        private CuoreUI.Controls.cuiButton SaveBtn;
     }
 }

@@ -12,14 +12,16 @@ namespace PawCare
 {
     public partial class CustomerAddressForm : Form
     {
-        public CustomerAddressForm()
+        private CustomerRegistrationData customerData;
+        public CustomerAddressForm(CustomerRegistrationData data)
         {
             InitializeComponent();
+            customerData = data;
         }
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            CustomerContactForm customerContactForm = new CustomerContactForm();
+            CustomerContactForm customerContactForm = new CustomerContactForm(customerData);
             customerContactForm.Show();
             this.Hide();
         }
