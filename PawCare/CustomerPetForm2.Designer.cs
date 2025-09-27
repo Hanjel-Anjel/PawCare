@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerPetForm2));
             BackBtn = new CuoreUI.Controls.cuiButton();
-            PetGendertxtBox = new CuoreUI.Controls.cuiComboBox();
+            VetCbx = new CuoreUI.Controls.cuiComboBox();
             cuiLabel4 = new CuoreUI.Controls.cuiLabel();
             cuiLabel3 = new CuoreUI.Controls.cuiLabel();
             cuiLabel2 = new CuoreUI.Controls.cuiLabel();
             CustomerNameLabel = new CuoreUI.Controls.cuiLabel();
-            cuiComboBox1 = new CuoreUI.Controls.cuiComboBox();
+            TypeServiceCbx = new CuoreUI.Controls.cuiComboBox();
             cuiLabel6 = new CuoreUI.Controls.cuiLabel();
-            cuiTextBox1 = new CuoreUI.Controls.cuiTextBox();
+            WeighttxtBox = new CuoreUI.Controls.cuiTextBox();
             PetPicBox = new CuoreUI.Controls.cuiPictureBox();
             SaveBtn = new CuoreUI.Controls.cuiButton();
             SuspendLayout();
@@ -80,30 +80,30 @@
             BackBtn.TextOffset = new Point(0, 0);
             BackBtn.Click += BackBtn_Click;
             // 
-            // PetGendertxtBox
+            // VetCbx
             // 
-            PetGendertxtBox.BackgroundColor = Color.FromArgb(255, 255, 255);
-            PetGendertxtBox.ButtonCursor = Cursors.Arrow;
-            PetGendertxtBox.ButtonHoverBackground = Color.FromArgb(15, 28, 243);
-            PetGendertxtBox.ButtonHoverOutline = Color.Empty;
-            PetGendertxtBox.ButtonNormalBackground = Color.FromArgb(15, 28, 243);
-            PetGendertxtBox.ButtonNormalOutline = Color.Empty;
-            PetGendertxtBox.ButtonPressedBackground = Color.FromArgb(15, 28, 243);
-            PetGendertxtBox.ButtonPressedOutline = Color.Empty;
-            PetGendertxtBox.DropDownBackgroundColor = Color.White;
-            PetGendertxtBox.DropDownOutlineColor = Color.Black;
-            PetGendertxtBox.ExpandArrowColor = Color.Gray;
-            PetGendertxtBox.ForeColor = Color.Gray;
-            PetGendertxtBox.Location = new Point(113, 327);
-            PetGendertxtBox.Margin = new Padding(4);
-            PetGendertxtBox.Name = "PetGendertxtBox";
-            PetGendertxtBox.NoSelectionDropdownText = "Empty";
-            PetGendertxtBox.NoSelectionText = "None";
-            PetGendertxtBox.OutlineColor = Color.Black;
-            PetGendertxtBox.OutlineThickness = 1F;
-            PetGendertxtBox.Rounding = 8;
-            PetGendertxtBox.Size = new Size(410, 64);
-            PetGendertxtBox.TabIndex = 38;
+            VetCbx.BackgroundColor = Color.FromArgb(255, 255, 255);
+            VetCbx.ButtonCursor = Cursors.Arrow;
+            VetCbx.ButtonHoverBackground = Color.FromArgb(15, 28, 243);
+            VetCbx.ButtonHoverOutline = Color.Empty;
+            VetCbx.ButtonNormalBackground = Color.FromArgb(15, 28, 243);
+            VetCbx.ButtonNormalOutline = Color.Empty;
+            VetCbx.ButtonPressedBackground = Color.FromArgb(15, 28, 243);
+            VetCbx.ButtonPressedOutline = Color.Empty;
+            VetCbx.DropDownBackgroundColor = Color.White;
+            VetCbx.DropDownOutlineColor = Color.Black;
+            VetCbx.ExpandArrowColor = Color.Gray;
+            VetCbx.ForeColor = Color.Gray;
+            VetCbx.Location = new Point(113, 327);
+            VetCbx.Margin = new Padding(4);
+            VetCbx.Name = "VetCbx";
+            VetCbx.NoSelectionDropdownText = "Empty";
+            VetCbx.NoSelectionText = "None";
+            VetCbx.OutlineColor = Color.Black;
+            VetCbx.OutlineThickness = 1F;
+            VetCbx.Rounding = 8;
+            VetCbx.Size = new Size(410, 64);
+            VetCbx.TabIndex = 38;
             // 
             // cuiLabel4
             // 
@@ -154,30 +154,30 @@
             CustomerNameLabel.TabIndex = 31;
             CustomerNameLabel.VerticalAlignment = StringAlignment.Near;
             // 
-            // cuiComboBox1
+            // TypeServiceCbx
             // 
-            cuiComboBox1.BackgroundColor = Color.FromArgb(255, 255, 255);
-            cuiComboBox1.ButtonCursor = Cursors.Arrow;
-            cuiComboBox1.ButtonHoverBackground = Color.FromArgb(15, 28, 243);
-            cuiComboBox1.ButtonHoverOutline = Color.Empty;
-            cuiComboBox1.ButtonNormalBackground = Color.FromArgb(15, 28, 243);
-            cuiComboBox1.ButtonNormalOutline = Color.Empty;
-            cuiComboBox1.ButtonPressedBackground = Color.FromArgb(15, 28, 243);
-            cuiComboBox1.ButtonPressedOutline = Color.Empty;
-            cuiComboBox1.DropDownBackgroundColor = Color.White;
-            cuiComboBox1.DropDownOutlineColor = Color.Black;
-            cuiComboBox1.ExpandArrowColor = Color.Gray;
-            cuiComboBox1.ForeColor = Color.Gray;
-            cuiComboBox1.Location = new Point(113, 132);
-            cuiComboBox1.Margin = new Padding(4);
-            cuiComboBox1.Name = "cuiComboBox1";
-            cuiComboBox1.NoSelectionDropdownText = "Empty";
-            cuiComboBox1.NoSelectionText = "None";
-            cuiComboBox1.OutlineColor = Color.Black;
-            cuiComboBox1.OutlineThickness = 1F;
-            cuiComboBox1.Rounding = 8;
-            cuiComboBox1.Size = new Size(410, 64);
-            cuiComboBox1.TabIndex = 44;
+            TypeServiceCbx.BackgroundColor = Color.FromArgb(255, 255, 255);
+            TypeServiceCbx.ButtonCursor = Cursors.Arrow;
+            TypeServiceCbx.ButtonHoverBackground = Color.FromArgb(15, 28, 243);
+            TypeServiceCbx.ButtonHoverOutline = Color.Empty;
+            TypeServiceCbx.ButtonNormalBackground = Color.FromArgb(15, 28, 243);
+            TypeServiceCbx.ButtonNormalOutline = Color.Empty;
+            TypeServiceCbx.ButtonPressedBackground = Color.FromArgb(15, 28, 243);
+            TypeServiceCbx.ButtonPressedOutline = Color.Empty;
+            TypeServiceCbx.DropDownBackgroundColor = Color.White;
+            TypeServiceCbx.DropDownOutlineColor = Color.Black;
+            TypeServiceCbx.ExpandArrowColor = Color.Gray;
+            TypeServiceCbx.ForeColor = Color.Gray;
+            TypeServiceCbx.Location = new Point(113, 132);
+            TypeServiceCbx.Margin = new Padding(4);
+            TypeServiceCbx.Name = "TypeServiceCbx";
+            TypeServiceCbx.NoSelectionDropdownText = "Empty";
+            TypeServiceCbx.NoSelectionText = "None";
+            TypeServiceCbx.OutlineColor = Color.Black;
+            TypeServiceCbx.OutlineThickness = 1F;
+            TypeServiceCbx.Rounding = 8;
+            TypeServiceCbx.Size = new Size(410, 64);
+            TypeServiceCbx.TabIndex = 44;
             // 
             // cuiLabel6
             // 
@@ -191,33 +191,33 @@
             cuiLabel6.TabIndex = 46;
             cuiLabel6.VerticalAlignment = StringAlignment.Near;
             // 
-            // cuiTextBox1
+            // WeighttxtBox
             // 
-            cuiTextBox1.BackgroundColor = Color.White;
-            cuiTextBox1.Content = "";
-            cuiTextBox1.FocusBackgroundColor = Color.White;
-            cuiTextBox1.FocusImageTint = Color.White;
-            cuiTextBox1.FocusOutlineColor = Color.FromArgb(15, 28, 243);
-            cuiTextBox1.Font = new Font("Poppins", 10.8F);
-            cuiTextBox1.ForeColor = Color.Black;
-            cuiTextBox1.Image = null;
-            cuiTextBox1.ImageExpand = new Point(0, 0);
-            cuiTextBox1.ImageOffset = new Point(0, 0);
-            cuiTextBox1.Location = new Point(113, 234);
-            cuiTextBox1.Margin = new Padding(4, 3, 4, 3);
-            cuiTextBox1.Multiline = false;
-            cuiTextBox1.Name = "cuiTextBox1";
-            cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.OutlineColor = Color.Black;
-            cuiTextBox1.Padding = new Padding(22, 18, 22, 0);
-            cuiTextBox1.PasswordChar = false;
-            cuiTextBox1.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox1.PlaceholderText = "";
-            cuiTextBox1.Rounding = new Padding(8);
-            cuiTextBox1.Size = new Size(410, 58);
-            cuiTextBox1.TabIndex = 47;
-            cuiTextBox1.TextOffset = new Size(0, 0);
-            cuiTextBox1.UnderlinedStyle = false;
+            WeighttxtBox.BackgroundColor = Color.White;
+            WeighttxtBox.Content = "";
+            WeighttxtBox.FocusBackgroundColor = Color.White;
+            WeighttxtBox.FocusImageTint = Color.White;
+            WeighttxtBox.FocusOutlineColor = Color.FromArgb(15, 28, 243);
+            WeighttxtBox.Font = new Font("Poppins", 10.8F);
+            WeighttxtBox.ForeColor = Color.Black;
+            WeighttxtBox.Image = null;
+            WeighttxtBox.ImageExpand = new Point(0, 0);
+            WeighttxtBox.ImageOffset = new Point(0, 0);
+            WeighttxtBox.Location = new Point(113, 234);
+            WeighttxtBox.Margin = new Padding(4, 3, 4, 3);
+            WeighttxtBox.Multiline = false;
+            WeighttxtBox.Name = "WeighttxtBox";
+            WeighttxtBox.NormalImageTint = Color.White;
+            WeighttxtBox.OutlineColor = Color.Black;
+            WeighttxtBox.Padding = new Padding(22, 18, 22, 0);
+            WeighttxtBox.PasswordChar = false;
+            WeighttxtBox.PlaceholderColor = SystemColors.WindowText;
+            WeighttxtBox.PlaceholderText = "";
+            WeighttxtBox.Rounding = new Padding(8);
+            WeighttxtBox.Size = new Size(410, 58);
+            WeighttxtBox.TabIndex = 47;
+            WeighttxtBox.TextOffset = new Size(0, 0);
+            WeighttxtBox.UnderlinedStyle = false;
             // 
             // PetPicBox
             // 
@@ -282,30 +282,32 @@
             ClientSize = new Size(629, 727);
             Controls.Add(SaveBtn);
             Controls.Add(PetPicBox);
-            Controls.Add(cuiTextBox1);
+            Controls.Add(WeighttxtBox);
             Controls.Add(cuiLabel6);
-            Controls.Add(cuiComboBox1);
+            Controls.Add(TypeServiceCbx);
             Controls.Add(BackBtn);
-            Controls.Add(PetGendertxtBox);
+            Controls.Add(VetCbx);
             Controls.Add(cuiLabel4);
             Controls.Add(cuiLabel3);
             Controls.Add(cuiLabel2);
             Controls.Add(CustomerNameLabel);
             Name = "CustomerPetForm2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CustomerPetForm2";
+            Load += CustomerPetForm2_Load;
             ResumeLayout(false);
         }
 
         #endregion
         private CuoreUI.Controls.cuiButton BackBtn;
-        private CuoreUI.Controls.cuiComboBox PetGendertxtBox;
+        private CuoreUI.Controls.cuiComboBox VetCbx;
         private CuoreUI.Controls.cuiLabel cuiLabel4;
         private CuoreUI.Controls.cuiLabel cuiLabel3;
         private CuoreUI.Controls.cuiLabel cuiLabel2;
         private CuoreUI.Controls.cuiLabel CustomerNameLabel;
-        private CuoreUI.Controls.cuiComboBox cuiComboBox1;
+        private CuoreUI.Controls.cuiComboBox TypeServiceCbx;
         private CuoreUI.Controls.cuiLabel cuiLabel6;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox1;
+        private CuoreUI.Controls.cuiTextBox WeighttxtBox;
         private CuoreUI.Controls.cuiPictureBox PetPicBox;
         private CuoreUI.Controls.cuiButton SaveBtn;
     }

@@ -21,6 +21,9 @@ namespace PawCare
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
+            customerData.ContactNumber = ContactNumbertxtBox.Content;
+            customerData.Email = EmailtxtBox.Content;
+
             CustomerPetForm customerPetForm = new CustomerPetForm(customerData);
             customerPetForm.Show();
             this.Hide();
@@ -31,6 +34,11 @@ namespace PawCare
             CustomerAddressForm customerAddressForm = new CustomerAddressForm(customerData);
             customerAddressForm.Show();
             this.Hide();
+        }
+
+        private void ContactNumbertxtBox_ContentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

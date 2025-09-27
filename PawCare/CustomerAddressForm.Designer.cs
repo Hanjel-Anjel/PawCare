@@ -80,9 +80,10 @@
             RegionCbox.DropDownBackgroundColor = Color.White;
             RegionCbox.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
             RegionCbox.ExpandArrowColor = Color.Gray;
-            RegionCbox.ForeColor = Color.Gray;
-            RegionCbox.Location = new Point(122, 120);
-            RegionCbox.Margin = new Padding(4);
+            RegionCbox.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            RegionCbox.ForeColor = Color.Black;
+            RegionCbox.Location = new Point(122, 128);
+            RegionCbox.Margin = new Padding(4, 6, 4, 6);
             RegionCbox.Name = "RegionCbox";
             RegionCbox.NoSelectionDropdownText = "Empty";
             RegionCbox.NoSelectionText = "None";
@@ -91,6 +92,7 @@
             RegionCbox.Rounding = 8;
             RegionCbox.Size = new Size(382, 30);
             RegionCbox.TabIndex = 4;
+            RegionCbox.SelectedIndexChanged += RegionCbox_SelectedIndexChanged;
             // 
             // CityCbox
             // 
@@ -105,9 +107,10 @@
             CityCbox.DropDownBackgroundColor = Color.White;
             CityCbox.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
             CityCbox.ExpandArrowColor = Color.Gray;
-            CityCbox.ForeColor = Color.Gray;
-            CityCbox.Location = new Point(122, 207);
-            CityCbox.Margin = new Padding(4);
+            CityCbox.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CityCbox.ForeColor = Color.Black;
+            CityCbox.Location = new Point(122, 209);
+            CityCbox.Margin = new Padding(4, 6, 4, 6);
             CityCbox.Name = "CityCbox";
             CityCbox.NoSelectionDropdownText = "Empty";
             CityCbox.NoSelectionText = "None";
@@ -116,6 +119,7 @@
             CityCbox.Rounding = 8;
             CityCbox.Size = new Size(382, 30);
             CityCbox.TabIndex = 6;
+            CityCbox.SelectedIndexChanged += CityCbox_SelectedIndexChanged;
             // 
             // cuiLabel2
             // 
@@ -142,9 +146,10 @@
             BarangayCbox.DropDownBackgroundColor = Color.White;
             BarangayCbox.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
             BarangayCbox.ExpandArrowColor = Color.Gray;
-            BarangayCbox.ForeColor = Color.Gray;
-            BarangayCbox.Location = new Point(122, 290);
-            BarangayCbox.Margin = new Padding(4);
+            BarangayCbox.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BarangayCbox.ForeColor = Color.Black;
+            BarangayCbox.Location = new Point(122, 288);
+            BarangayCbox.Margin = new Padding(4, 6, 4, 6);
             BarangayCbox.Name = "BarangayCbox";
             BarangayCbox.NoSelectionDropdownText = "Empty";
             BarangayCbox.NoSelectionText = "None";
@@ -153,6 +158,7 @@
             BarangayCbox.Rounding = 8;
             BarangayCbox.Size = new Size(382, 30);
             BarangayCbox.TabIndex = 8;
+            BarangayCbox.SelectedIndexChanged += BarangayCbox_SelectedIndexChanged;
             // 
             // cuiLabel3
             // 
@@ -173,8 +179,8 @@
             HouseNotxtBox.FocusBackgroundColor = Color.White;
             HouseNotxtBox.FocusImageTint = Color.White;
             HouseNotxtBox.FocusOutlineColor = Color.FromArgb(255, 106, 0);
-            HouseNotxtBox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            HouseNotxtBox.ForeColor = Color.Gray;
+            HouseNotxtBox.Font = new Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            HouseNotxtBox.ForeColor = Color.Black;
             HouseNotxtBox.Image = null;
             HouseNotxtBox.ImageExpand = new Point(0, 0);
             HouseNotxtBox.ImageOffset = new Point(0, 0);
@@ -184,7 +190,7 @@
             HouseNotxtBox.Name = "HouseNotxtBox";
             HouseNotxtBox.NormalImageTint = Color.White;
             HouseNotxtBox.OutlineColor = Color.Black;
-            HouseNotxtBox.Padding = new Padding(15, 13, 15, 0);
+            HouseNotxtBox.Padding = new Padding(20, 10, 20, 0);
             HouseNotxtBox.PasswordChar = false;
             HouseNotxtBox.PlaceholderColor = SystemColors.WindowText;
             HouseNotxtBox.PlaceholderText = "";
@@ -193,6 +199,7 @@
             HouseNotxtBox.TabIndex = 9;
             HouseNotxtBox.TextOffset = new Size(0, 0);
             HouseNotxtBox.UnderlinedStyle = false;
+            HouseNotxtBox.ContentChanged += HouseNotxtBox_ContentChanged;
             // 
             // LotBlocktxtBox
             // 
@@ -201,8 +208,8 @@
             LotBlocktxtBox.FocusBackgroundColor = Color.White;
             LotBlocktxtBox.FocusImageTint = Color.White;
             LotBlocktxtBox.FocusOutlineColor = Color.FromArgb(255, 106, 0);
-            LotBlocktxtBox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LotBlocktxtBox.ForeColor = Color.Gray;
+            LotBlocktxtBox.Font = new Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LotBlocktxtBox.ForeColor = Color.Black;
             LotBlocktxtBox.Image = null;
             LotBlocktxtBox.ImageExpand = new Point(0, 0);
             LotBlocktxtBox.ImageOffset = new Point(0, 0);
@@ -212,7 +219,7 @@
             LotBlocktxtBox.Name = "LotBlocktxtBox";
             LotBlocktxtBox.NormalImageTint = Color.White;
             LotBlocktxtBox.OutlineColor = Color.Black;
-            LotBlocktxtBox.Padding = new Padding(15, 13, 15, 0);
+            LotBlocktxtBox.Padding = new Padding(20, 10, 20, 0);
             LotBlocktxtBox.PasswordChar = false;
             LotBlocktxtBox.PlaceholderColor = SystemColors.WindowText;
             LotBlocktxtBox.PlaceholderText = "";
@@ -221,6 +228,7 @@
             LotBlocktxtBox.TabIndex = 10;
             LotBlocktxtBox.TextOffset = new Size(0, 0);
             LotBlocktxtBox.UnderlinedStyle = false;
+            LotBlocktxtBox.ContentChanged += LotBlocktxtBox_ContentChanged;
             // 
             // cuiLabel4
             // 
@@ -345,6 +353,7 @@
             Name = "CustomerAddressForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CustomerAddressForm";
+            Load += CustomerAddressForm_Load;
             ResumeLayout(false);
         }
 

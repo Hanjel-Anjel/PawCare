@@ -16,11 +16,19 @@ namespace PawCare
     {
         private CustomerRegistrationData customerData;
 
+        public CustomerNameForm(CustomerRegistrationData data)
+        {
+            InitializeComponent();
+            customerData = data;
+        }
+
         public CustomerNameForm()
         {
             InitializeComponent();
             customerData = new CustomerRegistrationData();
         }
+
+
 
         private void suffixCbox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -30,6 +38,18 @@ namespace PawCare
         private void CustomerNameForm_Load(object sender, EventArgs e)
         {
             suffixCbox.Items = new string[] { "Jr.", "Sr.", "I", "II", "III", "IV", "V" };
+
+            if (!string.IsNullOrEmpty(customerData.FirstName))
+                FnametxtBox.Content = customerData.FirstName;
+
+            if (!string.IsNullOrEmpty(customerData.MiddleName))
+                MnametxtBox.Content = customerData.MiddleName;
+
+            if (!string.IsNullOrEmpty(customerData.LastName))
+                LnametxtBox.Content = customerData.LastName;
+
+            if (!string.IsNullOrEmpty(customerData.Suffix))
+                suffixCbox.SelectedItem = customerData.Suffix;
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)
@@ -45,7 +65,7 @@ namespace PawCare
            customerData.FirstName = FnametxtBox.Content;
            customerData.MiddleName = MnametxtBox.Content;
            customerData.LastName = LnametxtBox.Content;
-           customerData.Suffix = suffixCbox.SelectedItem?.ToString();
+           customerData.Suffix = suffixCbox.SelectedItem?.ToString() ?? string.Empty;
 
             CustomerAddressForm customerAddressForm = new CustomerAddressForm(customerData);
            customerAddressForm.Show();

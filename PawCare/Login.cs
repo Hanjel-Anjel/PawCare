@@ -1,7 +1,9 @@
 using System;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
+//using System.Data.SqlClient;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace PawCare
 {
@@ -20,7 +22,8 @@ namespace PawCare
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            string connStr = @"Server=localhost\SQLEXPRESS;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;";
+            string connStr = @"Server=localhost\SQLEXPRESS;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
+
 
             using (SqlConnection con = new SqlConnection(connStr))
             {

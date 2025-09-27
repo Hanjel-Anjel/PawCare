@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             CustomerNameLabel = new CuoreUI.Controls.cuiLabel();
-            cuiTextBox1 = new CuoreUI.Controls.cuiTextBox();
-            cuiTextBox2 = new CuoreUI.Controls.cuiTextBox();
+            ContactNumbertxtBox = new CuoreUI.Controls.cuiTextBox();
+            EmailtxtBox = new CuoreUI.Controls.cuiTextBox();
             cuiLabel4 = new CuoreUI.Controls.cuiLabel();
             cuiLabel1 = new CuoreUI.Controls.cuiLabel();
             NextBtn = new CuoreUI.Controls.cuiButton();
@@ -49,61 +49,62 @@
             CustomerNameLabel.TabIndex = 3;
             CustomerNameLabel.VerticalAlignment = StringAlignment.Near;
             // 
-            // cuiTextBox1
+            // ContactNumbertxtBox
             // 
-            cuiTextBox1.BackgroundColor = Color.White;
-            cuiTextBox1.Content = "";
-            cuiTextBox1.FocusBackgroundColor = Color.White;
-            cuiTextBox1.FocusImageTint = Color.White;
-            cuiTextBox1.FocusOutlineColor = Color.FromArgb(255, 106, 0);
-            cuiTextBox1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox1.ForeColor = Color.Gray;
-            cuiTextBox1.Image = null;
-            cuiTextBox1.ImageExpand = new Point(0, 0);
-            cuiTextBox1.ImageOffset = new Point(0, 0);
-            cuiTextBox1.Location = new Point(122, 203);
-            cuiTextBox1.Margin = new Padding(4, 3, 4, 3);
-            cuiTextBox1.Multiline = false;
-            cuiTextBox1.Name = "cuiTextBox1";
-            cuiTextBox1.NormalImageTint = Color.White;
-            cuiTextBox1.OutlineColor = Color.Black;
-            cuiTextBox1.Padding = new Padding(15, 18, 15, 0);
-            cuiTextBox1.PasswordChar = false;
-            cuiTextBox1.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox1.PlaceholderText = "";
-            cuiTextBox1.Rounding = new Padding(8);
-            cuiTextBox1.Size = new Size(362, 50);
-            cuiTextBox1.TabIndex = 4;
-            cuiTextBox1.TextOffset = new Size(0, 0);
-            cuiTextBox1.UnderlinedStyle = false;
+            ContactNumbertxtBox.BackgroundColor = Color.White;
+            ContactNumbertxtBox.Content = "";
+            ContactNumbertxtBox.FocusBackgroundColor = Color.White;
+            ContactNumbertxtBox.FocusImageTint = Color.White;
+            ContactNumbertxtBox.FocusOutlineColor = Color.FromArgb(255, 106, 0);
+            ContactNumbertxtBox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ContactNumbertxtBox.ForeColor = Color.Gray;
+            ContactNumbertxtBox.Image = null;
+            ContactNumbertxtBox.ImageExpand = new Point(0, 0);
+            ContactNumbertxtBox.ImageOffset = new Point(0, 0);
+            ContactNumbertxtBox.Location = new Point(122, 203);
+            ContactNumbertxtBox.Margin = new Padding(4, 3, 4, 3);
+            ContactNumbertxtBox.Multiline = false;
+            ContactNumbertxtBox.Name = "ContactNumbertxtBox";
+            ContactNumbertxtBox.NormalImageTint = Color.White;
+            ContactNumbertxtBox.OutlineColor = Color.Black;
+            ContactNumbertxtBox.Padding = new Padding(15, 18, 15, 0);
+            ContactNumbertxtBox.PasswordChar = false;
+            ContactNumbertxtBox.PlaceholderColor = SystemColors.WindowText;
+            ContactNumbertxtBox.PlaceholderText = "";
+            ContactNumbertxtBox.Rounding = new Padding(8);
+            ContactNumbertxtBox.Size = new Size(362, 50);
+            ContactNumbertxtBox.TabIndex = 4;
+            ContactNumbertxtBox.TextOffset = new Size(0, 0);
+            ContactNumbertxtBox.UnderlinedStyle = false;
+            ContactNumbertxtBox.ContentChanged += ContactNumbertxtBox_ContentChanged;
             // 
-            // cuiTextBox2
+            // EmailtxtBox
             // 
-            cuiTextBox2.BackgroundColor = Color.White;
-            cuiTextBox2.Content = "";
-            cuiTextBox2.FocusBackgroundColor = Color.White;
-            cuiTextBox2.FocusImageTint = Color.White;
-            cuiTextBox2.FocusOutlineColor = Color.FromArgb(255, 106, 0);
-            cuiTextBox2.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cuiTextBox2.ForeColor = Color.Gray;
-            cuiTextBox2.Image = null;
-            cuiTextBox2.ImageExpand = new Point(0, 0);
-            cuiTextBox2.ImageOffset = new Point(0, 0);
-            cuiTextBox2.Location = new Point(122, 294);
-            cuiTextBox2.Margin = new Padding(4, 3, 4, 3);
-            cuiTextBox2.Multiline = false;
-            cuiTextBox2.Name = "cuiTextBox2";
-            cuiTextBox2.NormalImageTint = Color.White;
-            cuiTextBox2.OutlineColor = Color.Black;
-            cuiTextBox2.Padding = new Padding(15, 18, 15, 0);
-            cuiTextBox2.PasswordChar = false;
-            cuiTextBox2.PlaceholderColor = SystemColors.WindowText;
-            cuiTextBox2.PlaceholderText = "";
-            cuiTextBox2.Rounding = new Padding(8);
-            cuiTextBox2.Size = new Size(362, 50);
-            cuiTextBox2.TabIndex = 5;
-            cuiTextBox2.TextOffset = new Size(0, 0);
-            cuiTextBox2.UnderlinedStyle = false;
+            EmailtxtBox.BackgroundColor = Color.White;
+            EmailtxtBox.Content = "";
+            EmailtxtBox.FocusBackgroundColor = Color.White;
+            EmailtxtBox.FocusImageTint = Color.White;
+            EmailtxtBox.FocusOutlineColor = Color.FromArgb(255, 106, 0);
+            EmailtxtBox.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            EmailtxtBox.ForeColor = Color.Gray;
+            EmailtxtBox.Image = null;
+            EmailtxtBox.ImageExpand = new Point(0, 0);
+            EmailtxtBox.ImageOffset = new Point(0, 0);
+            EmailtxtBox.Location = new Point(122, 294);
+            EmailtxtBox.Margin = new Padding(4, 3, 4, 3);
+            EmailtxtBox.Multiline = false;
+            EmailtxtBox.Name = "EmailtxtBox";
+            EmailtxtBox.NormalImageTint = Color.White;
+            EmailtxtBox.OutlineColor = Color.Black;
+            EmailtxtBox.Padding = new Padding(15, 18, 15, 0);
+            EmailtxtBox.PasswordChar = false;
+            EmailtxtBox.PlaceholderColor = SystemColors.WindowText;
+            EmailtxtBox.PlaceholderText = "";
+            EmailtxtBox.Rounding = new Padding(8);
+            EmailtxtBox.Size = new Size(362, 50);
+            EmailtxtBox.TabIndex = 5;
+            EmailtxtBox.TextOffset = new Size(0, 0);
+            EmailtxtBox.UnderlinedStyle = false;
             // 
             // cuiLabel4
             // 
@@ -215,8 +216,8 @@
             Controls.Add(BackBtn);
             Controls.Add(cuiLabel1);
             Controls.Add(cuiLabel4);
-            Controls.Add(cuiTextBox2);
-            Controls.Add(cuiTextBox1);
+            Controls.Add(EmailtxtBox);
+            Controls.Add(ContactNumbertxtBox);
             Controls.Add(CustomerNameLabel);
             Margin = new Padding(3, 2, 3, 2);
             Name = "CustomerContactForm";
@@ -228,8 +229,8 @@
         #endregion
 
         private CuoreUI.Controls.cuiLabel CustomerNameLabel;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox1;
-        private CuoreUI.Controls.cuiTextBox cuiTextBox2;
+        private CuoreUI.Controls.cuiTextBox ContactNumbertxtBox;
+        private CuoreUI.Controls.cuiTextBox EmailtxtBox;
         private CuoreUI.Controls.cuiLabel cuiLabel4;
         private CuoreUI.Controls.cuiLabel cuiLabel1;
         private CuoreUI.Controls.cuiButton NextBtn;

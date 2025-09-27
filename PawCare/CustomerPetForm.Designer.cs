@@ -144,6 +144,7 @@
             PetGendertxtBox.Rounding = 8;
             PetGendertxtBox.Size = new Size(410, 64);
             PetGendertxtBox.TabIndex = 25;
+            PetGendertxtBox.SelectedIndexChanged += PetGendertxtBox_SelectedIndexChanged;
             // 
             // BreedtxtBox
             // 
@@ -172,6 +173,7 @@
             BreedtxtBox.TabIndex = 24;
             BreedtxtBox.TextOffset = new Size(0, 0);
             BreedtxtBox.UnderlinedStyle = false;
+            BreedtxtBox.ContentChanged += BreedtxtBox_ContentChanged;
             // 
             // PetNametxtBox
             // 
@@ -200,6 +202,7 @@
             PetNametxtBox.TabIndex = 22;
             PetNametxtBox.TextOffset = new Size(0, 0);
             PetNametxtBox.UnderlinedStyle = false;
+            PetNametxtBox.ContentChanged += PetNametxtBox_ContentChanged;
             // 
             // cuiLabel4
             // 
@@ -285,6 +288,7 @@
             TypePettxtBox.Rounding = 8;
             TypePettxtBox.Size = new Size(410, 64);
             TypePettxtBox.TabIndex = 28;
+            TypePettxtBox.SelectedIndexChanged += TypePettxtBox_SelectedIndexChanged;
             // 
             // BdayDatepicker
             // 
@@ -310,6 +314,7 @@
             BdayDatepicker.Size = new Size(410, 69);
             BdayDatepicker.TabIndex = 29;
             BdayDatepicker.Theme = CuoreUI.Controls.Forms.DatePicker.Themes.Light;
+            BdayDatepicker.Load += BdayDatepicker_Load;
             // 
             // cuiLabel5
             // 
@@ -345,6 +350,7 @@
             Name = "CustomerPetForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CustomerPetForm";
+            Load += CustomerPetForm_Load;
             ResumeLayout(false);
         }
 
