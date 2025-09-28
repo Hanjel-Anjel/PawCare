@@ -27,6 +27,7 @@ namespace PawCare
             customerData.Region = RegionCbox.SelectedItem?.ToString() ?? string.Empty;
             customerData.MunicipalityCity = CityCbox.SelectedItem?.ToString() ?? string.Empty;
             customerData.Barangay = BarangayCbox.SelectedItem?.ToString() ?? string.Empty;
+
             customerData.HouseNo = HouseNotxtBox.Content ?? string.Empty;
             customerData.LotBlock = LotBlocktxtBox.Content ?? string.Empty;
 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerPetForm2));
             BackBtn = new CuoreUI.Controls.cuiButton();
             VetCbx = new CuoreUI.Controls.cuiComboBox();
             cuiLabel4 = new CuoreUI.Controls.cuiLabel();
@@ -38,8 +37,9 @@
             TypeServiceCbx = new CuoreUI.Controls.cuiComboBox();
             cuiLabel6 = new CuoreUI.Controls.cuiLabel();
             WeighttxtBox = new CuoreUI.Controls.cuiTextBox();
-            PetPicBox = new CuoreUI.Controls.cuiPictureBox();
             SaveBtn = new CuoreUI.Controls.cuiButton();
+            PetPicBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)PetPicBox).BeginInit();
             SuspendLayout();
             // 
             // BackBtn
@@ -220,23 +220,6 @@
             WeighttxtBox.TextOffset = new Size(0, 0);
             WeighttxtBox.UnderlinedStyle = false;
             // 
-            // PetPicBox
-            // 
-            PetPicBox.BackgroundImage = (Image)resources.GetObject("PetPicBox.BackgroundImage");
-            PetPicBox.BackgroundImageLayout = ImageLayout.Stretch;
-            PetPicBox.BorderStyle = BorderStyle.FixedSingle;
-            PetPicBox.Content = null;
-            PetPicBox.ImageTint = Color.White;
-            PetPicBox.Location = new Point(198, 444);
-            PetPicBox.Margin = new Padding(4, 3, 4, 3);
-            PetPicBox.Name = "PetPicBox";
-            PetPicBox.OutlineThickness = 1F;
-            PetPicBox.PanelOutlineColor = Color.Empty;
-            PetPicBox.Rotation = 0;
-            PetPicBox.Rounding = new Padding(8);
-            PetPicBox.Size = new Size(224, 151);
-            PetPicBox.TabIndex = 48;
-            // 
             // SaveBtn
             // 
             SaveBtn.CheckButton = false;
@@ -275,14 +258,24 @@
             SaveBtn.TextOffset = new Point(0, 0);
             SaveBtn.Click += SaveBtn_Click;
             // 
+            // PetPicBox
+            // 
+            PetPicBox.BorderStyle = BorderStyle.FixedSingle;
+            PetPicBox.Location = new Point(214, 457);
+            PetPicBox.Name = "PetPicBox";
+            PetPicBox.Size = new Size(224, 151);
+            PetPicBox.TabIndex = 50;
+            PetPicBox.TabStop = false;
+            PetPicBox.Click += PetPicBox_Click;
+            // 
             // CustomerPetForm2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(629, 727);
-            Controls.Add(SaveBtn);
             Controls.Add(PetPicBox);
+            Controls.Add(SaveBtn);
             Controls.Add(WeighttxtBox);
             Controls.Add(cuiLabel6);
             Controls.Add(TypeServiceCbx);
@@ -296,6 +289,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CustomerPetForm2";
             Load += CustomerPetForm2_Load;
+            ((System.ComponentModel.ISupportInitialize)PetPicBox).EndInit();
             ResumeLayout(false);
         }
 
@@ -309,7 +303,7 @@
         private CuoreUI.Controls.cuiComboBox TypeServiceCbx;
         private CuoreUI.Controls.cuiLabel cuiLabel6;
         private CuoreUI.Controls.cuiTextBox WeighttxtBox;
-        private CuoreUI.Controls.cuiPictureBox PetPicBox;
         private CuoreUI.Controls.cuiButton SaveBtn;
+        private PictureBox PetPicBox;
     }
 }

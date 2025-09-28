@@ -180,5 +180,18 @@ namespace PawCare
         {
 
         }
+
+        private void PetPicBox_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                PetPicBox.Image = Image.FromFile(ofd.FileName); // works only if PetPicBox is a PictureBox
+                PetPicBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
     }
 }
+

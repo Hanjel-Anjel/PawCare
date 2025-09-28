@@ -117,13 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PetPicBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAIdJREFUSEvt
-        jUEKgCAQRbtPF2jZooO17JryFY9RjCjYL0JtIAIfDMzozPvD0PkVxphVit9VEDGAXUo9JJerh9zJ1UJy
-        uXNuuetfhQDYRGKtneIcpNLLW5w3vqvCez+mPg/gPxU4QJ0eEHiStP6dKF4kiu+KF4niu7TYWuy7AGDm
-        o4qa2df5ngN7MFLwLD9KvQAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>
