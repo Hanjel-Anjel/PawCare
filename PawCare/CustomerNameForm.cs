@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using System.Data.SqlClient;
 
 
@@ -54,7 +55,7 @@ namespace PawCare
 
         private void CancelBtn_Click(object sender, EventArgs e)
         {
-            
+
             EmployeeDashboard employeeDashboard = new EmployeeDashboard();
             employeeDashboard.Show();
             this.Hide();
@@ -62,14 +63,35 @@ namespace PawCare
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-           customerData.FirstName = FnametxtBox.Content;
-           customerData.MiddleName = MnametxtBox.Content;
-           customerData.LastName = LnametxtBox.Content;
-           customerData.Suffix = suffixCbox.SelectedItem?.ToString() ?? string.Empty;
+            customerData.FirstName = FnametxtBox.Content;
+            if (!Regex.IsMatch(customerData.FirstName, @"^[A-Za-z]{1,50}$"))
+            {
+                MessageBox.Show("❌ Invalid Name!",
+                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+            customerData.MiddleName = MnametxtBox.Content;
+            if(!Regex.IsMatch(customerData.MiddleName, @"^[A-Za-z]{1,50}$"))
+            {
+                MessageBox.Show("❌ Invalid Name!",
+                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+            customerData.LastName = LnametxtBox.Content;
+            if(!Regex.IsMatch(customerData.LastName, @"^[A-Za-z]{1,50}$"))
+            {
+                MessageBox.Show("❌ Invalid Name!",
+                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+            customerData.Suffix = suffixCbox.SelectedItem?.ToString() ?? string.Empty;
 
             CustomerAddressForm customerAddressForm = new CustomerAddressForm(customerData);
-           customerAddressForm.Show();
-           this.Hide();
+            customerAddressForm.Show();
+            this.Hide();
 
         }
 
@@ -90,3 +112,4 @@ namespace PawCare
         }
     }
 }
+

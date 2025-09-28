@@ -13,6 +13,9 @@ using Microsoft.Data.SqlClient;
 namespace PawCare
 {
     public partial class CustomerPetForm2 : Form
+
+
+
     {
         private CustomerRegistrationData customerData;
         public CustomerPetForm2(CustomerRegistrationData customerData)
@@ -40,7 +43,8 @@ namespace PawCare
             customerData.AssignedVet = VetCbx.SelectedItem.ToString() ?? string.Empty;
 
             // Connection string to your SQL Server
-            string connectionString = @"Server=localhost\SQLEXPRESS;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
+            string connectionString = @"Server=LAPTOP-AQ32RS4T;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
+
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -128,7 +132,7 @@ namespace PawCare
 
                     MessageBox.Show("Customer, address, and Pet saved successfully!");
 
-                   
+
                     customerData.FirstName = null;
                     customerData.MiddleName = null;
                     customerData.LastName = null;
@@ -169,7 +173,12 @@ namespace PawCare
         private void CustomerPetForm2_Load(object sender, EventArgs e)
         {
             TypeServiceCbx.Items = new string[] { "Grooming", "Vaccination", "Treatment", "Check-up" };
-            VetCbx.Items = new string[] {"Armario", "Maco", "Asierto", "Manzanero"};
+            VetCbx.Items = new string[] { "Armario", "Maco", "Asierto", "Manzanero" };
+        }
+
+        private void TypeServiceCbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -43,7 +43,7 @@
             // usernameLabel
             // 
             usernameLabel.Content = "Username";
-            usernameLabel.Font = new Font("Poppins", 14.25F);
+            usernameLabel.Font = new Font("Microsoft Sans Serif", 14.25F);
             usernameLabel.HorizontalAlignment = StringAlignment.Near;
             usernameLabel.Location = new Point(393, 124);
             usernameLabel.Margin = new Padding(4);
@@ -51,11 +51,12 @@
             usernameLabel.Size = new Size(141, 29);
             usernameLabel.TabIndex = 0;
             usernameLabel.VerticalAlignment = StringAlignment.Near;
+            usernameLabel.Load += usernameLabel_Load;
             // 
             // PasswordLabel
             // 
             PasswordLabel.Content = "Password";
-            PasswordLabel.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PasswordLabel.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PasswordLabel.HorizontalAlignment = StringAlignment.Near;
             PasswordLabel.Location = new Point(392, 243);
             PasswordLabel.Margin = new Padding(4);
@@ -71,7 +72,7 @@
             UsernameTextbox.FocusBackgroundColor = Color.White;
             UsernameTextbox.FocusImageTint = Color.White;
             UsernameTextbox.FocusOutlineColor = Color.FromArgb(15, 28, 243);
-            UsernameTextbox.Font = new Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            UsernameTextbox.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             UsernameTextbox.ForeColor = Color.Black;
             UsernameTextbox.Image = null;
             UsernameTextbox.ImageExpand = new Point(0, 0);
@@ -82,7 +83,7 @@
             UsernameTextbox.Name = "UsernameTextbox";
             UsernameTextbox.NormalImageTint = Color.White;
             UsernameTextbox.OutlineColor = Color.Black;
-            UsernameTextbox.Padding = new Padding(21, 17, 21, 0);
+            UsernameTextbox.Padding = new Padding(16, 19, 16, 0);
             UsernameTextbox.PasswordChar = false;
             UsernameTextbox.PlaceholderColor = SystemColors.WindowText;
             UsernameTextbox.PlaceholderText = "";
@@ -100,7 +101,7 @@
             PasswordTextbox.FocusBackgroundColor = Color.White;
             PasswordTextbox.FocusImageTint = Color.White;
             PasswordTextbox.FocusOutlineColor = Color.FromArgb(15, 28, 243);
-            PasswordTextbox.Font = new Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PasswordTextbox.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PasswordTextbox.ForeColor = Color.Black;
             PasswordTextbox.Image = null;
             PasswordTextbox.ImageExpand = new Point(0, 0);
@@ -111,7 +112,7 @@
             PasswordTextbox.Name = "PasswordTextbox";
             PasswordTextbox.NormalImageTint = Color.White;
             PasswordTextbox.OutlineColor = Color.Black;
-            PasswordTextbox.Padding = new Padding(21, 17, 21, 0);
+            PasswordTextbox.Padding = new Padding(16, 19, 16, 0);
             PasswordTextbox.PasswordChar = false;
             PasswordTextbox.PlaceholderColor = SystemColors.WindowText;
             PasswordTextbox.PlaceholderText = "";
@@ -131,7 +132,7 @@
             LoginButton.CheckedOutline = Color.FromArgb(15, 28, 243);
             LoginButton.Content = "Login";
             LoginButton.DialogResult = DialogResult.None;
-            LoginButton.Font = new Font("Poppins", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginButton.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginButton.ForeColor = Color.White;
             LoginButton.HoverBackground = Color.FromArgb(15, 28, 243);
             LoginButton.HoverForeColor = Color.Black;
@@ -167,7 +168,7 @@
             ShowPasswordCheckbox.CheckedOutlineColor = Color.FromArgb(15, 28, 243);
             ShowPasswordCheckbox.CheckedSymbolColor = Color.White;
             ShowPasswordCheckbox.Content = "Show Password";
-            ShowPasswordCheckbox.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ShowPasswordCheckbox.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ShowPasswordCheckbox.Location = new Point(570, 369);
             ShowPasswordCheckbox.Margin = new Padding(3, 2, 3, 2);
             ShowPasswordCheckbox.MinimumSize = new Size(14, 12);
@@ -239,7 +240,7 @@
             // LoginLabel
             // 
             LoginLabel.Content = "Login";
-            LoginLabel.Font = new Font("Poppins", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginLabel.Font = new Font("Microsoft Sans Serif", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginLabel.HorizontalAlignment = StringAlignment.Center;
             LoginLabel.Location = new Point(392, 53);
             LoginLabel.Margin = new Padding(4);

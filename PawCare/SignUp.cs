@@ -15,7 +15,8 @@ namespace PawCare
     public partial class SignUp : Form
     {
         private readonly string connStr =
-            @"Server=localhost\SQLEXPRESS;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;";
+             @"Server=LAPTOP-AQ32RS4T;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
+
 
         public SignUp()
         {
@@ -62,6 +63,11 @@ namespace PawCare
             Login loginForm = new Login();
             loginForm.Show();
             this.Hide();
+        }
+
+        private void usernameLabel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

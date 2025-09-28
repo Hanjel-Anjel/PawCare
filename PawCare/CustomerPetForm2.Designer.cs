@@ -52,7 +52,7 @@
             BackBtn.CheckedOutline = Color.FromArgb(15, 28, 243);
             BackBtn.Content = "Back";
             BackBtn.DialogResult = DialogResult.None;
-            BackBtn.Font = new Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BackBtn.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BackBtn.ForeColor = Color.Black;
             BackBtn.HoverBackground = Color.Red;
             BackBtn.HoverForeColor = Color.Black;
@@ -108,7 +108,7 @@
             // cuiLabel4
             // 
             cuiLabel4.Content = "Upload\\ Pet\\ Image";
-            cuiLabel4.Font = new Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel4.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel4.HorizontalAlignment = StringAlignment.Near;
             cuiLabel4.Location = new Point(113, 411);
             cuiLabel4.Margin = new Padding(4);
@@ -120,7 +120,7 @@
             // cuiLabel3
             // 
             cuiLabel3.Content = "Assigned\\ Veterinarian";
-            cuiLabel3.Font = new Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel3.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel3.HorizontalAlignment = StringAlignment.Near;
             cuiLabel3.Location = new Point(113, 299);
             cuiLabel3.Margin = new Padding(4);
@@ -133,7 +133,7 @@
             // cuiLabel2
             // 
             cuiLabel2.Content = "Weight";
-            cuiLabel2.Font = new Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel2.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel2.HorizontalAlignment = StringAlignment.Near;
             cuiLabel2.Location = new Point(113, 204);
             cuiLabel2.Margin = new Padding(4);
@@ -145,7 +145,7 @@
             // CustomerNameLabel
             // 
             CustomerNameLabel.Content = "Customer\\ Pet\\ Information";
-            CustomerNameLabel.Font = new Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CustomerNameLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CustomerNameLabel.HorizontalAlignment = StringAlignment.Center;
             CustomerNameLabel.Location = new Point(97, 46);
             CustomerNameLabel.Margin = new Padding(4);
@@ -178,11 +178,12 @@
             TypeServiceCbx.Rounding = 8;
             TypeServiceCbx.Size = new Size(410, 64);
             TypeServiceCbx.TabIndex = 44;
+            TypeServiceCbx.SelectedIndexChanged += TypeServiceCbx_SelectedIndexChanged;
             // 
             // cuiLabel6
             // 
             cuiLabel6.Content = "Type\\ of\\ Service";
-            cuiLabel6.Font = new Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel6.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel6.HorizontalAlignment = StringAlignment.Near;
             cuiLabel6.Location = new Point(113, 98);
             cuiLabel6.Margin = new Padding(4);
@@ -198,7 +199,7 @@
             WeighttxtBox.FocusBackgroundColor = Color.White;
             WeighttxtBox.FocusImageTint = Color.White;
             WeighttxtBox.FocusOutlineColor = Color.FromArgb(15, 28, 243);
-            WeighttxtBox.Font = new Font("Poppins", 10.8F);
+            WeighttxtBox.Font = new Font("Microsoft Sans Serif", 10.8F);
             WeighttxtBox.ForeColor = Color.Black;
             WeighttxtBox.Image = null;
             WeighttxtBox.ImageExpand = new Point(0, 0);
@@ -209,7 +210,7 @@
             WeighttxtBox.Name = "WeighttxtBox";
             WeighttxtBox.NormalImageTint = Color.White;
             WeighttxtBox.OutlineColor = Color.Black;
-            WeighttxtBox.Padding = new Padding(22, 18, 22, 0);
+            WeighttxtBox.Padding = new Padding(17, 21, 17, 0);
             WeighttxtBox.PasswordChar = false;
             WeighttxtBox.PlaceholderColor = SystemColors.WindowText;
             WeighttxtBox.PlaceholderText = "";
@@ -246,7 +247,7 @@
             SaveBtn.CheckedOutline = Color.FromArgb(15, 28, 243);
             SaveBtn.Content = "Save";
             SaveBtn.DialogResult = DialogResult.None;
-            SaveBtn.Font = new Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SaveBtn.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SaveBtn.ForeColor = Color.White;
             SaveBtn.HoverBackground = Color.FromArgb(15, 28, 243);
             SaveBtn.HoverForeColor = Color.Black;
