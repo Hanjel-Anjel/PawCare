@@ -43,8 +43,7 @@ namespace PawCare
             customerData.AssignedVet = VetCbx.SelectedItem.ToString() ?? string.Empty;
 
             // Connection string to your SQL Server
-            string connectionString = @"Server=LAPTOP-AQ32RS4T;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
-
+            string connectionString = @"Server=localhost\SQLEXPRESS;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

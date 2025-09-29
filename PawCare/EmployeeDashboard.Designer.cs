@@ -77,8 +77,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1223, 581);
             Controls.Add(CustomerBtn);
+            DoubleBuffered = true;
             Margin = new Padding(3, 2, 3, 2);
             Name = "EmployeeDashboard";
             StartPosition = FormStartPosition.CenterScreen;
