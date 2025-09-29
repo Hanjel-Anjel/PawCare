@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeDashboard));
             CustomerBtn = new CuoreUI.Controls.cuiButton();
+            ViewCustomerBtn = new CuoreUI.Controls.cuiButton();
             SuspendLayout();
             // 
             // CustomerBtn
@@ -72,6 +73,48 @@
             CustomerBtn.TextOffset = new Point(0, 0);
             CustomerBtn.Click += CustomerBtn_Click;
             // 
+            // ViewCustomerBtn
+            // 
+            ViewCustomerBtn.BackColor = Color.Transparent;
+            ViewCustomerBtn.BackgroundImage = (Image)resources.GetObject("ViewCustomerBtn.BackgroundImage");
+            ViewCustomerBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            ViewCustomerBtn.CheckButton = false;
+            ViewCustomerBtn.Checked = false;
+            ViewCustomerBtn.CheckedBackground = Color.Transparent;
+            ViewCustomerBtn.CheckedForeColor = Color.Transparent;
+            ViewCustomerBtn.CheckedImageTint = Color.Transparent;
+            ViewCustomerBtn.CheckedOutline = Color.Transparent;
+            ViewCustomerBtn.Content = "Customer";
+            ViewCustomerBtn.DialogResult = DialogResult.None;
+            ViewCustomerBtn.Font = new Font("Poppins", 12F);
+            ViewCustomerBtn.ForeColor = Color.White;
+            ViewCustomerBtn.HoverBackground = Color.Transparent;
+            ViewCustomerBtn.HoverForeColor = Color.Transparent;
+            ViewCustomerBtn.HoverImageTint = Color.Transparent;
+            ViewCustomerBtn.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            ViewCustomerBtn.Image = null;
+            ViewCustomerBtn.ImageAutoCenter = true;
+            ViewCustomerBtn.ImageExpand = new Point(0, 0);
+            ViewCustomerBtn.ImageOffset = new Point(0, 0);
+            ViewCustomerBtn.Location = new Point(415, 471);
+            ViewCustomerBtn.Name = "ViewCustomerBtn";
+            ViewCustomerBtn.NormalBackground = Color.Transparent;
+            ViewCustomerBtn.NormalForeColor = Color.White;
+            ViewCustomerBtn.NormalImageTint = Color.Transparent;
+            ViewCustomerBtn.NormalOutline = Color.FromArgb(64, 128, 128, 128);
+            ViewCustomerBtn.OutlineThickness = 1F;
+            ViewCustomerBtn.PressedBackground = Color.Transparent;
+            ViewCustomerBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
+            ViewCustomerBtn.PressedImageTint = Color.Transparent;
+            ViewCustomerBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            ViewCustomerBtn.RightToLeft = RightToLeft.No;
+            ViewCustomerBtn.Rounding = new Padding(8);
+            ViewCustomerBtn.Size = new Size(111, 98);
+            ViewCustomerBtn.TabIndex = 1;
+            ViewCustomerBtn.TextAlignment = StringAlignment.Center;
+            ViewCustomerBtn.TextOffset = new Point(0, 0);
+            ViewCustomerBtn.Click += ViewCustomerBtn_Click;
+            // 
             // EmployeeDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -79,6 +122,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1223, 581);
+            Controls.Add(ViewCustomerBtn);
             Controls.Add(CustomerBtn);
             DoubleBuffered = true;
             Margin = new Padding(3, 2, 3, 2);
@@ -91,5 +135,6 @@
         #endregion
 
         private CuoreUI.Controls.cuiButton CustomerBtn;
+        private CuoreUI.Controls.cuiButton ViewCustomerBtn;
     }
 }

@@ -118,10 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ViewCustomerBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAHNSURBVGhD7ZjdShZRGEZXmobhgQdClyOJoBAkRolX4B2I
+        IBkelWdehHYk3UhnafQj/t+AUh1KxQsTyMPr7Jk9095bmAULROd7Zn36fTojDAzcG8aAl8Ae8BX4Bfys
+        PrbP2dfsmKJZBI6APwHtGDu2OEaAd05wnb+Bt9Vji6Htk7itPZkisJeIfXc1sKn22Oc6mhp70zZ5T4Q8
+        AcZ1PCX2G0ijYrWtbLx3gmLd1fGUfHeCYv2m4ymxP3QaFKttZUNjupoNDelqNjSkq9nQkK5mQ0O6mg0N
+        6Wo2rp2YWG0rGwdOUKyfdDwldsenQbFmvUR55gTFuqDjKXkInDlRbT2utrIy28ON1ZyO5mLHCWyq3SYX
+        xZYTGXJbR0pBQ0MWi4aGLBYNDVksGhqySJ44oSGndSQnD4Al4NQJDXkIPNXB1IwCKz1dOH4ElqvNZEwC
+        qz3/K+ifdrmzDkzpSfvkMfCm53uQu7wCXgMTGtEVex1fOif8354DMxoTi/2ob5yTpNLOvaZRbdl0hnO5
+        oXFNsUvrLpfnfWst8xoZ4hFw4Yzl1t4z1taYV85IKb7Q2Do+OAOluK+xdXxxBkrxs8bW8cMZKEVra4w+
+        uDQHBgZa8hew1ZzE3dQPlAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABNYAAAJKCAYAAADgAci9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA/7JJREFUeF6E/XmYXNd13gsr35N8186Nr6N4iBNFdiIrsmNFURLLvva1nTiybIkT
+        vwAADr8BOAVTJAAA/7JJREFUeF6E/XmYXNd13gsr35N8186Nr6N4iBNFdiIrsmNFURLLvva1nTiybIkT
         iLnR3ejGRBAEAYJAz1VdXd1Ao9GYCIKkKEoUSYkEBxCcZEmWJVGcQIqDaEnUYNMULWswJQroobqbpBT/
         tb7nfd+19t6nAN3vj/2cc/bZ09lVders33nXWm/qqC/Z2vqSYdtRW7K1TIu2prZoa0cWuY98nqsv2ZqR
         sswSE46jjPL83Ajy0Ibns+5C0Y/SmtpC0Rbq5mO01TGyZKsr/cX+QmpjNess2mruL9qa4QVbM6zrWD2y

@@ -23,5 +23,12 @@ namespace PawCare
             customerNameForm.Show();
             this.Close();
         }
+
+        private void ViewCustomerBtn_Click(object sender, EventArgs e)
+        {
+            ListOfOwner listOfOwner = new ListOfOwner();
+            listOfOwner.Show();
+            this.Close();
+        }
     }
 }
