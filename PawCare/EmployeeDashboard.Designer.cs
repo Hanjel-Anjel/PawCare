@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeDashboard));
             CustomerBtn = new CuoreUI.Controls.cuiButton();
             ViewCustomerBtn = new CuoreUI.Controls.cuiButton();
+            ViewPetBtn = new CuoreUI.Controls.cuiButton();
             SuspendLayout();
             // 
             // CustomerBtn
@@ -115,6 +116,48 @@
             ViewCustomerBtn.TextOffset = new Point(0, 0);
             ViewCustomerBtn.Click += ViewCustomerBtn_Click;
             // 
+            // ViewPetBtn
+            // 
+            ViewPetBtn.BackColor = Color.Transparent;
+            ViewPetBtn.BackgroundImage = (Image)resources.GetObject("ViewPetBtn.BackgroundImage");
+            ViewPetBtn.BackgroundImageLayout = ImageLayout.Stretch;
+            ViewPetBtn.CheckButton = false;
+            ViewPetBtn.Checked = false;
+            ViewPetBtn.CheckedBackground = Color.Transparent;
+            ViewPetBtn.CheckedForeColor = Color.Transparent;
+            ViewPetBtn.CheckedImageTint = Color.Transparent;
+            ViewPetBtn.CheckedOutline = Color.Transparent;
+            ViewPetBtn.Content = "Customer";
+            ViewPetBtn.DialogResult = DialogResult.None;
+            ViewPetBtn.Font = new Font("Poppins", 12F);
+            ViewPetBtn.ForeColor = Color.White;
+            ViewPetBtn.HoverBackground = Color.Transparent;
+            ViewPetBtn.HoverForeColor = Color.Transparent;
+            ViewPetBtn.HoverImageTint = Color.Transparent;
+            ViewPetBtn.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            ViewPetBtn.Image = null;
+            ViewPetBtn.ImageAutoCenter = true;
+            ViewPetBtn.ImageExpand = new Point(0, 0);
+            ViewPetBtn.ImageOffset = new Point(0, 0);
+            ViewPetBtn.Location = new Point(741, 471);
+            ViewPetBtn.Name = "ViewPetBtn";
+            ViewPetBtn.NormalBackground = Color.Transparent;
+            ViewPetBtn.NormalForeColor = Color.White;
+            ViewPetBtn.NormalImageTint = Color.Transparent;
+            ViewPetBtn.NormalOutline = Color.FromArgb(64, 128, 128, 128);
+            ViewPetBtn.OutlineThickness = 1F;
+            ViewPetBtn.PressedBackground = Color.Transparent;
+            ViewPetBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
+            ViewPetBtn.PressedImageTint = Color.Transparent;
+            ViewPetBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            ViewPetBtn.RightToLeft = RightToLeft.No;
+            ViewPetBtn.Rounding = new Padding(8);
+            ViewPetBtn.Size = new Size(111, 98);
+            ViewPetBtn.TabIndex = 2;
+            ViewPetBtn.TextAlignment = StringAlignment.Center;
+            ViewPetBtn.TextOffset = new Point(0, 0);
+            ViewPetBtn.Click += ViewPetBtn_Click;
+            // 
             // EmployeeDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -122,6 +165,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1223, 581);
+            Controls.Add(ViewPetBtn);
             Controls.Add(ViewCustomerBtn);
             Controls.Add(CustomerBtn);
             DoubleBuffered = true;
@@ -136,5 +180,6 @@
 
         private CuoreUI.Controls.cuiButton CustomerBtn;
         private CuoreUI.Controls.cuiButton ViewCustomerBtn;
+        private CuoreUI.Controls.cuiButton ViewPetBtn;
     }
 }

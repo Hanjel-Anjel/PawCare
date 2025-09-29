@@ -30,5 +30,12 @@ namespace PawCare
             listOfOwner.Show();
             this.Close();
         }
+
+        private void ViewPetBtn_Click(object sender, EventArgs e)
+        {
+            ListOfPets listOfPets = new ListOfPets();
+            listOfPets.Show();
+            this.Close();
+        }
     }
 }
