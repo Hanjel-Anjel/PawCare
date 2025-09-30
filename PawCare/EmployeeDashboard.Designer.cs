@@ -32,7 +32,7 @@
             CustomerBtn = new CuoreUI.Controls.cuiButton();
             ViewCustomerBtn = new CuoreUI.Controls.cuiButton();
             ViewPetBtn = new CuoreUI.Controls.cuiButton();
-            LogoutBtn = new CuoreUI.Controls.cuiButton();
+            cuiButton1 = new CuoreUI.Controls.cuiButton();
             SuspendLayout();
             // 
             // CustomerBtn
@@ -88,7 +88,7 @@
             ViewCustomerBtn.CheckedOutline = Color.Transparent;
             ViewCustomerBtn.Content = "Customer";
             ViewCustomerBtn.DialogResult = DialogResult.None;
-            ViewCustomerBtn.Font = new Font("Poppins", 12F);
+            ViewCustomerBtn.Font = new Font("Poppins", 10F, FontStyle.Bold);
             ViewCustomerBtn.ForeColor = Color.White;
             ViewCustomerBtn.HoverBackground = Color.Transparent;
             ViewCustomerBtn.HoverForeColor = Color.Transparent;
@@ -98,12 +98,12 @@
             ViewCustomerBtn.ImageAutoCenter = true;
             ViewCustomerBtn.ImageExpand = new Point(0, 0);
             ViewCustomerBtn.ImageOffset = new Point(0, 0);
-            ViewCustomerBtn.Location = new Point(415, 471);
+            ViewCustomerBtn.Location = new Point(425, 512);
             ViewCustomerBtn.Name = "ViewCustomerBtn";
             ViewCustomerBtn.NormalBackground = Color.Transparent;
             ViewCustomerBtn.NormalForeColor = Color.White;
             ViewCustomerBtn.NormalImageTint = Color.Transparent;
-            ViewCustomerBtn.NormalOutline = Color.FromArgb(64, 128, 128, 128);
+            ViewCustomerBtn.NormalOutline = Color.Transparent;
             ViewCustomerBtn.OutlineThickness = 1F;
             ViewCustomerBtn.PressedBackground = Color.Transparent;
             ViewCustomerBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
@@ -111,10 +111,10 @@
             ViewCustomerBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             ViewCustomerBtn.RightToLeft = RightToLeft.No;
             ViewCustomerBtn.Rounding = new Padding(8);
-            ViewCustomerBtn.Size = new Size(111, 98);
+            ViewCustomerBtn.Size = new Size(78, 66);
             ViewCustomerBtn.TabIndex = 1;
             ViewCustomerBtn.TextAlignment = StringAlignment.Center;
-            ViewCustomerBtn.TextOffset = new Point(0, 0);
+            ViewCustomerBtn.TextOffset = new Point(0, 20);
             ViewCustomerBtn.Click += ViewCustomerBtn_Click;
             // 
             // ViewPetBtn
@@ -130,7 +130,7 @@
             ViewPetBtn.CheckedOutline = Color.Transparent;
             ViewPetBtn.Content = "Pet";
             ViewPetBtn.DialogResult = DialogResult.None;
-            ViewPetBtn.Font = new Font("Poppins", 12F);
+            ViewPetBtn.Font = new Font("Poppins", 10F, FontStyle.Bold);
             ViewPetBtn.ForeColor = Color.White;
             ViewPetBtn.HoverBackground = Color.Transparent;
             ViewPetBtn.HoverForeColor = Color.Transparent;
@@ -140,12 +140,12 @@
             ViewPetBtn.ImageAutoCenter = true;
             ViewPetBtn.ImageExpand = new Point(0, 0);
             ViewPetBtn.ImageOffset = new Point(0, 0);
-            ViewPetBtn.Location = new Point(741, 471);
+            ViewPetBtn.Location = new Point(750, 512);
             ViewPetBtn.Name = "ViewPetBtn";
             ViewPetBtn.NormalBackground = Color.Transparent;
             ViewPetBtn.NormalForeColor = Color.White;
             ViewPetBtn.NormalImageTint = Color.Transparent;
-            ViewPetBtn.NormalOutline = Color.FromArgb(64, 128, 128, 128);
+            ViewPetBtn.NormalOutline = Color.Transparent;
             ViewPetBtn.OutlineThickness = 1F;
             ViewPetBtn.PressedBackground = Color.Transparent;
             ViewPetBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
@@ -153,51 +153,53 @@
             ViewPetBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             ViewPetBtn.RightToLeft = RightToLeft.No;
             ViewPetBtn.Rounding = new Padding(8);
-            ViewPetBtn.Size = new Size(111, 98);
+            ViewPetBtn.Size = new Size(78, 66);
             ViewPetBtn.TabIndex = 2;
             ViewPetBtn.TextAlignment = StringAlignment.Center;
-            ViewPetBtn.TextOffset = new Point(0, 0);
+            ViewPetBtn.TextOffset = new Point(0, 20);
             ViewPetBtn.Click += ViewPetBtn_Click;
             // 
-            // LogoutBtn
+            // cuiButton1
             // 
-            LogoutBtn.BackColor = Color.Transparent;
-            LogoutBtn.CheckButton = false;
-            LogoutBtn.Checked = false;
-            LogoutBtn.CheckedBackground = Color.FromArgb(15, 28, 243);
-            LogoutBtn.CheckedForeColor = Color.White;
-            LogoutBtn.CheckedImageTint = Color.White;
-            LogoutBtn.CheckedOutline = Color.FromArgb(15, 28, 243);
-            LogoutBtn.Content = "Logout";
-            LogoutBtn.DialogResult = DialogResult.None;
-            LogoutBtn.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LogoutBtn.ForeColor = Color.White;
-            LogoutBtn.HoverBackground = Color.FromArgb(15, 28, 243);
-            LogoutBtn.HoverForeColor = Color.Black;
-            LogoutBtn.HoverImageTint = Color.White;
-            LogoutBtn.HoverOutline = Color.Black;
-            LogoutBtn.Image = null;
-            LogoutBtn.ImageAutoCenter = true;
-            LogoutBtn.ImageExpand = new Point(0, 0);
-            LogoutBtn.ImageOffset = new Point(0, 0);
-            LogoutBtn.Location = new Point(1008, 33);
-            LogoutBtn.Margin = new Padding(3, 2, 3, 2);
-            LogoutBtn.Name = "LogoutBtn";
-            LogoutBtn.NormalBackground = Color.FromArgb(233, 30, 99);
-            LogoutBtn.NormalForeColor = Color.White;
-            LogoutBtn.NormalImageTint = Color.White;
-            LogoutBtn.NormalOutline = Color.FromArgb(64, 128, 128, 128);
-            LogoutBtn.OutlineThickness = 1F;
-            LogoutBtn.PressedBackground = Color.WhiteSmoke;
-            LogoutBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
-            LogoutBtn.PressedImageTint = Color.White;
-            LogoutBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            LogoutBtn.Rounding = new Padding(8);
-            LogoutBtn.Size = new Size(178, 52);
-            LogoutBtn.TabIndex = 17;
-            LogoutBtn.TextAlignment = StringAlignment.Center;
-            LogoutBtn.TextOffset = new Point(0, 0);
-            LogoutBtn.Click += LogoutBtn_Click;
+            cuiButton1.BackColor = Color.Transparent;
+            cuiButton1.BackgroundImage = (Image)resources.GetObject("cuiButton1.BackgroundImage");
+            cuiButton1.BackgroundImageLayout = ImageLayout.Stretch;
+            cuiButton1.CheckButton = false;
+            cuiButton1.Checked = false;
+            cuiButton1.CheckedBackground = Color.Transparent;
+            cuiButton1.CheckedForeColor = Color.Transparent;
+            cuiButton1.CheckedImageTint = Color.Transparent;
+            cuiButton1.CheckedOutline = Color.Transparent;
+            cuiButton1.Content = "Logout";
+            cuiButton1.DialogResult = DialogResult.None;
+            cuiButton1.Font = new Font("Poppins", 10F, FontStyle.Bold);
+            cuiButton1.ForeColor = Color.White;
+            cuiButton1.HoverBackground = Color.Transparent;
+            cuiButton1.HoverForeColor = Color.Transparent;
+            cuiButton1.HoverImageTint = Color.Transparent;
+            cuiButton1.HoverOutline = Color.FromArgb(32, 128, 128, 128);
+            cuiButton1.Image = null;
+            cuiButton1.ImageAutoCenter = true;
+            cuiButton1.ImageExpand = new Point(0, 0);
+            cuiButton1.ImageOffset = new Point(0, 0);
+            cuiButton1.Location = new Point(867, 515);
+            cuiButton1.Name = "cuiButton1";
+            cuiButton1.NormalBackground = Color.Transparent;
+            cuiButton1.NormalForeColor = Color.White;
+            cuiButton1.NormalImageTint = Color.Transparent;
+            cuiButton1.NormalOutline = Color.Transparent;
+            cuiButton1.OutlineThickness = 1F;
+            cuiButton1.PressedBackground = Color.Transparent;
+            cuiButton1.PressedForeColor = Color.FromArgb(32, 32, 32);
+            cuiButton1.PressedImageTint = Color.Transparent;
+            cuiButton1.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            cuiButton1.RightToLeft = RightToLeft.No;
+            cuiButton1.Rounding = new Padding(8);
+            cuiButton1.Size = new Size(66, 63);
+            cuiButton1.TabIndex = 3;
+            cuiButton1.TextAlignment = StringAlignment.Center;
+            cuiButton1.TextOffset = new Point(0, 20);
+            cuiButton1.Click += cuiButton1_Click;
             // 
             // EmployeeDashboard
             // 
@@ -206,7 +208,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1223, 581);
-            Controls.Add(LogoutBtn);
+            Controls.Add(cuiButton1);
             Controls.Add(ViewPetBtn);
             Controls.Add(ViewCustomerBtn);
             Controls.Add(CustomerBtn);
@@ -215,6 +217,7 @@
             Name = "EmployeeDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EmployeeDashboard";
+            Load += EmployeeDashboard_Load;
             ResumeLayout(false);
         }
 
@@ -223,6 +226,6 @@
         private CuoreUI.Controls.cuiButton CustomerBtn;
         private CuoreUI.Controls.cuiButton ViewCustomerBtn;
         private CuoreUI.Controls.cuiButton ViewPetBtn;
-        private CuoreUI.Controls.cuiButton LogoutBtn;
+        private CuoreUI.Controls.cuiButton cuiButton1;
     }
 }
