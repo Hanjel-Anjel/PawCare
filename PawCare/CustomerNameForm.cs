@@ -66,7 +66,7 @@ namespace PawCare
             customerData.FirstName = FnametxtBox.Content;
             if (!Regex.IsMatch(customerData.FirstName, @"^[A-Za-z]{1,50}$"))
             {
-                MessageBox.Show("❌ Invalid Name!",
+                MessageBox.Show("Invalid Name!",
                         "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
@@ -74,7 +74,7 @@ namespace PawCare
             customerData.MiddleName = MnametxtBox.Content;
             if(!Regex.IsMatch(customerData.MiddleName, @"^[A-Za-z]{1,50}$"))
             {
-                MessageBox.Show("❌ Invalid Name!",
+                MessageBox.Show("Invalid Name!",
                         "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
@@ -82,7 +82,7 @@ namespace PawCare
             customerData.LastName = LnametxtBox.Content;
             if(!Regex.IsMatch(customerData.LastName, @"^[A-Za-z]{1,50}$"))
             {
-                MessageBox.Show("❌ Invalid Name!",
+                MessageBox.Show("Invalid Name!",
                         "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
