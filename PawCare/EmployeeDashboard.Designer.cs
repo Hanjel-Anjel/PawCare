@@ -32,6 +32,7 @@
             CustomerBtn = new CuoreUI.Controls.cuiButton();
             ViewCustomerBtn = new CuoreUI.Controls.cuiButton();
             ViewPetBtn = new CuoreUI.Controls.cuiButton();
+            LogoutBtn = new CuoreUI.Controls.cuiButton();
             SuspendLayout();
             // 
             // CustomerBtn
@@ -127,7 +128,7 @@
             ViewPetBtn.CheckedForeColor = Color.Transparent;
             ViewPetBtn.CheckedImageTint = Color.Transparent;
             ViewPetBtn.CheckedOutline = Color.Transparent;
-            ViewPetBtn.Content = "Customer";
+            ViewPetBtn.Content = "Pet";
             ViewPetBtn.DialogResult = DialogResult.None;
             ViewPetBtn.Font = new Font("Poppins", 12F);
             ViewPetBtn.ForeColor = Color.White;
@@ -158,6 +159,46 @@
             ViewPetBtn.TextOffset = new Point(0, 0);
             ViewPetBtn.Click += ViewPetBtn_Click;
             // 
+            // LogoutBtn
+            // 
+            LogoutBtn.BackColor = Color.Transparent;
+            LogoutBtn.CheckButton = false;
+            LogoutBtn.Checked = false;
+            LogoutBtn.CheckedBackground = Color.FromArgb(15, 28, 243);
+            LogoutBtn.CheckedForeColor = Color.White;
+            LogoutBtn.CheckedImageTint = Color.White;
+            LogoutBtn.CheckedOutline = Color.FromArgb(15, 28, 243);
+            LogoutBtn.Content = "Logout";
+            LogoutBtn.DialogResult = DialogResult.None;
+            LogoutBtn.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LogoutBtn.ForeColor = Color.White;
+            LogoutBtn.HoverBackground = Color.FromArgb(15, 28, 243);
+            LogoutBtn.HoverForeColor = Color.Black;
+            LogoutBtn.HoverImageTint = Color.White;
+            LogoutBtn.HoverOutline = Color.Black;
+            LogoutBtn.Image = null;
+            LogoutBtn.ImageAutoCenter = true;
+            LogoutBtn.ImageExpand = new Point(0, 0);
+            LogoutBtn.ImageOffset = new Point(0, 0);
+            LogoutBtn.Location = new Point(1008, 33);
+            LogoutBtn.Margin = new Padding(3, 2, 3, 2);
+            LogoutBtn.Name = "LogoutBtn";
+            LogoutBtn.NormalBackground = Color.FromArgb(233, 30, 99);
+            LogoutBtn.NormalForeColor = Color.White;
+            LogoutBtn.NormalImageTint = Color.White;
+            LogoutBtn.NormalOutline = Color.FromArgb(64, 128, 128, 128);
+            LogoutBtn.OutlineThickness = 1F;
+            LogoutBtn.PressedBackground = Color.WhiteSmoke;
+            LogoutBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
+            LogoutBtn.PressedImageTint = Color.White;
+            LogoutBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
+            LogoutBtn.Rounding = new Padding(8);
+            LogoutBtn.Size = new Size(178, 52);
+            LogoutBtn.TabIndex = 17;
+            LogoutBtn.TextAlignment = StringAlignment.Center;
+            LogoutBtn.TextOffset = new Point(0, 0);
+            LogoutBtn.Click += LogoutBtn_Click;
+            // 
             // EmployeeDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -165,6 +206,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1223, 581);
+            Controls.Add(LogoutBtn);
             Controls.Add(ViewPetBtn);
             Controls.Add(ViewCustomerBtn);
             Controls.Add(CustomerBtn);
@@ -181,5 +223,6 @@
         private CuoreUI.Controls.cuiButton CustomerBtn;
         private CuoreUI.Controls.cuiButton ViewCustomerBtn;
         private CuoreUI.Controls.cuiButton ViewPetBtn;
+        private CuoreUI.Controls.cuiButton LogoutBtn;
     }
 }

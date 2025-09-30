@@ -1,6 +1,6 @@
-﻿namespace PawCare
+﻿namespace PawCare.AdminPanel
 {
-    partial class ListOfPets
+    partial class ListOfOwnerAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -33,8 +33,8 @@
             SortCbx = new CuoreUI.Controls.cuiComboBox();
             SearchBtn = new CuoreUI.Controls.cuiButton();
             SearchtxtBox = new CuoreUI.Controls.cuiTextBox();
-            PetTableData = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)PetTableData).BeginInit();
+            CustomerTableData = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)CustomerTableData).BeginInit();
             SuspendLayout();
             // 
             // BackBtn
@@ -57,7 +57,7 @@
             BackBtn.ImageAutoCenter = true;
             BackBtn.ImageExpand = new Point(0, 0);
             BackBtn.ImageOffset = new Point(0, 0);
-            BackBtn.Location = new Point(977, 542);
+            BackBtn.Location = new Point(979, 539);
             BackBtn.Name = "BackBtn";
             BackBtn.NormalBackground = Color.Firebrick;
             BackBtn.NormalForeColor = Color.White;
@@ -89,7 +89,7 @@
             ColumnSortCbx.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
             ColumnSortCbx.ExpandArrowColor = Color.Gray;
             ColumnSortCbx.ForeColor = Color.Gray;
-            ColumnSortCbx.Location = new Point(744, 28);
+            ColumnSortCbx.Location = new Point(746, 17);
             ColumnSortCbx.Margin = new Padding(4, 3, 4, 3);
             ColumnSortCbx.Name = "ColumnSortCbx";
             ColumnSortCbx.NoSelectionDropdownText = "Empty";
@@ -115,7 +115,7 @@
             SortCbx.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
             SortCbx.ExpandArrowColor = Color.Gray;
             SortCbx.ForeColor = Color.Gray;
-            SortCbx.Location = new Point(934, 28);
+            SortCbx.Location = new Point(936, 17);
             SortCbx.Margin = new Padding(4, 3, 4, 3);
             SortCbx.Name = "SortCbx";
             SortCbx.NoSelectionDropdownText = "Empty";
@@ -147,7 +147,7 @@
             SearchBtn.ImageAutoCenter = true;
             SearchBtn.ImageExpand = new Point(0, 0);
             SearchBtn.ImageOffset = new Point(0, 0);
-            SearchBtn.Location = new Point(248, 28);
+            SearchBtn.Location = new Point(250, 17);
             SearchBtn.Name = "SearchBtn";
             SearchBtn.NormalBackground = Color.White;
             SearchBtn.NormalForeColor = Color.Black;
@@ -177,7 +177,7 @@
             SearchtxtBox.Image = null;
             SearchtxtBox.ImageExpand = new Point(0, 0);
             SearchtxtBox.ImageOffset = new Point(0, 0);
-            SearchtxtBox.Location = new Point(49, 24);
+            SearchtxtBox.Location = new Point(51, 13);
             SearchtxtBox.Margin = new Padding(4);
             SearchtxtBox.Multiline = false;
             SearchtxtBox.Name = "SearchtxtBox";
@@ -194,21 +194,21 @@
             SearchtxtBox.UnderlinedStyle = false;
             SearchtxtBox.ContentChanged += SearchtxtBox_ContentChanged;
             // 
-            // PetTableData
+            // CustomerTableData
             // 
-            PetTableData.AllowUserToAddRows = false;
-            PetTableData.AllowUserToDeleteRows = false;
-            PetTableData.BackgroundColor = Color.White;
-            PetTableData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            PetTableData.GridColor = Color.Black;
-            PetTableData.Location = new Point(38, 94);
-            PetTableData.Name = "PetTableData";
-            PetTableData.ReadOnly = true;
-            PetTableData.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            PetTableData.Size = new Size(1145, 432);
-            PetTableData.TabIndex = 6;
+            CustomerTableData.AllowUserToAddRows = false;
+            CustomerTableData.AllowUserToDeleteRows = false;
+            CustomerTableData.BackgroundColor = Color.White;
+            CustomerTableData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            CustomerTableData.GridColor = Color.Black;
+            CustomerTableData.Location = new Point(40, 90);
+            CustomerTableData.Name = "CustomerTableData";
+            CustomerTableData.ReadOnly = true;
+            CustomerTableData.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            CustomerTableData.Size = new Size(1145, 432);
+            CustomerTableData.TabIndex = 6;
             // 
-            // ListOfPets
+            // ListOfOwnerAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -218,11 +218,12 @@
             Controls.Add(SortCbx);
             Controls.Add(SearchBtn);
             Controls.Add(SearchtxtBox);
-            Controls.Add(PetTableData);
-            Name = "ListOfPets";
-            Text = "ListOfPets";
-            Load += ListOfPets_Load;
-            ((System.ComponentModel.ISupportInitialize)PetTableData).EndInit();
+            Controls.Add(CustomerTableData);
+            Name = "ListOfOwnerAdmin";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ListOfOwnerAdmin";
+            Load += ListOfOwnerAdmin_Load;
+            ((System.ComponentModel.ISupportInitialize)CustomerTableData).EndInit();
             ResumeLayout(false);
         }
 
@@ -233,6 +234,6 @@
         private CuoreUI.Controls.cuiComboBox SortCbx;
         private CuoreUI.Controls.cuiButton SearchBtn;
         private CuoreUI.Controls.cuiTextBox SearchtxtBox;
-        private DataGridView PetTableData;
+        private DataGridView CustomerTableData;
     }
 }

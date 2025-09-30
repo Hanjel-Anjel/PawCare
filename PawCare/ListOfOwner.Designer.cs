@@ -191,7 +191,7 @@
             BackBtn.ImageAutoCenter = true;
             BackBtn.ImageExpand = new Point(0, 0);
             BackBtn.ImageOffset = new Point(0, 0);
-            BackBtn.Location = new Point(975, 529);
+            BackBtn.Location = new Point(975, 540);
             BackBtn.Name = "BackBtn";
             BackBtn.NormalBackground = Color.Firebrick;
             BackBtn.NormalForeColor = Color.White;
@@ -213,7 +213,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1223, 581);
+            ClientSize = new Size(1224, 601);
             Controls.Add(BackBtn);
             Controls.Add(ColumnSortCbx);
             Controls.Add(SortCbx);

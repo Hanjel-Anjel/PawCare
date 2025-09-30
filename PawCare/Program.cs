@@ -1,3 +1,5 @@
+using PawCare.AdminPanel;
+
 namespace PawCare
 {
     internal static class Program

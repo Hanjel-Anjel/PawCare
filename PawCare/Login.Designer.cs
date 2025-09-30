@@ -206,7 +206,7 @@
             SignupBtn.CheckedForeColor = Color.White;
             SignupBtn.CheckedImageTint = Color.White;
             SignupBtn.CheckedOutline = Color.FromArgb(255, 106, 0);
-            SignupBtn.Content = "Go to Sign up";
+            SignupBtn.Content = "Go to Admin";
             SignupBtn.DialogResult = DialogResult.None;
             SignupBtn.Font = new Font("Microsoft Sans Serif", 9.75F);
             SignupBtn.ForeColor = Color.Black;

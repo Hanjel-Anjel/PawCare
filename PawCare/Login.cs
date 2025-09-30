@@ -70,8 +70,8 @@ namespace PawCare
 
         private void SignupBtn_Click(object sender, EventArgs e)
         {
-            SignUp signUpForm = new SignUp();
-            signUpForm.Show();
+            AdminPanel.AdminDashboard adminDashboard = new AdminPanel.AdminDashboard();
+            adminDashboard.Show();
             this.Hide();
         }
 

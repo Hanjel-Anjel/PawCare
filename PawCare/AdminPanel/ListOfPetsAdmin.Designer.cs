@@ -1,6 +1,6 @@
-﻿namespace PawCare
+﻿namespace PawCare.AdminPanel
 {
-    partial class ListOfPets
+    partial class ListOfPetsAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -57,7 +57,7 @@
             BackBtn.ImageAutoCenter = true;
             BackBtn.ImageExpand = new Point(0, 0);
             BackBtn.ImageOffset = new Point(0, 0);
-            BackBtn.Location = new Point(977, 542);
+            BackBtn.Location = new Point(979, 535);
             BackBtn.Name = "BackBtn";
             BackBtn.NormalBackground = Color.Firebrick;
             BackBtn.NormalForeColor = Color.White;
@@ -70,7 +70,7 @@
             BackBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             BackBtn.Rounding = new Padding(8);
             BackBtn.Size = new Size(184, 48);
-            BackBtn.TabIndex = 11;
+            BackBtn.TabIndex = 17;
             BackBtn.TextAlignment = StringAlignment.Center;
             BackBtn.TextOffset = new Point(0, 0);
             BackBtn.Click += BackBtn_Click;
@@ -89,7 +89,7 @@
             ColumnSortCbx.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
             ColumnSortCbx.ExpandArrowColor = Color.Gray;
             ColumnSortCbx.ForeColor = Color.Gray;
-            ColumnSortCbx.Location = new Point(744, 28);
+            ColumnSortCbx.Location = new Point(746, 21);
             ColumnSortCbx.Margin = new Padding(4, 3, 4, 3);
             ColumnSortCbx.Name = "ColumnSortCbx";
             ColumnSortCbx.NoSelectionDropdownText = "Empty";
@@ -98,7 +98,7 @@
             ColumnSortCbx.OutlineThickness = 1F;
             ColumnSortCbx.Rounding = 8;
             ColumnSortCbx.Size = new Size(157, 36);
-            ColumnSortCbx.TabIndex = 10;
+            ColumnSortCbx.TabIndex = 16;
             ColumnSortCbx.SelectedIndexChanged += ColumnSortCbx_SelectedIndexChanged;
             // 
             // SortCbx
@@ -115,7 +115,7 @@
             SortCbx.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
             SortCbx.ExpandArrowColor = Color.Gray;
             SortCbx.ForeColor = Color.Gray;
-            SortCbx.Location = new Point(934, 28);
+            SortCbx.Location = new Point(936, 21);
             SortCbx.Margin = new Padding(4, 3, 4, 3);
             SortCbx.Name = "SortCbx";
             SortCbx.NoSelectionDropdownText = "Empty";
@@ -124,7 +124,7 @@
             SortCbx.OutlineThickness = 1F;
             SortCbx.Rounding = 8;
             SortCbx.Size = new Size(157, 36);
-            SortCbx.TabIndex = 9;
+            SortCbx.TabIndex = 15;
             SortCbx.SelectedIndexChanged += SortCbx_SelectedIndexChanged;
             // 
             // SearchBtn
@@ -147,7 +147,7 @@
             SearchBtn.ImageAutoCenter = true;
             SearchBtn.ImageExpand = new Point(0, 0);
             SearchBtn.ImageOffset = new Point(0, 0);
-            SearchBtn.Location = new Point(248, 28);
+            SearchBtn.Location = new Point(250, 21);
             SearchBtn.Name = "SearchBtn";
             SearchBtn.NormalBackground = Color.White;
             SearchBtn.NormalForeColor = Color.Black;
@@ -160,7 +160,7 @@
             SearchBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             SearchBtn.Rounding = new Padding(8);
             SearchBtn.Size = new Size(76, 31);
-            SearchBtn.TabIndex = 8;
+            SearchBtn.TabIndex = 14;
             SearchBtn.TextAlignment = StringAlignment.Center;
             SearchBtn.TextOffset = new Point(0, 0);
             SearchBtn.Click += SearchBtn_Click;
@@ -177,7 +177,7 @@
             SearchtxtBox.Image = null;
             SearchtxtBox.ImageExpand = new Point(0, 0);
             SearchtxtBox.ImageOffset = new Point(0, 0);
-            SearchtxtBox.Location = new Point(49, 24);
+            SearchtxtBox.Location = new Point(51, 17);
             SearchtxtBox.Margin = new Padding(4);
             SearchtxtBox.Multiline = false;
             SearchtxtBox.Name = "SearchtxtBox";
@@ -189,7 +189,7 @@
             SearchtxtBox.PlaceholderText = "";
             SearchtxtBox.Rounding = new Padding(8);
             SearchtxtBox.Size = new Size(192, 38);
-            SearchtxtBox.TabIndex = 7;
+            SearchtxtBox.TabIndex = 13;
             SearchtxtBox.TextOffset = new Size(0, 0);
             SearchtxtBox.UnderlinedStyle = false;
             SearchtxtBox.ContentChanged += SearchtxtBox_ContentChanged;
@@ -201,14 +201,15 @@
             PetTableData.BackgroundColor = Color.White;
             PetTableData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             PetTableData.GridColor = Color.Black;
-            PetTableData.Location = new Point(38, 94);
+            PetTableData.Location = new Point(40, 87);
             PetTableData.Name = "PetTableData";
             PetTableData.ReadOnly = true;
             PetTableData.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             PetTableData.Size = new Size(1145, 432);
-            PetTableData.TabIndex = 6;
+            PetTableData.TabIndex = 12;
+            PetTableData.CellContentClick += PetTableData_CellContentClick;
             // 
-            // ListOfPets
+            // ListOfPetsAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -219,9 +220,10 @@
             Controls.Add(SearchBtn);
             Controls.Add(SearchtxtBox);
             Controls.Add(PetTableData);
-            Name = "ListOfPets";
-            Text = "ListOfPets";
-            Load += ListOfPets_Load;
+            Name = "ListOfPetsAdmin";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ListOfPetsAdmin";
+            Load += ListOfPetsAdmin_Load;
             ((System.ComponentModel.ISupportInitialize)PetTableData).EndInit();
             ResumeLayout(false);
         }

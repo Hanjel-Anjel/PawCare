@@ -37,5 +37,23 @@ namespace PawCare
             listOfPets.Show();
             this.Close();
         }
+
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure to logout?",
+                "Confirm Logout",
+
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+                );
+
+            if (result == DialogResult.Yes)
+            { 
+                Login login = new Login();
+                login.Show();
+                this.Hide();
+            }
+        }
     }
 }
