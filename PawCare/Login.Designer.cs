@@ -121,6 +121,7 @@
             PasswordTextbox.TabIndex = 3;
             PasswordTextbox.TextOffset = new Size(0, 0);
             PasswordTextbox.UnderlinedStyle = false;
+            PasswordTextbox.ContentChanged += PasswordTextbox_ContentChanged;
             // 
             // LoginButton
             // 
@@ -183,6 +184,7 @@
             ShowPasswordCheckbox.UncheckedForeground = Color.Empty;
             ShowPasswordCheckbox.UncheckedOutlineColor = Color.Gray;
             ShowPasswordCheckbox.UncheckedSymbolColor = Color.Empty;
+            ShowPasswordCheckbox.CheckedChanged += ShowPasswordCheckbox_CheckedChanged;
             // 
             // cuiPictureBox1
             // 

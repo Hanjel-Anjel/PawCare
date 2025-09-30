@@ -38,7 +38,7 @@ namespace PawCare
 
         private void CustomerNameForm_Load(object sender, EventArgs e)
         {
-            suffixCbox.Items = new string[] { "Jr.", "Sr.", "I", "II", "III", "IV", "V" };
+            suffixCbox.Items = new string[] { "Jr.", "Sr.", "II", "III", "IV", "V" };
 
             if (!string.IsNullOrEmpty(customerData.FirstName))
                 FnametxtBox.Content = customerData.FirstName;
@@ -63,29 +63,53 @@ namespace PawCare
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            customerData.FirstName = FnametxtBox.Content;
-            if (!Regex.IsMatch(customerData.FirstName, @"^[A-Za-z]{1,50}$"))
-            {
-                MessageBox.Show("Invalid Name!",
-                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
 
+            customerData.FirstName = FnametxtBox.Content?.Trim();
+            customerData.MiddleName = MnametxtBox.Content?.Trim();
+            customerData.LastName = LnametxtBox.Content?.Trim();
+
+            if (string.IsNullOrWhiteSpace(customerData.FirstName))
+            {
+                MessageBox.Show("Please input First Name.",
+                                "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FnametxtBox.Focus();
+                return;
             }
-            customerData.MiddleName = MnametxtBox.Content;
-            if(!Regex.IsMatch(customerData.MiddleName, @"^[A-Za-z]{1,50}$"))
+            else if (!Regex.IsMatch(customerData.FirstName, @"^[A-Za-z]{1,50}$"))
             {
-                MessageBox.Show("Invalid Name!",
-                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("First Name must contain only letters.",
+                                "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FnametxtBox.Focus();
                 return;
-
             }
-            customerData.LastName = LnametxtBox.Content;
-            if(!Regex.IsMatch(customerData.LastName, @"^[A-Za-z]{1,50}$"))
-            {
-                MessageBox.Show("Invalid Name!",
-                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
 
+            if (string.IsNullOrWhiteSpace(customerData.MiddleName))
+            {
+                MessageBox.Show("Please input Middle Name.",
+                                "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MnametxtBox.Focus();
+                return;
+            }
+            else if (!Regex.IsMatch(customerData.MiddleName, @"^[A-Za-z]{1,50}$"))
+            {
+                MessageBox.Show("Middle Name must contain only letters.",
+                                "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MnametxtBox.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(customerData.LastName))
+            {
+                MessageBox.Show("Please input Last Name.",
+                                "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LnametxtBox.Focus();
+                return;
+            }
+            else if (!Regex.IsMatch(customerData.LastName, @"^[A-Za-z]{1,50}$"))
+            {
+                MessageBox.Show("Last Name must contain only letters.",
+                                "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LnametxtBox.Focus();
+                return;
             }
             customerData.Suffix = suffixCbox.SelectedItem?.ToString() ?? string.Empty;
 

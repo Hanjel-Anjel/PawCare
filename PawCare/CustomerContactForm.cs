@@ -25,10 +25,18 @@ namespace PawCare
         {
             customerData.ContactNumber = ContactNumbertxtBox.Content;
 
-            if (!Regex.IsMatch(customerData.ContactNumber, @"^\d{11}$"))
+            if (string.IsNullOrWhiteSpace(customerData.ContactNumber))
             {
-                MessageBox.Show("❌ Invalid contact number! It must be exactly 11 digits.",
-                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please input Contact number.",
+                                "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ContactNumbertxtBox.Focus();
+                return;
+            }
+
+                if (!Regex.IsMatch(customerData.ContactNumber, @"^\d{11}$"))
+            {
+                MessageBox.Show("Invalid contact number! It must be exactly 11 digits.",
+                        "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
                 
             }
@@ -36,10 +44,18 @@ namespace PawCare
 
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
-            if (!Regex.IsMatch(customerData.Email, pattern))
+            if (string.IsNullOrWhiteSpace(customerData.Email))
             {
-                MessageBox.Show("❌ Invalid email address! Please enter a valid email.",
-                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please input valid Email.",
+                                "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                EmailtxtBox.Focus();
+                return;
+            }
+
+                if (!Regex.IsMatch(customerData.Email, pattern))
+            {
+                MessageBox.Show("Invalid email address! Please enter a valid email.",
+                        "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
