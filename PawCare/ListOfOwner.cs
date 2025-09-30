@@ -57,7 +57,7 @@ namespace PawCare
         {
 
 
-            string connStr = @"Server=localhost\SQLEXPRESS;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
+            string connStr = @"Server=LAPTOP-AQ32RS4T;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
 
             using (SqlConnection con = new SqlConnection(connStr))
             {
