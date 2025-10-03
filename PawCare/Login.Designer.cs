@@ -35,40 +35,44 @@
             PasswordTextbox = new CuoreUI.Controls.cuiTextBox();
             LoginButton = new CuoreUI.Controls.cuiButton();
             ShowPasswordCheckbox = new CuoreUI.Controls.cuiCheckbox();
-            cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
             SignupBtn = new CuoreUI.Controls.cuiButton();
             LoginLabel = new CuoreUI.Controls.cuiLabel();
             SuspendLayout();
             // 
             // usernameLabel
             // 
-            usernameLabel.Content = "Username";
-            usernameLabel.Font = new Font("Microsoft Sans Serif", 14.25F);
+            usernameLabel.BackColor = Color.Transparent;
+            usernameLabel.Content = "Username:";
+            usernameLabel.Font = new Font("Microsoft Sans Serif", 9.75F);
             usernameLabel.HorizontalAlignment = StringAlignment.Near;
-            usernameLabel.Location = new Point(393, 124);
+            usernameLabel.Location = new Point(236, 198);
             usernameLabel.Margin = new Padding(4);
             usernameLabel.Name = "usernameLabel";
-            usernameLabel.Size = new Size(141, 29);
+            usernameLabel.Size = new Size(141, 15);
             usernameLabel.TabIndex = 0;
             usernameLabel.VerticalAlignment = StringAlignment.Near;
             usernameLabel.Load += usernameLabel_Load;
             // 
             // PasswordLabel
             // 
-            PasswordLabel.Content = "Password";
-            PasswordLabel.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PasswordLabel.BackColor = Color.Transparent;
+            PasswordLabel.Content = "Password:";
+            PasswordLabel.Font = new Font("Microsoft Sans Serif", 9.75F);
             PasswordLabel.HorizontalAlignment = StringAlignment.Near;
-            PasswordLabel.Location = new Point(392, 243);
+            PasswordLabel.Location = new Point(236, 272);
             PasswordLabel.Margin = new Padding(4);
             PasswordLabel.Name = "PasswordLabel";
-            PasswordLabel.Size = new Size(141, 29);
+            PasswordLabel.Size = new Size(141, 12);
             PasswordLabel.TabIndex = 1;
             PasswordLabel.VerticalAlignment = StringAlignment.Near;
+            PasswordLabel.Load += PasswordLabel_Load;
             // 
             // UsernameTextbox
             // 
+            UsernameTextbox.BackColor = Color.Transparent;
             UsernameTextbox.BackgroundColor = Color.White;
             UsernameTextbox.Content = "";
+            UsernameTextbox.Cursor = Cursors.IBeam;
             UsernameTextbox.FocusBackgroundColor = Color.White;
             UsernameTextbox.FocusImageTint = Color.White;
             UsernameTextbox.FocusOutlineColor = Color.FromArgb(15, 28, 243);
@@ -77,18 +81,18 @@
             UsernameTextbox.Image = null;
             UsernameTextbox.ImageExpand = new Point(0, 0);
             UsernameTextbox.ImageOffset = new Point(0, 0);
-            UsernameTextbox.Location = new Point(393, 160);
+            UsernameTextbox.Location = new Point(237, 220);
             UsernameTextbox.Margin = new Padding(4, 3, 4, 3);
             UsernameTextbox.Multiline = false;
             UsernameTextbox.Name = "UsernameTextbox";
             UsernameTextbox.NormalImageTint = Color.White;
             UsernameTextbox.OutlineColor = Color.Black;
-            UsernameTextbox.Padding = new Padding(16, 19, 16, 0);
+            UsernameTextbox.Padding = new Padding(16, 12, 16, 0);
             UsernameTextbox.PasswordChar = false;
             UsernameTextbox.PlaceholderColor = SystemColors.WindowText;
             UsernameTextbox.PlaceholderText = "";
             UsernameTextbox.Rounding = new Padding(8);
-            UsernameTextbox.Size = new Size(308, 55);
+            UsernameTextbox.Size = new Size(308, 40);
             UsernameTextbox.TabIndex = 2;
             UsernameTextbox.TextOffset = new Size(0, 0);
             UsernameTextbox.UnderlinedStyle = false;
@@ -96,8 +100,10 @@
             // 
             // PasswordTextbox
             // 
+            PasswordTextbox.BackColor = Color.Transparent;
             PasswordTextbox.BackgroundColor = Color.White;
             PasswordTextbox.Content = "";
+            PasswordTextbox.Cursor = Cursors.IBeam;
             PasswordTextbox.FocusBackgroundColor = Color.White;
             PasswordTextbox.FocusImageTint = Color.White;
             PasswordTextbox.FocusOutlineColor = Color.FromArgb(15, 28, 243);
@@ -106,18 +112,18 @@
             PasswordTextbox.Image = null;
             PasswordTextbox.ImageExpand = new Point(0, 0);
             PasswordTextbox.ImageOffset = new Point(0, 0);
-            PasswordTextbox.Location = new Point(392, 279);
+            PasswordTextbox.Location = new Point(237, 291);
             PasswordTextbox.Margin = new Padding(4, 3, 4, 3);
             PasswordTextbox.Multiline = false;
             PasswordTextbox.Name = "PasswordTextbox";
             PasswordTextbox.NormalImageTint = Color.White;
             PasswordTextbox.OutlineColor = Color.Black;
-            PasswordTextbox.Padding = new Padding(16, 19, 16, 0);
-            PasswordTextbox.PasswordChar = false;
+            PasswordTextbox.Padding = new Padding(16, 12, 16, 0);
+            PasswordTextbox.PasswordChar = true;
             PasswordTextbox.PlaceholderColor = SystemColors.WindowText;
             PasswordTextbox.PlaceholderText = "";
             PasswordTextbox.Rounding = new Padding(8);
-            PasswordTextbox.Size = new Size(308, 55);
+            PasswordTextbox.Size = new Size(308, 40);
             PasswordTextbox.TabIndex = 3;
             PasswordTextbox.TextOffset = new Size(0, 0);
             PasswordTextbox.UnderlinedStyle = false;
@@ -125,6 +131,7 @@
             // 
             // LoginButton
             // 
+            LoginButton.BackColor = Color.Transparent;
             LoginButton.CheckButton = false;
             LoginButton.Checked = false;
             LoginButton.CheckedBackground = Color.FromArgb(15, 28, 243);
@@ -143,7 +150,7 @@
             LoginButton.ImageAutoCenter = true;
             LoginButton.ImageExpand = new Point(0, 0);
             LoginButton.ImageOffset = new Point(0, 0);
-            LoginButton.Location = new Point(433, 419);
+            LoginButton.Location = new Point(286, 372);
             LoginButton.Margin = new Padding(3, 2, 3, 2);
             LoginButton.Name = "LoginButton";
             LoginButton.NormalBackground = Color.FromArgb(15, 28, 243);
@@ -156,7 +163,7 @@
             LoginButton.PressedImageTint = Color.White;
             LoginButton.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             LoginButton.Rounding = new Padding(8);
-            LoginButton.Size = new Size(218, 53);
+            LoginButton.Size = new Size(218, 40);
             LoginButton.TabIndex = 4;
             LoginButton.TextAlignment = StringAlignment.Center;
             LoginButton.TextOffset = new Point(0, 0);
@@ -164,13 +171,15 @@
             // 
             // ShowPasswordCheckbox
             // 
+            ShowPasswordCheckbox.BackColor = Color.FromArgb(210, 211, 221);
+            ShowPasswordCheckbox.BackgroundImageLayout = ImageLayout.None;
             ShowPasswordCheckbox.Checked = false;
             ShowPasswordCheckbox.CheckedForeground = Color.FromArgb(15, 28, 243);
             ShowPasswordCheckbox.CheckedOutlineColor = Color.FromArgb(15, 28, 243);
             ShowPasswordCheckbox.CheckedSymbolColor = Color.White;
             ShowPasswordCheckbox.Content = "Show Password";
-            ShowPasswordCheckbox.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ShowPasswordCheckbox.Location = new Point(570, 369);
+            ShowPasswordCheckbox.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ShowPasswordCheckbox.Location = new Point(436, 336);
             ShowPasswordCheckbox.Margin = new Padding(3, 2, 3, 2);
             ShowPasswordCheckbox.MinimumSize = new Size(14, 12);
             ShowPasswordCheckbox.Name = "ShowPasswordCheckbox";
@@ -178,7 +187,7 @@
             ShowPasswordCheckbox.OutlineThickness = 1F;
             ShowPasswordCheckbox.Rounding = 4;
             ShowPasswordCheckbox.ShowSymbols = true;
-            ShowPasswordCheckbox.Size = new Size(130, 24);
+            ShowPasswordCheckbox.Size = new Size(107, 15);
             ShowPasswordCheckbox.TabIndex = 5;
             ShowPasswordCheckbox.Text = "Show Password";
             ShowPasswordCheckbox.UncheckedForeground = Color.Empty;
@@ -186,23 +195,9 @@
             ShowPasswordCheckbox.UncheckedSymbolColor = Color.Empty;
             ShowPasswordCheckbox.CheckedChanged += ShowPasswordCheckbox_CheckedChanged;
             // 
-            // cuiPictureBox1
-            // 
-            cuiPictureBox1.Content = (Image)resources.GetObject("cuiPictureBox1.Content");
-            cuiPictureBox1.ImageTint = Color.White;
-            cuiPictureBox1.Location = new Point(13, 79);
-            cuiPictureBox1.Margin = new Padding(4);
-            cuiPictureBox1.Name = "cuiPictureBox1";
-            cuiPictureBox1.OutlineThickness = 1F;
-            cuiPictureBox1.PanelOutlineColor = Color.Empty;
-            cuiPictureBox1.Rotation = 0;
-            cuiPictureBox1.Rounding = new Padding(8);
-            cuiPictureBox1.Size = new Size(345, 314);
-            cuiPictureBox1.TabIndex = 6;
-            cuiPictureBox1.Load += cuiPictureBox1_Load;
-            // 
             // SignupBtn
             // 
+            SignupBtn.BackColor = Color.Transparent;
             SignupBtn.CheckButton = false;
             SignupBtn.Checked = false;
             SignupBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
@@ -221,7 +216,7 @@
             SignupBtn.ImageAutoCenter = true;
             SignupBtn.ImageExpand = new Point(0, 0);
             SignupBtn.ImageOffset = new Point(0, 0);
-            SignupBtn.Location = new Point(393, 369);
+            SignupBtn.Location = new Point(346, 416);
             SignupBtn.Margin = new Padding(3, 2, 3, 2);
             SignupBtn.Name = "SignupBtn";
             SignupBtn.NormalBackground = Color.White;
@@ -242,10 +237,11 @@
             // 
             // LoginLabel
             // 
+            LoginLabel.BackColor = Color.Transparent;
             LoginLabel.Content = "Login";
-            LoginLabel.Font = new Font("Microsoft Sans Serif", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LoginLabel.HorizontalAlignment = StringAlignment.Center;
-            LoginLabel.Location = new Point(392, 53);
+            LoginLabel.Location = new Point(237, 173);
             LoginLabel.Margin = new Padding(4);
             LoginLabel.Name = "LoginLabel";
             LoginLabel.Size = new Size(306, 40);
@@ -257,17 +253,19 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(774, 483);
+            Controls.Add(usernameLabel);
             Controls.Add(LoginLabel);
             Controls.Add(SignupBtn);
-            Controls.Add(cuiPictureBox1);
             Controls.Add(ShowPasswordCheckbox);
             Controls.Add(LoginButton);
             Controls.Add(PasswordTextbox);
             Controls.Add(UsernameTextbox);
             Controls.Add(PasswordLabel);
-            Controls.Add(usernameLabel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
@@ -283,7 +281,6 @@
         private CuoreUI.Controls.cuiTextBox PasswordTextbox;
         private CuoreUI.Controls.cuiButton LoginButton;
         private CuoreUI.Controls.cuiCheckbox ShowPasswordCheckbox;
-        private CuoreUI.Controls.cuiPictureBox cuiPictureBox1;
         private CuoreUI.Controls.cuiButton SignupBtn;
         private CuoreUI.Controls.cuiLabel LoginLabel;
     }
