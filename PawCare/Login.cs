@@ -16,16 +16,16 @@ namespace PawCare
             InitializeComponent();
 
         }
-
+        //login form load
         private void Login_Load(object sender, EventArgs e)
         {
 
         }
-
+        //login button
         private void LoginButton_Click(object sender, EventArgs e)
         {
             string connStr = ConfigurationManager.ConnectionStrings["Dbconnection"].ConnectionString;
-
+           
 
             using (SqlConnection con = new SqlConnection(connStr))
             {
@@ -33,8 +33,9 @@ namespace PawCare
                 {
                     con.Open();
 
-                    string email = UsernameTextbox.Content;
+                    string email = UsernameTextbox.Content;   
                     string password = PasswordTextbox.Content;
+
 
                     string query = "SELECT COUNT(*) FROM UserAccount WHERE Email = @Email AND Password = @Password";
 
@@ -55,7 +56,7 @@ namespace PawCare
                         }
                         else
                         {
-                            MessageBox.Show("Invalid Email or Password");
+                            MessageBox.Show("Invalid Email or Password!");
                         }
                     }
                 }
@@ -65,7 +66,7 @@ namespace PawCare
                 }
             }
         }
-
+        //username textbox
         private void UsernameTextbox_ContentChanged(object sender, EventArgs e)
         {
 
@@ -78,22 +79,37 @@ namespace PawCare
             this.Hide();
         }
 
+        //username label
         private void usernameLabel_Load(object sender, EventArgs e)
         {
 
         }
-
+        //show password checkbox
         private void ShowPasswordCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (ShowPasswordCheckbox.Checked)
+            {
+                // Show the password
+                PasswordTextbox.PasswordChar = false;
+            }
+            else
+            {
+                // Hide the password
+                PasswordTextbox.PasswordChar = true;
+            }
         }
-
+        //password textbox
         private void PasswordTextbox_ContentChanged(object sender, EventArgs e)
         {
 
         }
 
         private void cuiPictureBox1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordLabel_Load(object sender, EventArgs e)
         {
 
         }
