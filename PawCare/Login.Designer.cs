@@ -199,6 +199,7 @@
             cuiPictureBox1.Rounding = new Padding(8);
             cuiPictureBox1.Size = new Size(345, 314);
             cuiPictureBox1.TabIndex = 6;
+            cuiPictureBox1.Load += cuiPictureBox1_Load;
             // 
             // SignupBtn
             // 
