@@ -43,7 +43,7 @@
             // 
             usernameLabel.BackColor = Color.Transparent;
             usernameLabel.Content = "Username:";
-            usernameLabel.Font = new Font("Microsoft Sans Serif", 9.75F);
+            usernameLabel.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             usernameLabel.HorizontalAlignment = StringAlignment.Near;
             usernameLabel.Location = new Point(236, 198);
             usernameLabel.Margin = new Padding(4);
