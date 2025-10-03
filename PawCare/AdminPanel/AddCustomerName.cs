@@ -87,5 +87,10 @@ namespace PawCare.AdminPanel
             adminDashboard.Show();
             this.Hide();
         }
+        //customer name label load
+        private void CustomerNameLabel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

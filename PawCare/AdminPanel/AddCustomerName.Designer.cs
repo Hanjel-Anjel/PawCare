@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomerName));
             NextBtn = new CuoreUI.Controls.cuiButton();
             CancelBtn = new CuoreUI.Controls.cuiButton();
             suffixCbox = new CuoreUI.Controls.cuiComboBox();
@@ -43,6 +44,7 @@
             // 
             // NextBtn
             // 
+            NextBtn.BackColor = Color.Transparent;
             NextBtn.CheckButton = false;
             NextBtn.Checked = false;
             NextBtn.CheckedBackground = Color.FromArgb(15, 28, 243);
@@ -51,7 +53,7 @@
             NextBtn.CheckedOutline = Color.FromArgb(15, 28, 243);
             NextBtn.Content = "Next";
             NextBtn.DialogResult = DialogResult.None;
-            NextBtn.Font = new Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            NextBtn.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             NextBtn.ForeColor = Color.White;
             NextBtn.HoverBackground = Color.FromArgb(15, 28, 243);
             NextBtn.HoverForeColor = Color.Black;
@@ -61,7 +63,7 @@
             NextBtn.ImageAutoCenter = true;
             NextBtn.ImageExpand = new Point(0, 0);
             NextBtn.ImageOffset = new Point(0, 0);
-            NextBtn.Location = new Point(357, 547);
+            NextBtn.Location = new Point(407, 408);
             NextBtn.Name = "NextBtn";
             NextBtn.NormalBackground = Color.FromArgb(15, 28, 243);
             NextBtn.NormalForeColor = Color.White;
@@ -72,8 +74,8 @@
             NextBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
             NextBtn.PressedImageTint = Color.White;
             NextBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            NextBtn.Rounding = new Padding(20);
-            NextBtn.Size = new Size(156, 50);
+            NextBtn.Rounding = new Padding(10);
+            NextBtn.Size = new Size(140, 40);
             NextBtn.TabIndex = 27;
             NextBtn.TextAlignment = StringAlignment.Center;
             NextBtn.TextOffset = new Point(0, 0);
@@ -81,6 +83,7 @@
             // 
             // CancelBtn
             // 
+            CancelBtn.BackColor = Color.Transparent;
             CancelBtn.CheckButton = false;
             CancelBtn.Checked = false;
             CancelBtn.CheckedBackground = Color.FromArgb(15, 28, 243);
@@ -89,7 +92,7 @@
             CancelBtn.CheckedOutline = Color.FromArgb(15, 28, 243);
             CancelBtn.Content = "Cancel";
             CancelBtn.DialogResult = DialogResult.None;
-            CancelBtn.Font = new Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CancelBtn.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CancelBtn.ForeColor = Color.Black;
             CancelBtn.HoverBackground = Color.Red;
             CancelBtn.HoverForeColor = Color.Black;
@@ -99,7 +102,7 @@
             CancelBtn.ImageAutoCenter = true;
             CancelBtn.ImageExpand = new Point(0, 0);
             CancelBtn.ImageOffset = new Point(0, 0);
-            CancelBtn.Location = new Point(131, 547);
+            CancelBtn.Location = new Point(239, 408);
             CancelBtn.Name = "CancelBtn";
             CancelBtn.NormalBackground = Color.White;
             CancelBtn.NormalForeColor = Color.Black;
@@ -110,8 +113,8 @@
             CancelBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
             CancelBtn.PressedImageTint = Color.White;
             CancelBtn.PressedOutline = Color.Black;
-            CancelBtn.Rounding = new Padding(20);
-            CancelBtn.Size = new Size(156, 50);
+            CancelBtn.Rounding = new Padding(10);
+            CancelBtn.Size = new Size(140, 40);
             CancelBtn.TabIndex = 26;
             CancelBtn.TextAlignment = StringAlignment.Center;
             CancelBtn.TextOffset = new Point(0, 0);
@@ -119,6 +122,7 @@
             // 
             // suffixCbox
             // 
+            suffixCbox.BackColor = Color.Transparent;
             suffixCbox.BackgroundColor = Color.FromArgb(255, 255, 255);
             suffixCbox.ButtonCursor = Cursors.Arrow;
             suffixCbox.ButtonHoverBackground = Color.FromArgb(15, 28, 243);
@@ -131,7 +135,7 @@
             suffixCbox.DropDownOutlineColor = Color.Black;
             suffixCbox.ExpandArrowColor = Color.Gray;
             suffixCbox.ForeColor = Color.Gray;
-            suffixCbox.Location = new Point(117, 431);
+            suffixCbox.Location = new Point(239, 346);
             suffixCbox.Margin = new Padding(4);
             suffixCbox.Name = "suffixCbox";
             suffixCbox.NoSelectionDropdownText = "Empty";
@@ -139,99 +143,104 @@
             suffixCbox.OutlineColor = Color.Black;
             suffixCbox.OutlineThickness = 1F;
             suffixCbox.Rounding = 8;
-            suffixCbox.Size = new Size(410, 64);
+            suffixCbox.Size = new Size(308, 45);
             suffixCbox.TabIndex = 25;
             // 
             // LnametxtBox
             // 
+            LnametxtBox.BackColor = Color.Transparent;
             LnametxtBox.BackgroundColor = Color.White;
             LnametxtBox.Content = "";
             LnametxtBox.FocusBackgroundColor = Color.White;
             LnametxtBox.FocusImageTint = Color.White;
             LnametxtBox.FocusOutlineColor = Color.FromArgb(15, 28, 243);
-            LnametxtBox.Font = new Font("Poppins", 10.8F);
+            LnametxtBox.Font = new Font("Microsoft Sans Serif", 10.8F);
             LnametxtBox.ForeColor = Color.Black;
             LnametxtBox.Image = null;
             LnametxtBox.ImageExpand = new Point(0, 0);
             LnametxtBox.ImageOffset = new Point(0, 0);
-            LnametxtBox.Location = new Point(117, 326);
+            LnametxtBox.Location = new Point(239, 253);
             LnametxtBox.Margin = new Padding(4, 3, 4, 3);
             LnametxtBox.Multiline = false;
             LnametxtBox.Name = "LnametxtBox";
             LnametxtBox.NormalImageTint = Color.White;
             LnametxtBox.OutlineColor = Color.Black;
-            LnametxtBox.Padding = new Padding(22, 18, 22, 0);
+            LnametxtBox.Padding = new Padding(17, 14, 17, 0);
             LnametxtBox.PasswordChar = false;
             LnametxtBox.PlaceholderColor = SystemColors.WindowText;
             LnametxtBox.PlaceholderText = "";
             LnametxtBox.Rounding = new Padding(8);
-            LnametxtBox.Size = new Size(410, 58);
+            LnametxtBox.Size = new Size(308, 45);
             LnametxtBox.TabIndex = 24;
             LnametxtBox.TextOffset = new Size(0, 0);
             LnametxtBox.UnderlinedStyle = false;
             // 
             // MnametxtBox
             // 
+            MnametxtBox.BackColor = Color.Transparent;
             MnametxtBox.BackgroundColor = Color.White;
             MnametxtBox.Content = "";
             MnametxtBox.FocusBackgroundColor = Color.White;
             MnametxtBox.FocusImageTint = Color.White;
             MnametxtBox.FocusOutlineColor = Color.FromArgb(15, 28, 243);
-            MnametxtBox.Font = new Font("Poppins", 10.8F);
+            MnametxtBox.Font = new Font("Microsoft Sans Serif", 10.8F);
             MnametxtBox.ForeColor = Color.Black;
             MnametxtBox.Image = null;
             MnametxtBox.ImageExpand = new Point(0, 0);
             MnametxtBox.ImageOffset = new Point(0, 0);
-            MnametxtBox.Location = new Point(117, 227);
+            MnametxtBox.Location = new Point(239, 169);
             MnametxtBox.Margin = new Padding(4, 3, 4, 3);
             MnametxtBox.Multiline = false;
             MnametxtBox.Name = "MnametxtBox";
             MnametxtBox.NormalImageTint = Color.White;
             MnametxtBox.OutlineColor = Color.Black;
-            MnametxtBox.Padding = new Padding(22, 18, 22, 0);
+            MnametxtBox.Padding = new Padding(17, 14, 17, 0);
             MnametxtBox.PasswordChar = false;
             MnametxtBox.PlaceholderColor = SystemColors.WindowText;
             MnametxtBox.PlaceholderText = "";
             MnametxtBox.Rounding = new Padding(8);
-            MnametxtBox.Size = new Size(410, 58);
+            MnametxtBox.Size = new Size(308, 45);
             MnametxtBox.TabIndex = 23;
             MnametxtBox.TextOffset = new Size(0, 0);
             MnametxtBox.UnderlinedStyle = false;
             // 
             // FnametxtBox
             // 
+            FnametxtBox.BackColor = Color.Transparent;
             FnametxtBox.BackgroundColor = Color.White;
             FnametxtBox.Content = "";
             FnametxtBox.FocusBackgroundColor = Color.White;
             FnametxtBox.FocusImageTint = Color.White;
             FnametxtBox.FocusOutlineColor = Color.FromArgb(15, 28, 243);
-            FnametxtBox.Font = new Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FnametxtBox.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FnametxtBox.ForeColor = Color.Black;
             FnametxtBox.Image = null;
             FnametxtBox.ImageExpand = new Point(0, 0);
             FnametxtBox.ImageOffset = new Point(0, 0);
-            FnametxtBox.Location = new Point(117, 129);
+            FnametxtBox.Location = new Point(239, 93);
             FnametxtBox.Margin = new Padding(4, 3, 4, 3);
             FnametxtBox.Multiline = false;
             FnametxtBox.Name = "FnametxtBox";
             FnametxtBox.NormalImageTint = Color.White;
             FnametxtBox.OutlineColor = Color.Black;
-            FnametxtBox.Padding = new Padding(22, 18, 22, 0);
+            FnametxtBox.Padding = new Padding(17, 14, 17, 0);
             FnametxtBox.PasswordChar = false;
             FnametxtBox.PlaceholderColor = SystemColors.WindowText;
             FnametxtBox.PlaceholderText = "";
             FnametxtBox.Rounding = new Padding(8);
-            FnametxtBox.Size = new Size(410, 58);
+            FnametxtBox.Size = new Size(308, 45);
             FnametxtBox.TabIndex = 22;
             FnametxtBox.TextOffset = new Size(0, 0);
             FnametxtBox.UnderlinedStyle = false;
             // 
             // cuiLabel4
             // 
+            cuiLabel4.BackColor = Color.Transparent;
             cuiLabel4.Content = "Suffix";
-            cuiLabel4.Font = new Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel4.Font = new Font("Microsoft Sans Serif", 9.75F);
+            cuiLabel4.ForeColor = Color.MidnightBlue;
             cuiLabel4.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel4.Location = new Point(117, 398);
+            cuiLabel4.Location = new Point(239, 313);
             cuiLabel4.Margin = new Padding(4);
             cuiLabel4.Name = "cuiLabel4";
             cuiLabel4.Size = new Size(122, 26);
@@ -240,10 +249,12 @@
             // 
             // cuiLabel3
             // 
+            cuiLabel3.BackColor = Color.Transparent;
             cuiLabel3.Content = "Last\\ Name\\*";
-            cuiLabel3.Font = new Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel3.Font = new Font("Microsoft Sans Serif", 9.75F);
+            cuiLabel3.ForeColor = Color.MidnightBlue;
             cuiLabel3.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel3.Location = new Point(117, 293);
+            cuiLabel3.Location = new Point(239, 220);
             cuiLabel3.Margin = new Padding(4);
             cuiLabel3.Name = "cuiLabel3";
             cuiLabel3.Size = new Size(122, 26);
@@ -252,10 +263,12 @@
             // 
             // cuiLabel2
             // 
+            cuiLabel2.BackColor = Color.Transparent;
             cuiLabel2.Content = "Middle\\ Name\\*";
-            cuiLabel2.Font = new Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel2.Font = new Font("Microsoft Sans Serif", 9.75F);
+            cuiLabel2.ForeColor = Color.MidnightBlue;
             cuiLabel2.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel2.Location = new Point(117, 203);
+            cuiLabel2.Location = new Point(239, 145);
             cuiLabel2.Margin = new Padding(4);
             cuiLabel2.Name = "cuiLabel2";
             cuiLabel2.Size = new Size(122, 26);
@@ -264,10 +277,12 @@
             // 
             // cuiLabel1
             // 
+            cuiLabel1.BackColor = Color.Transparent;
             cuiLabel1.Content = "First\\ Name\\*";
-            cuiLabel1.Font = new Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel1.Font = new Font("Microsoft Sans Serif", 9.75F);
+            cuiLabel1.ForeColor = Color.MidnightBlue;
             cuiLabel1.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel1.Location = new Point(117, 106);
+            cuiLabel1.Location = new Point(239, 70);
             cuiLabel1.Margin = new Padding(4);
             cuiLabel1.Name = "cuiLabel1";
             cuiLabel1.Size = new Size(122, 26);
@@ -276,22 +291,27 @@
             // 
             // CustomerNameLabel
             // 
-            CustomerNameLabel.Content = "Customer\\ Name:";
-            CustomerNameLabel.Font = new Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CustomerNameLabel.BackColor = Color.Transparent;
+            CustomerNameLabel.Content = "Customer\\ Name";
+            CustomerNameLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CustomerNameLabel.ForeColor = Color.MidnightBlue;
             CustomerNameLabel.HorizontalAlignment = StringAlignment.Center;
-            CustomerNameLabel.Location = new Point(17, 39);
+            CustomerNameLabel.Location = new Point(285, 33);
             CustomerNameLabel.Margin = new Padding(4);
             CustomerNameLabel.Name = "CustomerNameLabel";
-            CustomerNameLabel.Size = new Size(306, 40);
+            CustomerNameLabel.Size = new Size(212, 29);
             CustomerNameLabel.TabIndex = 17;
             CustomerNameLabel.VerticalAlignment = StringAlignment.Near;
+            CustomerNameLabel.Load += CustomerNameLabel_Load;
             // 
             // AddCustomerName
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(629, 637);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.None;
+            ClientSize = new Size(774, 483);
             Controls.Add(NextBtn);
             Controls.Add(CancelBtn);
             Controls.Add(suffixCbox);
@@ -303,6 +323,7 @@
             Controls.Add(cuiLabel2);
             Controls.Add(cuiLabel1);
             Controls.Add(CustomerNameLabel);
+            MaximizeBox = false;
             Name = "AddCustomerName";
             Text = "AddCustomerName";
             Load += AddCustomerName_Load;
