@@ -56,7 +56,35 @@ namespace PawCare.AdminPanel
                 {
                     con.Open();
 
-                    string query = "SELECT FirstName, MiddleName, LastName, Suffix, ContactNumber, Email, Created_At FROM Customer";
+                    string query = @"
+                        SELECT 
+                            c.CustomerID,
+                            CONCAT(
+                                COALESCE(c.FirstName, ''), ' ',
+                                COALESCE(c.MiddleName, ''), ' ',
+                                COALESCE(c.LastName, ''), ' ',
+                                COALESCE(c.Suffix, '')
+                            ) AS FullName,
+                            c.FirstName,
+                            c.MiddleName,
+                            c.LastName,
+                            c.Suffix,
+                            c.ContactNumber,
+                            c.Email,
+                            
+                            CONCAT(
+                                COALESCE(ca.HouseNo, ''), ' ',
+                                COALESCE(ca.LotBlock, ''), ' ',
+                                COALESCE(ca.Barangay, ''), ', ',
+                                COALESCE(ca.MunicipalityCity, ''), ', ',
+                                COALESCE(ca.Region, '')
+                            ) AS FullAddress,
+                            c.Created_At
+                        FROM Customer c
+                        LEFT JOIN CustomerAddress ca
+                            ON c.CustomerID = ca.CustomerID";
+
+
 
                     using (SqlDataAdapter adapter = new SqlDataAdapter(query, con))
 
@@ -67,23 +95,32 @@ namespace PawCare.AdminPanel
                             originalTable = dataTable;
                             CustomerTableData.DataSource = dataTable;
 
-                            CustomerTableData.Columns["FirstName"].HeaderText = "First Name";
-                            CustomerTableData.Columns["MiddleName"].HeaderText = "Middle Name";
-                            CustomerTableData.Columns["LastName"].HeaderText = "Last Name";
+                            CustomerTableData.Columns["FullName"].HeaderText = "Customer Name";
                             CustomerTableData.Columns["Suffix"].HeaderText = "Suffix";
                             CustomerTableData.Columns["ContactNumber"].HeaderText = "Contact No.";
+                            CustomerTableData.Columns["FullAddress"].HeaderText = "Address";
                             CustomerTableData.Columns["Email"].HeaderText = "Email Address";
                             CustomerTableData.Columns["Created_At"].HeaderText = "Date Created";
+
+                            CustomerTableData.Columns["FirstName"].Visible = false;
+                            CustomerTableData.Columns["MiddleName"].Visible = false;
+                            CustomerTableData.Columns["LastName"].Visible = false;
+                            CustomerTableData.Columns["Suffix"].Visible = false;
+                            CustomerTableData.Columns["CustomerID"].Visible = false;
+
 
                             // Make columns stretch evenly
                             CustomerTableData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+                            CustomerTableData.Columns["FullAddress"].FillWeight = 250;
+                            CustomerTableData.Columns["FullName"].FillWeight = 150;
+                            CustomerTableData.Columns["Email"].FillWeight = 150;
+                            CustomerTableData.Columns["ContactNumber"].FillWeight = 100;
+                            CustomerTableData.Columns["Created_At"].FillWeight = 100;
                         }
                         ColumnSortCbx.Items = new string[]
                         {
-                            "FirstName",
-                            "MiddleName",
-                            "LastName"
+                            "FullName"
                         };
 
                         SortCbx.Items = new string[] { "A-Z", "Z-A" };
