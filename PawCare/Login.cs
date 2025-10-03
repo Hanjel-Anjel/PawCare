@@ -3,6 +3,8 @@ using Microsoft.Data.SqlClient;
 //using System.Data.SqlClient;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Configuration;
+
 
 
 namespace PawCare
@@ -17,12 +19,13 @@ namespace PawCare
 
         private void Login_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            string connStr = @"Server=LAPTOP-AQ32RS4T;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
+            string connStr = ConfigurationManager.ConnectionStrings["Dbconnection"].ConnectionString;
+
 
             using (SqlConnection con = new SqlConnection(connStr))
             {
@@ -82,10 +85,15 @@ namespace PawCare
 
         private void ShowPasswordCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void PasswordTextbox_ContentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiPictureBox1_Load(object sender, EventArgs e)
         {
 
         }

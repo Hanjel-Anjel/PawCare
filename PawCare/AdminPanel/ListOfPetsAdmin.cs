@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using System.Configuration;
 
 namespace PawCare.AdminPanel
 {
@@ -48,7 +49,7 @@ namespace PawCare.AdminPanel
 
         private void ListOfPetsAdmin_Load(object sender, EventArgs e)
         {
-            string connStr = @"Server=LAPTOP-AQ32RS4T;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
+            string connStr = ConfigurationManager.ConnectionStrings["Dbconnection"].ConnectionString;
 
             using (SqlConnection con = new SqlConnection(connStr))
             {
