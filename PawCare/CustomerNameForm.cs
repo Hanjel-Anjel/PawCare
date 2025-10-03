@@ -75,7 +75,7 @@ namespace PawCare
                 FnametxtBox.Focus();
                 return;
             }
-            else if (!Regex.IsMatch(customerData.FirstName, @"^[A-Za-z]{1,50}$"))
+            else if (!Regex.IsMatch(customerData.FirstName, @"^[A-Za-z\s]{1,50}$"))
             {
                 MessageBox.Show("First Name must contain only letters.",
                                 "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -90,7 +90,7 @@ namespace PawCare
                 MnametxtBox.Focus();
                 return;
             }
-            else if (!Regex.IsMatch(customerData.MiddleName, @"^[A-Za-z]{1,50}$"))
+            else if (!Regex.IsMatch(customerData.MiddleName, @"^[A-Za-z\s]{1,50}$"))
             {
                 MessageBox.Show("Middle Name must contain only letters.",
                                 "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -104,7 +104,7 @@ namespace PawCare
                 LnametxtBox.Focus();
                 return;
             }
-            else if (!Regex.IsMatch(customerData.LastName, @"^[A-Za-z]{1,50}$"))
+            else if (!Regex.IsMatch(customerData.LastName, @"^[A-Za-z\s]{1,50}$"))
             {
                 MessageBox.Show("Last Name must contain only letters.",
                                 "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);

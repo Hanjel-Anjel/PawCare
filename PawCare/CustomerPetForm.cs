@@ -39,7 +39,7 @@ namespace PawCare
                 PetNametxtBox.Focus();
                 return;
             }
-                if (!Regex.IsMatch(customerData.PetName, @"^[A-Za-z]{1,50}$"))
+                if (!Regex.IsMatch(customerData.PetName, @"^[A-Za-z\s]{1,50}$"))
             {
                 MessageBox.Show("Invalid Name!",
                         "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
