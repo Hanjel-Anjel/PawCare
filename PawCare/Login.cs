@@ -17,12 +17,12 @@ namespace PawCare
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            string connStr = @"Server=localhost\SQLEXPRESS;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
+            string connStr = @"Server=LAPTOP-AQ32RS4T;Database=Groom_Veterinary_Clinic;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True;";
 
             using (SqlConnection con = new SqlConnection(connStr))
             {
@@ -76,6 +76,16 @@ namespace PawCare
         }
 
         private void usernameLabel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShowPasswordCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void PasswordTextbox_ContentChanged(object sender, EventArgs e)
         {
 
         }

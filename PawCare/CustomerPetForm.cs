@@ -29,11 +29,19 @@ namespace PawCare
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            
+
             customerData.PetName = PetNametxtBox.Content;
-            if (!Regex.IsMatch(customerData.PetName, @"^[A-Za-z]{1,50}$"))
+
+            if (string.IsNullOrWhiteSpace(customerData.PetName))
             {
-                MessageBox.Show("❌ Invalid Name!",
+                MessageBox.Show("Please input your pet Name.",
+                                "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PetNametxtBox.Focus();
+                return;
+            }
+                if (!Regex.IsMatch(customerData.PetName, @"^[A-Za-z\s]{1,50}$"))
+            {
+                MessageBox.Show("Invalid Name!",
                         "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
