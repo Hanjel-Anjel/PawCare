@@ -53,5 +53,12 @@ namespace PawCare.AdminPanel
                 this.Hide();
             }
         }
+
+        private void AddCustomerBtn_Click(object sender, EventArgs e)
+        {
+            AddCustomerName addCustomerName = new AddCustomerName();
+            addCustomerName.Show();
+            this.Hide();
+        }
     }
 }

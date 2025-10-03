@@ -32,13 +32,13 @@ namespace PawCare
                 ContactNumbertxtBox.Focus();
                 return;
             }
-                
-                if (!Regex.IsMatch(customerData.ContactNumber, @"^\d{11}$"))
+
+            if (!Regex.IsMatch(customerData.ContactNumber, @"^\d{11}$"))
             {
                 MessageBox.Show("Invalid contact number! It must be exactly 11 digits.",
                         "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-                 
+
             }
             customerData.Email = EmailtxtBox.Content;
 
@@ -52,7 +52,7 @@ namespace PawCare
                 return;
             }
 
-                if (!Regex.IsMatch(customerData.Email, pattern))
+            if (!Regex.IsMatch(customerData.Email, pattern))
             {
                 MessageBox.Show("Invalid email address! Please enter a valid email.",
                         "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -72,6 +72,11 @@ namespace PawCare
         }
 
         private void ContactNumbertxtBox_ContentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomerContactForm_Load(object sender, EventArgs e)
         {
 
         }

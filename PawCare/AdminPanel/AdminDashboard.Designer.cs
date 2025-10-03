@@ -277,6 +277,7 @@
             AddCustomerBtn.TabIndex = 10;
             AddCustomerBtn.TextAlignment = StringAlignment.Center;
             AddCustomerBtn.TextOffset = new Point(0, 0);
+            AddCustomerBtn.Click += AddCustomerBtn_Click;
             // 
             // CustomerListBtn
             // 

@@ -223,6 +223,7 @@
             Name = "CustomerContactForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CustomerContactForm";
+            Load += CustomerContactForm_Load;
             ResumeLayout(false);
         }
 
