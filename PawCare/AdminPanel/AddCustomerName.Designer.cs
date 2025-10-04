@@ -323,6 +323,7 @@
             Controls.Add(cuiLabel2);
             Controls.Add(cuiLabel1);
             Controls.Add(CustomerNameLabel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "AddCustomerName";
             Text = "AddCustomerName";
