@@ -221,6 +221,7 @@
             Controls.Add(ContactNumbertxtBox);
             Controls.Add(CustomerNameLabel);
             Name = "AddCustomerContact";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddCustomerContact";
             Load += AddCustomerContact_Load;
             ResumeLayout(false);

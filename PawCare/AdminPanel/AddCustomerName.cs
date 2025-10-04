@@ -20,6 +20,12 @@ namespace PawCare.AdminPanel
             customerData = new AddCustomerData();
         }
 
+        public AddCustomerName(AddCustomerData data)
+        {
+            InitializeComponent();
+            customerData = data;
+        }
+
         private void NextBtn_Click(object sender, EventArgs e)
         {
             customerData.FirstName = FnametxtBox.Content?.Trim();
@@ -79,6 +85,15 @@ namespace PawCare.AdminPanel
         private void AddCustomerName_Load(object sender, EventArgs e)
         {
             suffixCbox.Items = new string[] { "Jr.", "Sr.", "II", "III", "IV", "V" };
+
+            if (!string.IsNullOrEmpty(customerData.FirstName))
+                FnametxtBox.Content = customerData.FirstName;
+            if (!string.IsNullOrEmpty(customerData.MiddleName))
+                MnametxtBox.Content = customerData.MiddleName;
+            if (!string.IsNullOrEmpty(customerData.LastName))
+                LnametxtBox.Content = customerData.LastName;
+            if (!string.IsNullOrEmpty(customerData.Suffix))
+                suffixCbox.SelectedItem = customerData.Suffix;
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)

@@ -326,6 +326,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "AddCustomerName";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddCustomerName";
             Load += AddCustomerName_Load;
             ResumeLayout(false);

@@ -197,5 +197,10 @@ namespace PawCare.AdminPanel
 
             SortData();
         }
+
+        private void CustomerTableData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

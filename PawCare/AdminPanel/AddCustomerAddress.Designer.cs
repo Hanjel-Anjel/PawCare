@@ -350,6 +350,7 @@
             Controls.Add(cuiLabel1);
             Controls.Add(CustomerNameLabel);
             Name = "AddCustomerAddress";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddCustomerAddress";
             Load += AddCustomerAddress_Load;
             ResumeLayout(false);

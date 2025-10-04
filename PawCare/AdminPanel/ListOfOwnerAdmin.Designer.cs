@@ -207,6 +207,7 @@
             CustomerTableData.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             CustomerTableData.Size = new Size(1145, 432);
             CustomerTableData.TabIndex = 6;
+            CustomerTableData.CellContentClick += CustomerTableData_CellContentClick;
             // 
             // ListOfOwnerAdmin
             // 

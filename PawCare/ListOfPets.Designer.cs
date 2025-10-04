@@ -228,6 +228,7 @@
             Controls.Add(PetTableData);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ListOfPets";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ListOfPets";
             Load += ListOfPets_Load;
             ((System.ComponentModel.ISupportInitialize)PetTableData).EndInit();

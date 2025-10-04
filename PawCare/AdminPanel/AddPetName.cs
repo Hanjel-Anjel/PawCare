@@ -1,0 +1,103 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PawCare.AdminPanel
+{
+    public partial class AddPetName : Form
+    {
+        private AddCustomerData customerData;
+
+        public AddPetName(AddCustomerData customerData)
+        {
+            InitializeComponent();
+            this.customerData = customerData;
+        }
+
+
+        private void AddPetName_Load(object sender, EventArgs e)
+        {
+            TypePettxtBox.Items = new string[] { "Cat", "Dog" };
+            PetGendertxtBox.Items = new string[] { "Male", "Female" };
+
+            if (!string.IsNullOrEmpty(customerData.PetName))
+                PetNametxtBox.Content = customerData.PetName;
+            if (!string.IsNullOrEmpty(customerData.PetType))
+                TypePettxtBox.SelectedItem = customerData.PetType;
+            if (!string.IsNullOrEmpty(customerData.Breed))
+                BreedtxtBox.Content = customerData.Breed;
+            if (!string.IsNullOrEmpty(customerData.Gender))
+                PetGendertxtBox.SelectedItem = customerData.Gender;
+            if (customerData.DateOfBirth.HasValue)
+                BdayDatepicker.Content = customerData.DateOfBirth.Value;
+
+
+        }
+
+        private void PetNametxtBox_ContentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TypePettxtBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BdayDatepicker_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BreedtxtBox_ContentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PetGendertxtBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NextBtn_Click(object sender, EventArgs e)
+        {
+            customerData.PetName = PetNametxtBox.Content;
+            if (string.IsNullOrWhiteSpace(customerData.PetName))
+            {
+                MessageBox.Show("Please input your pet Name.",
+                                "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PetNametxtBox.Focus();
+                return;
+            }
+            if (!Regex.IsMatch(customerData.PetName, @"^[A-Za-z\s]{1,50}$"))
+            {
+                MessageBox.Show("Invalid Name!",
+                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            customerData.PetType = TypePettxtBox.SelectedItem.ToString() ?? string.Empty;
+            customerData.Breed = BreedtxtBox.Content;
+            customerData.Gender = PetGendertxtBox.SelectedItem.ToString() ?? string.Empty;
+            customerData.DateOfBirth = BdayDatepicker.Content;
+
+            AddPetInformation petInfoForm = new AddPetInformation(customerData);
+            petInfoForm.Show();
+            this.Hide();
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            AddPetOwnerName addPetOwnerName = new AddPetOwnerName(customerData);
+            addPetOwnerName.Show();
+            this.Hide();
+        }
+    }
+}

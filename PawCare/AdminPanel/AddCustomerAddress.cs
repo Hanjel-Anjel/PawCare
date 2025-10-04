@@ -156,7 +156,9 @@ namespace PawCare.AdminPanel
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
-
+            AddCustomerName addCustomerName = new AddCustomerName(customerData);
+            addCustomerName.Show();
+            this.Hide();
         }
     }
 }

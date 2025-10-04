@@ -159,6 +159,7 @@
             AddPetBtn.TabIndex = 7;
             AddPetBtn.TextAlignment = StringAlignment.Center;
             AddPetBtn.TextOffset = new Point(0, 0);
+            AddPetBtn.Click += AddPetBtn_Click;
             // 
             // PetListBtn
             // 

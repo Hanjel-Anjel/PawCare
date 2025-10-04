@@ -80,7 +80,10 @@ namespace PawCare
 
         private void CustomerContactForm_Load(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrEmpty(customerData.ContactNumber))
+                ContactNumbertxtBox.Content = customerData.ContactNumber;
+            if (!string.IsNullOrEmpty(customerData.Email))
+                EmailtxtBox.Content = customerData.Email;
         }
     }
 }

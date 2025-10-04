@@ -61,6 +61,17 @@ namespace PawCare
             TypePettxtBox.Items = new string[] { "Cat", "Dog" };
             PetGendertxtBox.Items = new string[] { "Male", "Female" };
 
+            if (!string.IsNullOrEmpty(customerData.PetName))
+                PetNametxtBox.Content = customerData.PetName;
+            if (!string.IsNullOrEmpty(customerData.PetType))
+                TypePettxtBox.SelectedItem = customerData.PetType;
+            if (!string.IsNullOrEmpty(customerData.Breed))
+                BreedtxtBox.Content = customerData.Breed;
+            if (!string.IsNullOrEmpty(customerData.Gender))
+                PetGendertxtBox.SelectedItem = customerData.Gender;
+            if (customerData.DateOfBirth.HasValue)
+                BdayDatepicker.Content = customerData.DateOfBirth.Value;
+
         }
 
         private void TypePettxtBox_SelectedIndexChanged(object sender, EventArgs e)
