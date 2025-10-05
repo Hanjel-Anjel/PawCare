@@ -51,7 +51,7 @@
             cuiLabel5.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel5.ForeColor = Color.MidnightBlue;
             cuiLabel5.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel5.Location = new Point(218, 192);
+            cuiLabel5.Location = new Point(239, 195);
             cuiLabel5.Margin = new Padding(4);
             cuiLabel5.Name = "cuiLabel5";
             cuiLabel5.Size = new Size(122, 18);
@@ -69,7 +69,7 @@
             BdayDatepicker.HoverOutline = Color.Blue;
             BdayDatepicker.Icon = (Image)resources.GetObject("BdayDatepicker.Icon");
             BdayDatepicker.IconTint = Color.Black;
-            BdayDatepicker.Location = new Point(218, 210);
+            BdayDatepicker.Location = new Point(239, 213);
             BdayDatepicker.Margin = new Padding(5);
             BdayDatepicker.Name = "BdayDatepicker";
             BdayDatepicker.NormalBackground = Color.White;
@@ -100,7 +100,7 @@
             TypePettxtBox.DropDownOutlineColor = Color.Black;
             TypePettxtBox.ExpandArrowColor = Color.Gray;
             TypePettxtBox.ForeColor = Color.Gray;
-            TypePettxtBox.Location = new Point(218, 147);
+            TypePettxtBox.Location = new Point(239, 150);
             TypePettxtBox.Margin = new Padding(4);
             TypePettxtBox.Name = "TypePettxtBox";
             TypePettxtBox.NoSelectionDropdownText = "Empty";
@@ -133,7 +133,7 @@
             NextBtn.ImageAutoCenter = true;
             NextBtn.ImageExpand = new Point(0, 0);
             NextBtn.ImageOffset = new Point(0, 0);
-            NextBtn.Location = new Point(381, 407);
+            NextBtn.Location = new Point(402, 410);
             NextBtn.Name = "NextBtn";
             NextBtn.NormalBackground = Color.FromArgb(15, 28, 243);
             NextBtn.NormalForeColor = Color.White;
@@ -172,7 +172,7 @@
             BackBtn.ImageAutoCenter = true;
             BackBtn.ImageExpand = new Point(0, 0);
             BackBtn.ImageOffset = new Point(0, 0);
-            BackBtn.Location = new Point(218, 407);
+            BackBtn.Location = new Point(239, 410);
             BackBtn.Name = "BackBtn";
             BackBtn.NormalBackground = Color.White;
             BackBtn.NormalForeColor = Color.Black;
@@ -205,7 +205,7 @@
             PetGendertxtBox.DropDownOutlineColor = Color.Black;
             PetGendertxtBox.ExpandArrowColor = Color.Gray;
             PetGendertxtBox.ForeColor = Color.Gray;
-            PetGendertxtBox.Location = new Point(218, 339);
+            PetGendertxtBox.Location = new Point(239, 342);
             PetGendertxtBox.Margin = new Padding(4);
             PetGendertxtBox.Name = "PetGendertxtBox";
             PetGendertxtBox.NoSelectionDropdownText = "Empty";
@@ -230,7 +230,7 @@
             BreedtxtBox.Image = null;
             BreedtxtBox.ImageExpand = new Point(0, 0);
             BreedtxtBox.ImageOffset = new Point(0, 0);
-            BreedtxtBox.Location = new Point(218, 276);
+            BreedtxtBox.Location = new Point(239, 279);
             BreedtxtBox.Margin = new Padding(4, 3, 4, 3);
             BreedtxtBox.Multiline = false;
             BreedtxtBox.Name = "BreedtxtBox";
@@ -260,7 +260,7 @@
             PetNametxtBox.Image = null;
             PetNametxtBox.ImageExpand = new Point(0, 0);
             PetNametxtBox.ImageOffset = new Point(0, 0);
-            PetNametxtBox.Location = new Point(218, 82);
+            PetNametxtBox.Location = new Point(239, 85);
             PetNametxtBox.Margin = new Padding(4, 3, 4, 3);
             PetNametxtBox.Multiline = false;
             PetNametxtBox.Name = "PetNametxtBox";
@@ -284,7 +284,7 @@
             cuiLabel4.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel4.ForeColor = Color.MidnightBlue;
             cuiLabel4.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel4.Location = new Point(218, 324);
+            cuiLabel4.Location = new Point(239, 327);
             cuiLabel4.Margin = new Padding(4);
             cuiLabel4.Name = "cuiLabel4";
             cuiLabel4.Size = new Size(122, 19);
@@ -298,7 +298,7 @@
             cuiLabel3.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel3.ForeColor = Color.MidnightBlue;
             cuiLabel3.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel3.Location = new Point(218, 258);
+            cuiLabel3.Location = new Point(239, 261);
             cuiLabel3.Margin = new Padding(4);
             cuiLabel3.Name = "cuiLabel3";
             cuiLabel3.Size = new Size(122, 21);
@@ -312,7 +312,7 @@
             cuiLabel2.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel2.ForeColor = Color.MidnightBlue;
             cuiLabel2.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel2.Location = new Point(218, 129);
+            cuiLabel2.Location = new Point(239, 132);
             cuiLabel2.Margin = new Padding(4);
             cuiLabel2.Name = "cuiLabel2";
             cuiLabel2.Size = new Size(122, 26);
@@ -326,7 +326,7 @@
             cuiLabel1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel1.ForeColor = Color.MidnightBlue;
             cuiLabel1.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel1.Location = new Point(218, 59);
+            cuiLabel1.Location = new Point(239, 62);
             cuiLabel1.Margin = new Padding(4);
             cuiLabel1.Name = "cuiLabel1";
             cuiLabel1.Size = new Size(122, 26);
@@ -340,7 +340,7 @@
             CustomerNameLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CustomerNameLabel.ForeColor = Color.MidnightBlue;
             CustomerNameLabel.HorizontalAlignment = StringAlignment.Center;
-            CustomerNameLabel.Location = new Point(216, 30);
+            CustomerNameLabel.Location = new Point(237, 33);
             CustomerNameLabel.Margin = new Padding(4);
             CustomerNameLabel.Name = "CustomerNameLabel";
             CustomerNameLabel.Size = new Size(305, 29);
@@ -351,6 +351,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.FILL_UP_FORM_PET_BACKGROUND;
             ClientSize = new Size(774, 483);
             Controls.Add(cuiLabel5);
             Controls.Add(BdayDatepicker);

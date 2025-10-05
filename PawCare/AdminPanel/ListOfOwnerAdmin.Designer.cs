@@ -39,6 +39,7 @@
             // 
             // BackBtn
             // 
+            BackBtn.BackColor = Color.Transparent;
             BackBtn.CheckButton = false;
             BackBtn.Checked = false;
             BackBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
@@ -57,7 +58,7 @@
             BackBtn.ImageAutoCenter = true;
             BackBtn.ImageExpand = new Point(0, 0);
             BackBtn.ImageOffset = new Point(0, 0);
-            BackBtn.Location = new Point(979, 539);
+            BackBtn.Location = new Point(1053, 526);
             BackBtn.Name = "BackBtn";
             BackBtn.NormalBackground = Color.Firebrick;
             BackBtn.NormalForeColor = Color.White;
@@ -69,7 +70,7 @@
             BackBtn.PressedImageTint = Color.White;
             BackBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             BackBtn.Rounding = new Padding(8);
-            BackBtn.Size = new Size(184, 48);
+            BackBtn.Size = new Size(140, 40);
             BackBtn.TabIndex = 11;
             BackBtn.TextAlignment = StringAlignment.Center;
             BackBtn.TextOffset = new Point(0, 0);
@@ -77,6 +78,7 @@
             // 
             // ColumnSortCbx
             // 
+            ColumnSortCbx.BackColor = Color.Transparent;
             ColumnSortCbx.BackgroundColor = Color.FromArgb(255, 255, 255);
             ColumnSortCbx.ButtonCursor = Cursors.Arrow;
             ColumnSortCbx.ButtonHoverBackground = Color.FromArgb(192, 255, 106, 0);
@@ -89,7 +91,7 @@
             ColumnSortCbx.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
             ColumnSortCbx.ExpandArrowColor = Color.Gray;
             ColumnSortCbx.ForeColor = Color.Gray;
-            ColumnSortCbx.Location = new Point(746, 17);
+            ColumnSortCbx.Location = new Point(846, 42);
             ColumnSortCbx.Margin = new Padding(4, 3, 4, 3);
             ColumnSortCbx.Name = "ColumnSortCbx";
             ColumnSortCbx.NoSelectionDropdownText = "Empty";
@@ -103,6 +105,7 @@
             // 
             // SortCbx
             // 
+            SortCbx.BackColor = Color.Transparent;
             SortCbx.BackgroundColor = Color.FromArgb(255, 255, 255);
             SortCbx.ButtonCursor = Cursors.Arrow;
             SortCbx.ButtonHoverBackground = Color.FromArgb(192, 255, 106, 0);
@@ -115,7 +118,7 @@
             SortCbx.DropDownOutlineColor = Color.FromArgb(30, 255, 255, 255);
             SortCbx.ExpandArrowColor = Color.Gray;
             SortCbx.ForeColor = Color.Gray;
-            SortCbx.Location = new Point(936, 17);
+            SortCbx.Location = new Point(1036, 42);
             SortCbx.Margin = new Padding(4, 3, 4, 3);
             SortCbx.Name = "SortCbx";
             SortCbx.NoSelectionDropdownText = "Empty";
@@ -129,6 +132,7 @@
             // 
             // SearchBtn
             // 
+            SearchBtn.BackColor = Color.Transparent;
             SearchBtn.CheckButton = false;
             SearchBtn.Checked = false;
             SearchBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
@@ -147,7 +151,7 @@
             SearchBtn.ImageAutoCenter = true;
             SearchBtn.ImageExpand = new Point(0, 0);
             SearchBtn.ImageOffset = new Point(0, 0);
-            SearchBtn.Location = new Point(250, 17);
+            SearchBtn.Location = new Point(247, 46);
             SearchBtn.Name = "SearchBtn";
             SearchBtn.NormalBackground = Color.White;
             SearchBtn.NormalForeColor = Color.Black;
@@ -167,6 +171,7 @@
             // 
             // SearchtxtBox
             // 
+            SearchtxtBox.BackColor = Color.Transparent;
             SearchtxtBox.BackgroundColor = Color.White;
             SearchtxtBox.Content = "";
             SearchtxtBox.FocusBackgroundColor = Color.White;
@@ -177,7 +182,7 @@
             SearchtxtBox.Image = null;
             SearchtxtBox.ImageExpand = new Point(0, 0);
             SearchtxtBox.ImageOffset = new Point(0, 0);
-            SearchtxtBox.Location = new Point(51, 13);
+            SearchtxtBox.Location = new Point(48, 42);
             SearchtxtBox.Margin = new Padding(4);
             SearchtxtBox.Multiline = false;
             SearchtxtBox.Name = "SearchtxtBox";
@@ -201,7 +206,7 @@
             CustomerTableData.BackgroundColor = Color.White;
             CustomerTableData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             CustomerTableData.GridColor = Color.Black;
-            CustomerTableData.Location = new Point(40, 90);
+            CustomerTableData.Location = new Point(48, 84);
             CustomerTableData.Name = "CustomerTableData";
             CustomerTableData.ReadOnly = true;
             CustomerTableData.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -213,6 +218,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.LIST_BACKGROUND;
             ClientSize = new Size(1224, 601);
             Controls.Add(BackBtn);
             Controls.Add(ColumnSortCbx);

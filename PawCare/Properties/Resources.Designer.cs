@@ -61,6 +61,36 @@ namespace PawCare.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FILL_UP_FORM_pet_2_BACKGROUND {
+            get {
+                object obj = ResourceManager.GetObject("FILL UP FORM pet 2 BACKGROUND", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FILL_UP_FORM_PET_BACKGROUND {
+            get {
+                object obj = ResourceManager.GetObject("FILL UP FORM PET BACKGROUND", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LIST_BACKGROUND {
+            get {
+                object obj = ResourceManager.GetObject("LIST BACKGROUND", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] Poppins_Bold {

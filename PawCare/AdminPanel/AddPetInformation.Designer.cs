@@ -46,7 +46,7 @@
             // 
             PetPicBox.BackColor = Color.Transparent;
             PetPicBox.BorderStyle = BorderStyle.FixedSingle;
-            PetPicBox.Location = new Point(446, 154);
+            PetPicBox.Location = new Point(456, 157);
             PetPicBox.Name = "PetPicBox";
             PetPicBox.Size = new Size(224, 195);
             PetPicBox.TabIndex = 61;
@@ -74,7 +74,7 @@
             SaveBtn.ImageAutoCenter = true;
             SaveBtn.ImageExpand = new Point(0, 0);
             SaveBtn.ImageOffset = new Point(0, 0);
-            SaveBtn.Location = new Point(488, 376);
+            SaveBtn.Location = new Point(498, 379);
             SaveBtn.Name = "SaveBtn";
             SaveBtn.NormalBackground = Color.FromArgb(15, 28, 243);
             SaveBtn.NormalForeColor = Color.White;
@@ -105,7 +105,7 @@
             WeighttxtBox.Image = null;
             WeighttxtBox.ImageExpand = new Point(0, 0);
             WeighttxtBox.ImageOffset = new Point(0, 0);
-            WeighttxtBox.Location = new Point(98, 226);
+            WeighttxtBox.Location = new Point(108, 229);
             WeighttxtBox.Margin = new Padding(4, 3, 4, 3);
             WeighttxtBox.Multiline = false;
             WeighttxtBox.Name = "WeighttxtBox";
@@ -129,7 +129,7 @@
             cuiLabel6.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel6.ForeColor = Color.MidnightBlue;
             cuiLabel6.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel6.Location = new Point(98, 130);
+            cuiLabel6.Location = new Point(108, 133);
             cuiLabel6.Margin = new Padding(4);
             cuiLabel6.Name = "cuiLabel6";
             cuiLabel6.Size = new Size(122, 23);
@@ -151,7 +151,7 @@
             TypeServiceCbx.DropDownOutlineColor = Color.Black;
             TypeServiceCbx.ExpandArrowColor = Color.Gray;
             TypeServiceCbx.ForeColor = Color.Gray;
-            TypeServiceCbx.Location = new Point(98, 154);
+            TypeServiceCbx.Location = new Point(108, 157);
             TypeServiceCbx.Margin = new Padding(4);
             TypeServiceCbx.Name = "TypeServiceCbx";
             TypeServiceCbx.NoSelectionDropdownText = "Empty";
@@ -184,7 +184,7 @@
             BackBtn.ImageAutoCenter = true;
             BackBtn.ImageExpand = new Point(0, 0);
             BackBtn.ImageOffset = new Point(0, 0);
-            BackBtn.Location = new Point(136, 376);
+            BackBtn.Location = new Point(146, 379);
             BackBtn.Name = "BackBtn";
             BackBtn.NormalBackground = Color.White;
             BackBtn.NormalForeColor = Color.Black;
@@ -217,7 +217,7 @@
             VetCbx.DropDownOutlineColor = Color.Black;
             VetCbx.ExpandArrowColor = Color.Gray;
             VetCbx.ForeColor = Color.Gray;
-            VetCbx.Location = new Point(98, 300);
+            VetCbx.Location = new Point(108, 303);
             VetCbx.Margin = new Padding(4);
             VetCbx.Name = "VetCbx";
             VetCbx.NoSelectionDropdownText = "Empty";
@@ -236,7 +236,7 @@
             cuiLabel4.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel4.ForeColor = Color.MidnightBlue;
             cuiLabel4.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel4.Location = new Point(488, 130);
+            cuiLabel4.Location = new Point(498, 133);
             cuiLabel4.Margin = new Padding(4);
             cuiLabel4.Name = "cuiLabel4";
             cuiLabel4.Size = new Size(152, 23);
@@ -250,7 +250,7 @@
             cuiLabel3.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel3.ForeColor = Color.MidnightBlue;
             cuiLabel3.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel3.Location = new Point(98, 278);
+            cuiLabel3.Location = new Point(108, 281);
             cuiLabel3.Margin = new Padding(4);
             cuiLabel3.Name = "cuiLabel3";
             cuiLabel3.Size = new Size(178, 20);
@@ -264,7 +264,7 @@
             cuiLabel2.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cuiLabel2.ForeColor = Color.MidnightBlue;
             cuiLabel2.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel2.Location = new Point(98, 207);
+            cuiLabel2.Location = new Point(108, 210);
             cuiLabel2.Margin = new Padding(4);
             cuiLabel2.Name = "cuiLabel2";
             cuiLabel2.Size = new Size(122, 21);
@@ -278,7 +278,7 @@
             CustomerNameLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CustomerNameLabel.ForeColor = Color.MidnightBlue;
             CustomerNameLabel.HorizontalAlignment = StringAlignment.Center;
-            CustomerNameLabel.Location = new Point(233, 38);
+            CustomerNameLabel.Location = new Point(243, 41);
             CustomerNameLabel.Margin = new Padding(4);
             CustomerNameLabel.Name = "CustomerNameLabel";
             CustomerNameLabel.Size = new Size(301, 34);
@@ -289,6 +289,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.FILL_UP_FORM_pet_2_BACKGROUND;
             ClientSize = new Size(774, 483);
             Controls.Add(PetPicBox);
             Controls.Add(SaveBtn);
