@@ -157,6 +157,13 @@ namespace PawCare.AdminPanel
             {
                 // If empty, reset to full table
                 CustomerTableData.DataSource = originalTable;
+
+                CustomerTableData.Columns["FirstName"].Visible = false;
+                CustomerTableData.Columns["MiddleName"].Visible = false;
+                CustomerTableData.Columns["LastName"].Visible = false;
+                CustomerTableData.Columns["Suffix"].Visible = false;
+                CustomerTableData.Columns["CustomerID"].Visible = false;
+
                 return;
             }
 

@@ -128,6 +128,8 @@ namespace PawCare.AdminPanel
             {
                 // If empty, reset to full table
                 PetTableData.DataSource = originalTable;
+
+
                 return;
             }
 
