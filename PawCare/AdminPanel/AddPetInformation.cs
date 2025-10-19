@@ -15,6 +15,13 @@ namespace PawCare.AdminPanel
     public partial class AddPetInformation : Form
     {
         private AddCustomerData customerData;
+
+        // Helper list to store ServiceIDs
+        private List<int> _serviceIds = new List<int>();
+
+        // Helper list to store VeterinarianIDs
+        private List<int> _vetIds = new List<int>();
+
         public AddPetInformation(AddCustomerData customerData)
         {
             InitializeComponent();
@@ -23,8 +30,55 @@ namespace PawCare.AdminPanel
 
         private void AddPetInformation_Load(object sender, EventArgs e)
         {
-            TypeServiceCbx.Items = new string[] { "Grooming", "Vaccination", "Treatment", "Check-up" };
-            VetCbx.Items = new string[] { "Armario", "Maco", "Asierto", "Manzanero" };
+            string connectionString = ConfigurationManager.ConnectionStrings["Dbconnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    // ------------------ LOAD SERVICES ------------------
+                    string query = "SELECT ServiceID, ServiceName FROM Service";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        List<string> serviceNames = new List<string>();
+                        _serviceIds.Clear();
+
+                        while (reader.Read())
+                        {
+                            serviceNames.Add(reader["ServiceName"].ToString());
+                            _serviceIds.Add(Convert.ToInt32(reader["ServiceID"]));
+                        }
+
+                        TypeServiceCbx.Items = serviceNames.ToArray();
+                    }
+
+                    // ------------------ LOAD VETERINARIANS ------------------
+                    string vetQuery = "SELECT VeterinarianID, LastName FROM Veterinarian";
+
+                    using (SqlCommand vetCmd = new SqlCommand(vetQuery, conn))
+                    using (SqlDataReader vetReader = vetCmd.ExecuteReader())
+                    {
+                        List<string> vetNames = new List<string>();
+                        _vetIds.Clear();
+
+                        while (vetReader.Read())
+                        {
+                            vetNames.Add(vetReader["LastName"].ToString());
+                            _vetIds.Add(Convert.ToInt32(vetReader["VeterinarianID"]));
+                        }
+
+                        VetCbx.Items = vetNames.ToArray();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading services or veterinarians: " + ex.Message);
+                }
+            }
         }
 
         private void TypeServiceCbx_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,11 +123,13 @@ namespace PawCare.AdminPanel
                 {
                     conn.Open();
 
+                    // ------------------ 1. INSERT PET ------------------
                     string insertPetQuery = @"
                         INSERT INTO Pet (CustomerID, PetName, PetType, Breed, Gender, DateOfBirth)
                         OUTPUT INSERTED.PetID
                         VALUES (@CustomerID, @PetName, @PetType, @Breed, @Gender, @DateOfBirth)";
 
+                    int newPetId;
                     using (SqlCommand cmd = new SqlCommand(insertPetQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("@CustomerID", customerData.CustomerID);
@@ -87,12 +143,39 @@ namespace PawCare.AdminPanel
                         else
                             cmd.Parameters.AddWithValue("@DateOfBirth", DBNull.Value);
 
-                        int newPetId = (int)cmd.ExecuteScalar();
-
-                        MessageBox.Show("Pet saved successfully!");
+                        newPetId = (int)cmd.ExecuteScalar();
                     }
 
-                    
+                    // ------------------ 2. INSERT SERVICE RECORD ------------------
+                    string insertServiceQuery = @"
+                        INSERT INTO ServiceRecord (PetID, ServiceTypeID, VeterinarianID, Weight, Picture)
+                        VALUES (@PetID, @ServiceTypeID, @VeterinarianID, @Weight, @Picture)";
+
+                    using (SqlCommand cmd2 = new SqlCommand(insertServiceQuery, conn))
+                    {
+                        cmd2.Parameters.AddWithValue("@PetID", newPetId);
+                        cmd2.Parameters.AddWithValue("@ServiceTypeID", _serviceIds[TypeServiceCbx.SelectedIndex]);
+                        cmd2.Parameters.AddWithValue("@VeterinarianID", _vetIds[VetCbx.SelectedIndex]);
+                        cmd2.Parameters.AddWithValue("@Weight", customerData.Weight ?? (object)DBNull.Value);
+
+                        // Handle picture
+                        if (PetPicBox.Image != null)
+                        {
+                            using (var ms = new System.IO.MemoryStream())
+                            {
+                                PetPicBox.Image.Save(ms, PetPicBox.Image.RawFormat);
+                                cmd2.Parameters.AddWithValue("@Picture", ms.ToArray());
+                            }
+                        }
+                        else
+                            cmd2.Parameters.AddWithValue("@Picture", DBNull.Value);
+
+                        cmd2.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Pet and Service Record saved successfully!");
+
+
 
                     customerData.CustomerID = 0;
                     customerData.FirstName = null;

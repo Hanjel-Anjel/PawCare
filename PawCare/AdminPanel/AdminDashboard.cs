@@ -67,5 +67,34 @@ namespace PawCare.AdminPanel
             addPetOwnerName.Show();
             this.Hide();
         }
+
+        private void AddServiceBtn_Click(object sender, EventArgs e)
+        {
+            AddCustomerData customerData = new AddCustomerData();
+            AddService addService = new AddService(customerData);
+            addService.Show();
+            this.Hide();
+        }
+
+        private void ServiceListBtn_Click(object sender, EventArgs e)
+        {
+            ListOfService listOfService = new ListOfService();
+            listOfService.Show();
+            this.Hide();
+        }
+
+        private void AddVetBtn_Click(object sender, EventArgs e)
+        {
+            AddVetName addVetName = new AddVetName();
+            addVetName.Show();
+            this.Hide();
+        }
+
+        private void VetListBtn_Click(object sender, EventArgs e)
+        {
+            ListOfVetAdmin listOfVetAdmin = new ListOfVetAdmin();
+            listOfVetAdmin.Show();
+            this.Hide();
+        }
     }
 }

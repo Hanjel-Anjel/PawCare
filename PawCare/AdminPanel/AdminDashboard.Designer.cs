@@ -81,6 +81,7 @@
             AddVetBtn.TabIndex = 5;
             AddVetBtn.TextAlignment = StringAlignment.Center;
             AddVetBtn.TextOffset = new Point(0, 0);
+            AddVetBtn.Click += AddVetBtn_Click;
             // 
             // VetListBtn
             // 
@@ -120,6 +121,7 @@
             VetListBtn.TabIndex = 6;
             VetListBtn.TextAlignment = StringAlignment.Center;
             VetListBtn.TextOffset = new Point(0, 0);
+            VetListBtn.Click += VetListBtn_Click;
             // 
             // AddPetBtn
             // 
@@ -397,6 +399,7 @@
             AddServiceBtn.TabIndex = 13;
             AddServiceBtn.TextAlignment = StringAlignment.Center;
             AddServiceBtn.TextOffset = new Point(0, 0);
+            AddServiceBtn.Click += AddServiceBtn_Click;
             // 
             // ServiceListBtn
             // 
@@ -436,6 +439,7 @@
             ServiceListBtn.TabIndex = 14;
             ServiceListBtn.TextAlignment = StringAlignment.Center;
             ServiceListBtn.TextOffset = new Point(0, 0);
+            ServiceListBtn.Click += ServiceListBtn_Click;
             // 
             // cuiLabel1
             // 

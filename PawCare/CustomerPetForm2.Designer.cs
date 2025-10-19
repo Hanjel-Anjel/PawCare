@@ -107,6 +107,7 @@
             VetCbx.Rounding = 8;
             VetCbx.Size = new Size(308, 45);
             VetCbx.TabIndex = 38;
+            VetCbx.SelectedIndexChanged += VetCbx_SelectedIndexChanged;
             // 
             // cuiLabel4
             // 
@@ -234,6 +235,7 @@
             WeighttxtBox.TabIndex = 47;
             WeighttxtBox.TextOffset = new Size(0, 0);
             WeighttxtBox.UnderlinedStyle = false;
+            WeighttxtBox.ContentChanged += WeighttxtBox_ContentChanged;
             // 
             // SaveBtn
             // 

@@ -14,11 +14,16 @@ using System.Configuration;
 namespace PawCare
 {
     public partial class CustomerPetForm2 : Form
-
-
-
     {
+        // Store customer registration data
         private CustomerRegistrationData customerData;
+
+        // Helper list to store ServiceIDs
+        private List<int> _serviceIds = new List<int>();
+
+        // Helper list to store VeterinarianIDs
+        private List<int> _vetIds = new List<int>();
+
         public CustomerPetForm2(CustomerRegistrationData customerData)
         {
             InitializeComponent();
@@ -40,6 +45,20 @@ namespace PawCare
         //save button
         private void SaveBtn_Click(object sender, EventArgs e)
         {
+            // Ensure service and vet are selected
+            if (TypeServiceCbx.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a service.");
+                return;
+            }
+
+            if (VetCbx.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a veterinarian.");
+                return;
+            }
+
+
             customerData.ServiceType = TypeServiceCbx.SelectedItem.ToString() ?? string.Empty;
             customerData.Weight = WeighttxtBox.Content;
             customerData.AssignedVet = VetCbx.SelectedItem.ToString() ?? string.Empty;
@@ -116,16 +135,28 @@ namespace PawCare
                     }
 
                     // Service Record Query
+
+                    // Get ServiceID based on selected service
+                    int selectedServiceId = GetServiceIdByName(customerData.ServiceType, conn);
+
+                    // Get VeterinarianID (if you also save vets in DB, otherwise use 0 or null)
+                    //int selectedVetId = GetVeterinarianIdByName(customerData.AssignedVet, conn); // Create similar method for vets
+
+
                     string insertServiceQuery = @"
-                        INSERT INTO ServiceRecord (PetID, ServiceType, Weight, AssignedVeterinarian)
-                        VALUES (@PetID, @ServiceType, @Weight, @AssignedVet)";
+                    INSERT INTO ServiceRecord (PetID, ServiceTypeID, Weight, VeterinarianID)
+                    VALUES (@PetID, @ServiceTypeID, @Weight, @VeterinarianID)";
 
                     using (SqlCommand cmd = new SqlCommand(insertServiceQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("@PetID", newPetId);
-                        cmd.Parameters.AddWithValue("@ServiceType", string.IsNullOrEmpty(customerData.ServiceType) ? (object)DBNull.Value : customerData.ServiceType);
+                        cmd.Parameters.AddWithValue("@ServiceTypeID", selectedServiceId);
                         cmd.Parameters.AddWithValue("@Weight", string.IsNullOrEmpty(customerData.Weight) ? (object)DBNull.Value : customerData.Weight);
-                        cmd.Parameters.AddWithValue("@AssignedVet", string.IsNullOrEmpty(customerData.AssignedVet) ? (object)DBNull.Value : customerData.AssignedVet);
+
+                        
+                        int selectedVetId = _vetIds[VetCbx.SelectedIndex];
+                        cmd.Parameters.AddWithValue("@VeterinarianID", selectedVetId);
+
 
                         cmd.ExecuteNonQuery();
                     }
@@ -172,10 +203,71 @@ namespace PawCare
 
         }
 
+        // Get ServiceID by ServiceName
+        // Helpter method to get ServiceID by ServiceName
+        private int GetServiceIdByName(string serviceName, SqlConnection conn)
+        {
+            string query = "SELECT ServiceID FROM Service WHERE ServiceName = @ServiceName";
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@ServiceName", serviceName);
+                object result = cmd.ExecuteScalar();
+                return result != null ? Convert.ToInt32(result) : 0;
+            }
+        }
+
+
         private void CustomerPetForm2_Load(object sender, EventArgs e)
         {
-            TypeServiceCbx.Items = new string[] { "Grooming", "Vaccination", "Treatment", "Check-up" };
-            VetCbx.Items = new string[] { "Armario", "Maco", "Asierto", "Manzanero" };
+            string connectionString = ConfigurationManager.ConnectionStrings["Dbconnection"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    // ------------------ LOAD SERVICES ------------------
+                    string query = "SELECT ServiceID, ServiceName FROM Service";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        List<string> serviceNames = new List<string>();
+                        _serviceIds.Clear();
+
+                        while (reader.Read())
+                        {
+                            serviceNames.Add(reader["ServiceName"].ToString());
+                            _serviceIds.Add(Convert.ToInt32(reader["ServiceID"]));
+                        }
+
+                        TypeServiceCbx.Items = serviceNames.ToArray();
+                    }
+
+                    // ------------------ LOAD VETERINARIANS ------------------
+                    string vetQuery = "SELECT VeterinarianID, LastName FROM Veterinarian";
+
+                    using (SqlCommand vetCmd = new SqlCommand(vetQuery, conn))
+                    using (SqlDataReader vetReader = vetCmd.ExecuteReader())
+                    {
+                        List<string> vetNames = new List<string>();
+                        _vetIds.Clear();
+
+                        while (vetReader.Read())
+                        {
+                            vetNames.Add(vetReader["LastName"].ToString());
+                            _vetIds.Add(Convert.ToInt32(vetReader["VeterinarianID"]));
+                        }
+
+                        VetCbx.Items = vetNames.ToArray();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading services or veterinarians: " + ex.Message);
+                }
+            }
         }
 
         private void TypeServiceCbx_SelectedIndexChanged(object sender, EventArgs e)
@@ -193,6 +285,16 @@ namespace PawCare
                 PetPicBox.Image = Image.FromFile(ofd.FileName); // works only if PetPicBox is a PictureBox
                 PetPicBox.SizeMode = PictureBoxSizeMode.StretchImage;
             }
+        }
+
+        private void WeighttxtBox_ContentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VetCbx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

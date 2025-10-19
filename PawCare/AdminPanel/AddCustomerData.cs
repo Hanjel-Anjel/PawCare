@@ -37,5 +37,13 @@ namespace PawCare.AdminPanel
         public string? ServiceType { get; set; }
         public string? Weight { get; set; }
         public string? AssignedVet { get; set; }
+
+        // Service Info
+        public string ? ServiceName { get; set; }
+        public string ? Description { get; set; }
+        public decimal ? Price { get; set; }
+
+        // Vet Info
+        public string ? Specialization { get; set; }
     }
 }

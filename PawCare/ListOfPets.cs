@@ -59,15 +59,21 @@ namespace PawCare
                     con.Open();
 
                     string query = @"
-                                    SELECT 
-                                    p.PetName,
-                                    p.PetType,
-                                    p.Breed,
-                                    p.Gender,
-                                    p.DateOfBirth,
-                                    CONCAT(c.FirstName, ' ', c.LastName) AS OwnerName
-                                FROM Pet p
-                                INNER JOIN Customer c ON p.CustomerID = c.CustomerID";
+                      SELECT 
+                            p.PetName,
+                            p.PetType,
+                            p.Breed,
+                            p.Gender,
+                            p.DateOfBirth,
+                            CONCAT(c.FirstName, ' ', c.LastName) AS OwnerName,
+                            CONCAT(v.FirstName, ' ', v.LastName) AS AssignedVeterinarian,
+                            s.ServiceName
+                        FROM Pet p
+                        INNER JOIN Customer c ON p.CustomerID = c.CustomerID
+                        INNER JOIN ServiceRecord sr ON p.PetID = sr.PetID
+                        LEFT JOIN Veterinarian v ON sr.VeterinarianID = v.VeterinarianID
+                        LEFT JOIN Service s ON sr.ServiceTypeID = s.ServiceID";
+
 
                     using (SqlDataAdapter adapter = new SqlDataAdapter(query, con))
 
@@ -84,6 +90,8 @@ namespace PawCare
                             PetTableData.Columns["Gender"].HeaderText = "Gender";
                             PetTableData.Columns["DateOfBirth"].HeaderText = "Birth Date";
                             PetTableData.Columns["OwnerName"].HeaderText = "Owner";
+                            PetTableData.Columns["AssignedVeterinarian"].HeaderText = "Assigned Vet";
+                            PetTableData.Columns["ServiceName"].HeaderText = "Service";
 
                             // Make columns stretch evenly
                             PetTableData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
