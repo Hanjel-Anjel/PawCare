@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 using System.Configuration;
+using PawCare.EmployeePanel;
 
 namespace PawCare
 {
