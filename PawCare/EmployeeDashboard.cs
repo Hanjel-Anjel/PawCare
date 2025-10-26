@@ -72,12 +72,9 @@ namespace PawCare
         //veterinarian list button
         private void vetlistBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-             "This feature is under development.",        // Message
-             "Warning",                                   // Title
-             MessageBoxButtons.OK,                        // Buttons
-             MessageBoxIcon.Warning                       // Icon
-            );
+           ListOfVet listOfVet = new ListOfVet();
+           listOfVet.Show();
+           this.Close();
         }
         //logout button
         private void logoutBtn_Click_1(object sender, EventArgs e)

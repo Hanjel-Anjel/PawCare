@@ -25,58 +25,66 @@ namespace PawCare
         private void LoginButton_Click(object sender, EventArgs e)
         {
             string connStr = ConfigurationManager.ConnectionStrings["Dbconnection"].ConnectionString;
-           
 
-            using (SqlConnection con = new SqlConnection(connStr))
+    using (SqlConnection con = new SqlConnection(connStr))
+    {
+        try
+        {
+            con.Open();
+
+            string email = UsernameTextbox.Content;   
+            string password = PasswordTextbox.Content;
+
+            // Fetch role instead of just counting
+            string query = "SELECT Role FROM UserAccount WHERE Email = @Email AND Password = @Password";
+
+            using (SqlCommand cmd = new SqlCommand(query, con))
             {
-                try
+                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.Parameters.AddWithValue("@Password", password);
+
+                object result = cmd.ExecuteScalar();
+
+                if (result != null)
                 {
-                    con.Open();
+                            string role = result.ToString() ?? string.Empty;
+                    MessageBox.Show($"Login Successful! Role: {role}");
 
-                    string email = UsernameTextbox.Content;   
-                    string password = PasswordTextbox.Content;
-
-
-                    string query = "SELECT COUNT(*) FROM UserAccount WHERE Email = @Email AND Password = @Password";
-
-
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    // Role-based redirection
+                    if (role == "Admin")
                     {
-                        cmd.Parameters.AddWithValue("@Email", email);
-                        cmd.Parameters.AddWithValue("@Password", password);
-
-                        int count = (int)cmd.ExecuteScalar();
-
-                        if (count > 0)
-                        {
-                            MessageBox.Show("Login Successful!");
-                            EmployeeDashboard employeeDashboard = new EmployeeDashboard();
-                            employeeDashboard.Show();
-                            this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid Email or Password!");
-                        }
+                        AdminPanel.AdminDashboard adminDashboard = new AdminPanel.AdminDashboard();
+                        adminDashboard.Show();
                     }
+                    else if (role == "Employee")
+                    {
+                        EmployeeDashboard employeeDashboard = new EmployeeDashboard();
+                        employeeDashboard.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unknown role. Please contact admin.");
+                    }
+
+                    this.Hide();
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Invalid Email or Password!");
                 }
             }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Error: " + ex.Message);
+        }
+    }
+
         }
         //username textbox
         private void UsernameTextbox_ContentChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void SignupBtn_Click(object sender, EventArgs e)
-        {
-            AdminPanel.AdminDashboard adminDashboard = new AdminPanel.AdminDashboard();
-            adminDashboard.Show();
-            this.Hide();
         }
 
         //username label

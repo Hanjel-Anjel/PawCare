@@ -35,7 +35,6 @@
             PasswordTextbox = new CuoreUI.Controls.cuiTextBox();
             LoginButton = new CuoreUI.Controls.cuiButton();
             ShowPasswordCheckbox = new CuoreUI.Controls.cuiCheckbox();
-            SignupBtn = new CuoreUI.Controls.cuiButton();
             LoginLabel = new CuoreUI.Controls.cuiLabel();
             SuspendLayout();
             // 
@@ -195,46 +194,6 @@
             ShowPasswordCheckbox.UncheckedSymbolColor = Color.Empty;
             ShowPasswordCheckbox.CheckedChanged += ShowPasswordCheckbox_CheckedChanged;
             // 
-            // SignupBtn
-            // 
-            SignupBtn.BackColor = Color.Transparent;
-            SignupBtn.CheckButton = false;
-            SignupBtn.Checked = false;
-            SignupBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
-            SignupBtn.CheckedForeColor = Color.White;
-            SignupBtn.CheckedImageTint = Color.White;
-            SignupBtn.CheckedOutline = Color.FromArgb(255, 106, 0);
-            SignupBtn.Content = "Go to Admin";
-            SignupBtn.DialogResult = DialogResult.None;
-            SignupBtn.Font = new Font("Microsoft Sans Serif", 9.75F);
-            SignupBtn.ForeColor = Color.Black;
-            SignupBtn.HoverBackground = Color.White;
-            SignupBtn.HoverForeColor = Color.Black;
-            SignupBtn.HoverImageTint = Color.White;
-            SignupBtn.HoverOutline = Color.FromArgb(32, 128, 128, 128);
-            SignupBtn.Image = null;
-            SignupBtn.ImageAutoCenter = true;
-            SignupBtn.ImageExpand = new Point(0, 0);
-            SignupBtn.ImageOffset = new Point(0, 0);
-            SignupBtn.Location = new Point(346, 416);
-            SignupBtn.Margin = new Padding(3, 2, 3, 2);
-            SignupBtn.Name = "SignupBtn";
-            SignupBtn.NormalBackground = Color.White;
-            SignupBtn.NormalForeColor = Color.Black;
-            SignupBtn.NormalImageTint = Color.White;
-            SignupBtn.NormalOutline = Color.FromArgb(64, 128, 128, 128);
-            SignupBtn.OutlineThickness = 1F;
-            SignupBtn.PressedBackground = Color.WhiteSmoke;
-            SignupBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
-            SignupBtn.PressedImageTint = Color.White;
-            SignupBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            SignupBtn.Rounding = new Padding(8);
-            SignupBtn.Size = new Size(103, 24);
-            SignupBtn.TabIndex = 7;
-            SignupBtn.TextAlignment = StringAlignment.Center;
-            SignupBtn.TextOffset = new Point(0, 0);
-            SignupBtn.Click += SignupBtn_Click;
-            // 
             // LoginLabel
             // 
             LoginLabel.BackColor = Color.Transparent;
@@ -257,7 +216,6 @@
             ClientSize = new Size(774, 483);
             Controls.Add(usernameLabel);
             Controls.Add(LoginLabel);
-            Controls.Add(SignupBtn);
             Controls.Add(ShowPasswordCheckbox);
             Controls.Add(LoginButton);
             Controls.Add(PasswordTextbox);
@@ -281,7 +239,6 @@
         private CuoreUI.Controls.cuiTextBox PasswordTextbox;
         private CuoreUI.Controls.cuiButton LoginButton;
         private CuoreUI.Controls.cuiCheckbox ShowPasswordCheckbox;
-        private CuoreUI.Controls.cuiButton SignupBtn;
         private CuoreUI.Controls.cuiLabel LoginLabel;
     }
 }
