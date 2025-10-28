@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPetOwnerName));
             SearchBtn = new CuoreUI.Controls.cuiButton();
             SearchtxtBox = new CuoreUI.Controls.cuiTextBox();
             CustomerTableData = new DataGridView();
@@ -45,6 +46,7 @@
             // 
             // SearchBtn
             // 
+            SearchBtn.BackColor = Color.Transparent;
             SearchBtn.CheckButton = false;
             SearchBtn.Checked = false;
             SearchBtn.CheckedBackground = Color.FromArgb(255, 106, 0);
@@ -63,7 +65,7 @@
             SearchBtn.ImageAutoCenter = true;
             SearchBtn.ImageExpand = new Point(0, 0);
             SearchBtn.ImageOffset = new Point(0, 0);
-            SearchBtn.Location = new Point(367, 16);
+            SearchBtn.Location = new Point(372, 31);
             SearchBtn.Name = "SearchBtn";
             SearchBtn.NormalBackground = Color.White;
             SearchBtn.NormalForeColor = Color.Black;
@@ -75,7 +77,7 @@
             SearchBtn.PressedImageTint = Color.White;
             SearchBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
             SearchBtn.Rounding = new Padding(8);
-            SearchBtn.Size = new Size(76, 31);
+            SearchBtn.Size = new Size(88, 31);
             SearchBtn.TabIndex = 10;
             SearchBtn.TextAlignment = StringAlignment.Center;
             SearchBtn.TextOffset = new Point(0, 0);
@@ -83,6 +85,7 @@
             // 
             // SearchtxtBox
             // 
+            SearchtxtBox.BackColor = Color.Transparent;
             SearchtxtBox.BackgroundColor = Color.White;
             SearchtxtBox.Content = "";
             SearchtxtBox.FocusBackgroundColor = Color.White;
@@ -93,7 +96,7 @@
             SearchtxtBox.Image = null;
             SearchtxtBox.ImageExpand = new Point(0, 0);
             SearchtxtBox.ImageOffset = new Point(0, 0);
-            SearchtxtBox.Location = new Point(32, 13);
+            SearchtxtBox.Location = new Point(37, 28);
             SearchtxtBox.Margin = new Padding(4);
             SearchtxtBox.Multiline = false;
             SearchtxtBox.Name = "SearchtxtBox";
@@ -117,7 +120,7 @@
             CustomerTableData.BackgroundColor = Color.White;
             CustomerTableData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             CustomerTableData.GridColor = Color.Black;
-            CustomerTableData.Location = new Point(32, 58);
+            CustomerTableData.Location = new Point(37, 73);
             CustomerTableData.Name = "CustomerTableData";
             CustomerTableData.ReadOnly = true;
             CustomerTableData.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -138,7 +141,7 @@
             LnametxtBox.Image = null;
             LnametxtBox.ImageExpand = new Point(0, 0);
             LnametxtBox.ImageOffset = new Point(0, 0);
-            LnametxtBox.Location = new Point(529, 321);
+            LnametxtBox.Location = new Point(501, 292);
             LnametxtBox.Margin = new Padding(4, 3, 4, 3);
             LnametxtBox.Multiline = false;
             LnametxtBox.Name = "LnametxtBox";
@@ -168,7 +171,7 @@
             MnametxtBox.Image = null;
             MnametxtBox.ImageExpand = new Point(0, 0);
             MnametxtBox.ImageOffset = new Point(0, 0);
-            MnametxtBox.Location = new Point(529, 237);
+            MnametxtBox.Location = new Point(501, 218);
             MnametxtBox.Margin = new Padding(4, 3, 4, 3);
             MnametxtBox.Multiline = false;
             MnametxtBox.Name = "MnametxtBox";
@@ -198,7 +201,7 @@
             FnametxtBox.Image = null;
             FnametxtBox.ImageExpand = new Point(0, 0);
             FnametxtBox.ImageOffset = new Point(0, 0);
-            FnametxtBox.Location = new Point(529, 161);
+            FnametxtBox.Location = new Point(501, 142);
             FnametxtBox.Margin = new Padding(4, 3, 4, 3);
             FnametxtBox.Multiline = false;
             FnametxtBox.Name = "FnametxtBox";
@@ -222,7 +225,7 @@
             cuiLabel3.Font = new Font("Microsoft Sans Serif", 9.75F);
             cuiLabel3.ForeColor = Color.MidnightBlue;
             cuiLabel3.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel3.Location = new Point(529, 288);
+            cuiLabel3.Location = new Point(505, 269);
             cuiLabel3.Margin = new Padding(4);
             cuiLabel3.Name = "cuiLabel3";
             cuiLabel3.Size = new Size(122, 26);
@@ -236,7 +239,7 @@
             cuiLabel2.Font = new Font("Microsoft Sans Serif", 9.75F);
             cuiLabel2.ForeColor = Color.MidnightBlue;
             cuiLabel2.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel2.Location = new Point(529, 213);
+            cuiLabel2.Location = new Point(505, 194);
             cuiLabel2.Margin = new Padding(4);
             cuiLabel2.Name = "cuiLabel2";
             cuiLabel2.Size = new Size(122, 26);
@@ -250,7 +253,7 @@
             cuiLabel1.Font = new Font("Microsoft Sans Serif", 9.75F);
             cuiLabel1.ForeColor = Color.MidnightBlue;
             cuiLabel1.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel1.Location = new Point(529, 138);
+            cuiLabel1.Location = new Point(505, 119);
             cuiLabel1.Margin = new Padding(4);
             cuiLabel1.Name = "cuiLabel1";
             cuiLabel1.Size = new Size(122, 26);
@@ -264,7 +267,7 @@
             CustomerNameLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CustomerNameLabel.ForeColor = Color.MidnightBlue;
             CustomerNameLabel.HorizontalAlignment = StringAlignment.Center;
-            CustomerNameLabel.Location = new Point(575, 101);
+            CustomerNameLabel.Location = new Point(554, 73);
             CustomerNameLabel.Margin = new Padding(4);
             CustomerNameLabel.Name = "CustomerNameLabel";
             CustomerNameLabel.Size = new Size(212, 29);
@@ -292,7 +295,7 @@
             NextBtn.ImageAutoCenter = true;
             NextBtn.ImageExpand = new Point(0, 0);
             NextBtn.ImageOffset = new Point(0, 0);
-            NextBtn.Location = new Point(697, 426);
+            NextBtn.Location = new Point(669, 365);
             NextBtn.Name = "NextBtn";
             NextBtn.NormalBackground = Color.FromArgb(15, 28, 243);
             NextBtn.NormalForeColor = Color.White;
@@ -331,7 +334,7 @@
             CancelBtn.ImageAutoCenter = true;
             CancelBtn.ImageExpand = new Point(0, 0);
             CancelBtn.ImageOffset = new Point(0, 0);
-            CancelBtn.Location = new Point(529, 426);
+            CancelBtn.Location = new Point(505, 365);
             CancelBtn.Name = "CancelBtn";
             CancelBtn.NormalBackground = Color.White;
             CancelBtn.NormalForeColor = Color.Black;
@@ -353,7 +356,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(932, 535);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Center;
+            ClientSize = new Size(829, 535);
             Controls.Add(NextBtn);
             Controls.Add(CancelBtn);
             Controls.Add(LnametxtBox);
@@ -366,6 +371,7 @@
             Controls.Add(CustomerTableData);
             Controls.Add(SearchBtn);
             Controls.Add(SearchtxtBox);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AddPetOwnerName";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddPetOwnerName";

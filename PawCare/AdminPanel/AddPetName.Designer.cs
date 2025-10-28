@@ -340,7 +340,7 @@
             CustomerNameLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CustomerNameLabel.ForeColor = Color.MidnightBlue;
             CustomerNameLabel.HorizontalAlignment = StringAlignment.Center;
-            CustomerNameLabel.Location = new Point(237, 33);
+            CustomerNameLabel.Location = new Point(238, 35);
             CustomerNameLabel.Margin = new Padding(4);
             CustomerNameLabel.Name = "CustomerNameLabel";
             CustomerNameLabel.Size = new Size(305, 29);
@@ -366,6 +366,7 @@
             Controls.Add(cuiLabel2);
             Controls.Add(cuiLabel1);
             Controls.Add(CustomerNameLabel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AddPetName";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddPetName";

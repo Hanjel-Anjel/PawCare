@@ -89,8 +89,8 @@ namespace PawCare.AdminPanel
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
-                { 
-                conn.Open();
+                {
+                    conn.Open();
                     // Customer Query
                     string insertCustomerQuery = @"
                         INSERT INTO Customer (FirstName, MiddleName, LastName, Suffix, ContactNumber, Email)
@@ -114,7 +114,7 @@ namespace PawCare.AdminPanel
                         INSERT INTO CustomerAddress (CustomerID, Region, MunicipalityCity, Barangay, HouseNo, LotBlock)
                         VALUES (@CustomerID, @Region, @MunicipalityCity, @Barangay, @HouseNo, @LotBlock)";
                     using (SqlCommand cmd = new SqlCommand(insertAddressQuery, conn))
-                        {
+                    {
                         cmd.Parameters.AddWithValue("@CustomerID", newCustomerId);
                         cmd.Parameters.AddWithValue("@Region", customerData.Region);
                         cmd.Parameters.AddWithValue("@MunicipalityCity", customerData.MunicipalityCity);
@@ -122,7 +122,7 @@ namespace PawCare.AdminPanel
                         cmd.Parameters.AddWithValue("@HouseNo", customerData.HouseNo);
                         cmd.Parameters.AddWithValue("@LotBlock", string.IsNullOrEmpty(customerData.LotBlock) ? (object)DBNull.Value : customerData.LotBlock);
                         cmd.ExecuteNonQuery();
-                        }
+                    }
                     MessageBox.Show("Customer, address, and Pet saved successfully!");
 
 
@@ -145,13 +145,18 @@ namespace PawCare.AdminPanel
                     this.Hide();
 
                 }
-                catch (Exception ex) 
+                catch (Exception ex)
                 {
                     MessageBox.Show("Error saving customer: " + ex.Message);
                 }
 
             }
 
+
+        }
+
+        private void CustomerNameLabel_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -28,14 +28,14 @@ namespace PawCare.AdminPanel
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-              customerData.ServiceName = ServiceNametxtBox.Content;
-              customerData.Description = DescriptiontxtBox.Content;
-              customerData.Price = decimal.TryParse(PricetxtBox.Content, out decimal price) ? price : (decimal?)null;
+            customerData.ServiceName = ServiceNametxtBox.Content;
+            customerData.Description = DescriptiontxtBox.Content;
+            customerData.Price = decimal.TryParse(PricetxtBox.Content, out decimal price) ? price : (decimal?)null;
 
             // Connection string to your SQL Server
             string connectionString = ConfigurationManager.ConnectionStrings["Dbconnection"].ConnectionString;
 
-           using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
@@ -90,6 +90,13 @@ namespace PawCare.AdminPanel
         private void PricetxtBox_ContentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            AdminDashboard adminDashboard = new AdminDashboard();
+            adminDashboard.Show();
+            this.Hide();
         }
     }
 }

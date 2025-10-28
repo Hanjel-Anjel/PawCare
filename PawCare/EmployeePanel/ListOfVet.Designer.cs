@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListOfVet));
             VetTableData = new DataGridView();
             BackBtn = new CuoreUI.Controls.cuiButton();
             ColumnSortCbx = new CuoreUI.Controls.cuiComboBox();
@@ -225,7 +226,9 @@
             Controls.Add(SortCbx);
             Controls.Add(SearchBtn);
             Controls.Add(SearchtxtBox);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ListOfVet";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ListOfVet";
             Load += ListOfVet_Load;
             ((System.ComponentModel.ISupportInitialize)VetTableData).EndInit();

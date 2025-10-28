@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomerContact));
             SaveBtn = new CuoreUI.Controls.cuiButton();
             BackBtn = new CuoreUI.Controls.cuiButton();
             cuiLabel1 = new CuoreUI.Controls.cuiLabel();
@@ -39,6 +40,7 @@
             // 
             // SaveBtn
             // 
+            SaveBtn.BackColor = Color.Transparent;
             SaveBtn.CheckButton = false;
             SaveBtn.Checked = false;
             SaveBtn.CheckedBackground = Color.FromArgb(15, 28, 243);
@@ -47,7 +49,7 @@
             SaveBtn.CheckedOutline = Color.FromArgb(15, 28, 243);
             SaveBtn.Content = "Save";
             SaveBtn.DialogResult = DialogResult.None;
-            SaveBtn.Font = new Font("Poppins", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SaveBtn.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SaveBtn.ForeColor = Color.White;
             SaveBtn.HoverBackground = Color.FromArgb(15, 28, 243);
             SaveBtn.HoverForeColor = Color.Black;
@@ -57,7 +59,7 @@
             SaveBtn.ImageAutoCenter = true;
             SaveBtn.ImageExpand = new Point(0, 0);
             SaveBtn.ImageOffset = new Point(0, 0);
-            SaveBtn.Location = new Point(349, 468);
+            SaveBtn.Location = new Point(426, 334);
             SaveBtn.Name = "SaveBtn";
             SaveBtn.NormalBackground = Color.FromArgb(15, 28, 243);
             SaveBtn.NormalForeColor = Color.White;
@@ -68,8 +70,8 @@
             SaveBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
             SaveBtn.PressedImageTint = Color.White;
             SaveBtn.PressedOutline = Color.FromArgb(64, 128, 128, 128);
-            SaveBtn.Rounding = new Padding(20);
-            SaveBtn.Size = new Size(156, 50);
+            SaveBtn.Rounding = new Padding(10);
+            SaveBtn.Size = new Size(140, 40);
             SaveBtn.TabIndex = 23;
             SaveBtn.TextAlignment = StringAlignment.Center;
             SaveBtn.TextOffset = new Point(0, 0);
@@ -77,6 +79,7 @@
             // 
             // BackBtn
             // 
+            BackBtn.BackColor = Color.Transparent;
             BackBtn.CheckButton = false;
             BackBtn.Checked = false;
             BackBtn.CheckedBackground = Color.FromArgb(15, 28, 243);
@@ -85,7 +88,7 @@
             BackBtn.CheckedOutline = Color.FromArgb(15, 28, 243);
             BackBtn.Content = "Back";
             BackBtn.DialogResult = DialogResult.None;
-            BackBtn.Font = new Font("Poppins", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BackBtn.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             BackBtn.ForeColor = Color.Black;
             BackBtn.HoverBackground = Color.Red;
             BackBtn.HoverForeColor = Color.Black;
@@ -95,7 +98,7 @@
             BackBtn.ImageAutoCenter = true;
             BackBtn.ImageExpand = new Point(0, 0);
             BackBtn.ImageOffset = new Point(0, 0);
-            BackBtn.Location = new Point(123, 468);
+            BackBtn.Location = new Point(220, 334);
             BackBtn.Name = "BackBtn";
             BackBtn.NormalBackground = Color.White;
             BackBtn.NormalForeColor = Color.Black;
@@ -106,8 +109,8 @@
             BackBtn.PressedForeColor = Color.FromArgb(32, 32, 32);
             BackBtn.PressedImageTint = Color.White;
             BackBtn.PressedOutline = Color.Black;
-            BackBtn.Rounding = new Padding(20);
-            BackBtn.Size = new Size(156, 50);
+            BackBtn.Rounding = new Padding(10);
+            BackBtn.Size = new Size(140, 40);
             BackBtn.TabIndex = 22;
             BackBtn.TextAlignment = StringAlignment.Center;
             BackBtn.TextOffset = new Point(0, 0);
@@ -115,30 +118,37 @@
             // 
             // cuiLabel1
             // 
+            cuiLabel1.BackColor = Color.Transparent;
             cuiLabel1.Content = "Email\\ Address";
-            cuiLabel1.Font = new Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel1.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel1.ForeColor = Color.MidnightBlue;
             cuiLabel1.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel1.Location = new Point(132, 304);
+            cuiLabel1.Location = new Point(220, 214);
             cuiLabel1.Margin = new Padding(4);
             cuiLabel1.Name = "cuiLabel1";
             cuiLabel1.Size = new Size(122, 21);
             cuiLabel1.TabIndex = 21;
             cuiLabel1.VerticalAlignment = StringAlignment.Near;
+            cuiLabel1.Load += this.cuiLabel1_Load;
             // 
             // cuiLabel4
             // 
+            cuiLabel4.BackColor = Color.Transparent;
             cuiLabel4.Content = "Contact\\ Number\\ ";
-            cuiLabel4.Font = new Font("Poppins", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel4.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cuiLabel4.ForeColor = Color.MidnightBlue;
             cuiLabel4.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel4.Location = new Point(132, 208);
+            cuiLabel4.Location = new Point(220, 118);
             cuiLabel4.Margin = new Padding(4);
             cuiLabel4.Name = "cuiLabel4";
             cuiLabel4.Size = new Size(178, 26);
             cuiLabel4.TabIndex = 20;
             cuiLabel4.VerticalAlignment = StringAlignment.Near;
+            cuiLabel4.Load += this.cuiLabel4_Load;
             // 
             // EmailtxtBox
             // 
+            EmailtxtBox.BackColor = Color.Transparent;
             EmailtxtBox.BackgroundColor = Color.White;
             EmailtxtBox.Content = "";
             EmailtxtBox.FocusBackgroundColor = Color.White;
@@ -149,7 +159,7 @@
             EmailtxtBox.Image = null;
             EmailtxtBox.ImageExpand = new Point(0, 0);
             EmailtxtBox.ImageOffset = new Point(0, 0);
-            EmailtxtBox.Location = new Point(132, 331);
+            EmailtxtBox.Location = new Point(220, 241);
             EmailtxtBox.Margin = new Padding(4, 3, 4, 3);
             EmailtxtBox.Multiline = false;
             EmailtxtBox.Name = "EmailtxtBox";
@@ -168,6 +178,7 @@
             // 
             // ContactNumbertxtBox
             // 
+            ContactNumbertxtBox.BackColor = Color.Transparent;
             ContactNumbertxtBox.BackgroundColor = Color.White;
             ContactNumbertxtBox.Content = "";
             ContactNumbertxtBox.FocusBackgroundColor = Color.White;
@@ -178,7 +189,7 @@
             ContactNumbertxtBox.Image = null;
             ContactNumbertxtBox.ImageExpand = new Point(0, 0);
             ContactNumbertxtBox.ImageOffset = new Point(0, 0);
-            ContactNumbertxtBox.Location = new Point(132, 240);
+            ContactNumbertxtBox.Location = new Point(220, 150);
             ContactNumbertxtBox.Margin = new Padding(4, 3, 4, 3);
             ContactNumbertxtBox.Multiline = false;
             ContactNumbertxtBox.Name = "ContactNumbertxtBox";
@@ -197,22 +208,27 @@
             // 
             // CustomerNameLabel
             // 
+            CustomerNameLabel.BackColor = Color.Transparent;
             CustomerNameLabel.Content = "Customer\\ Contacts";
-            CustomerNameLabel.Font = new Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CustomerNameLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CustomerNameLabel.ForeColor = Color.MidnightBlue;
             CustomerNameLabel.HorizontalAlignment = StringAlignment.Near;
-            CustomerNameLabel.Location = new Point(132, 118);
+            CustomerNameLabel.Location = new Point(292, 70);
             CustomerNameLabel.Margin = new Padding(4);
             CustomerNameLabel.Name = "CustomerNameLabel";
-            CustomerNameLabel.Size = new Size(306, 40);
+            CustomerNameLabel.Size = new Size(229, 40);
             CustomerNameLabel.TabIndex = 17;
             CustomerNameLabel.VerticalAlignment = StringAlignment.Near;
+            CustomerNameLabel.Load += CustomerNameLabel_Load;
             // 
             // AddCustomerContact
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(629, 637);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Center;
+            ClientSize = new Size(774, 483);
             Controls.Add(SaveBtn);
             Controls.Add(BackBtn);
             Controls.Add(cuiLabel1);
@@ -220,6 +236,7 @@
             Controls.Add(EmailtxtBox);
             Controls.Add(ContactNumbertxtBox);
             Controls.Add(CustomerNameLabel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AddCustomerContact";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddCustomerContact";

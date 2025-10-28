@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPetInformation));
             PetPicBox = new PictureBox();
             SaveBtn = new CuoreUI.Controls.cuiButton();
             WeighttxtBox = new CuoreUI.Controls.cuiTextBox();
@@ -302,6 +303,7 @@
             Controls.Add(cuiLabel3);
             Controls.Add(cuiLabel2);
             Controls.Add(CustomerNameLabel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AddPetInformation";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddPetInformation";

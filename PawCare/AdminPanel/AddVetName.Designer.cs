@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddVetName));
             CustomerNameLabel = new CuoreUI.Controls.cuiLabel();
             NextBtn = new CuoreUI.Controls.cuiButton();
             CancelBtn = new CuoreUI.Controls.cuiButton();
@@ -48,7 +49,7 @@
             CustomerNameLabel.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             CustomerNameLabel.ForeColor = Color.MidnightBlue;
             CustomerNameLabel.HorizontalAlignment = StringAlignment.Near;
-            CustomerNameLabel.Location = new Point(183, 55);
+            CustomerNameLabel.Location = new Point(279, 50);
             CustomerNameLabel.Margin = new Padding(4);
             CustomerNameLabel.Name = "CustomerNameLabel";
             CustomerNameLabel.Size = new Size(235, 29);
@@ -76,7 +77,7 @@
             NextBtn.ImageAutoCenter = true;
             NextBtn.ImageExpand = new Point(0, 0);
             NextBtn.ImageOffset = new Point(0, 0);
-            NextBtn.Location = new Point(318, 436);
+            NextBtn.Location = new Point(414, 391);
             NextBtn.Name = "NextBtn";
             NextBtn.NormalBackground = Color.FromArgb(15, 28, 243);
             NextBtn.NormalForeColor = Color.White;
@@ -115,7 +116,7 @@
             CancelBtn.ImageAutoCenter = true;
             CancelBtn.ImageExpand = new Point(0, 0);
             CancelBtn.ImageOffset = new Point(0, 0);
-            CancelBtn.Location = new Point(150, 436);
+            CancelBtn.Location = new Point(246, 391);
             CancelBtn.Name = "CancelBtn";
             CancelBtn.NormalBackground = Color.White;
             CancelBtn.NormalForeColor = Color.Black;
@@ -148,7 +149,7 @@
             suffixCbox.DropDownOutlineColor = Color.Black;
             suffixCbox.ExpandArrowColor = Color.Gray;
             suffixCbox.ForeColor = Color.Gray;
-            suffixCbox.Location = new Point(150, 374);
+            suffixCbox.Location = new Point(246, 327);
             suffixCbox.Margin = new Padding(4);
             suffixCbox.Name = "suffixCbox";
             suffixCbox.NoSelectionDropdownText = "Empty";
@@ -173,7 +174,7 @@
             LnametxtBox.Image = null;
             LnametxtBox.ImageExpand = new Point(0, 0);
             LnametxtBox.ImageOffset = new Point(0, 0);
-            LnametxtBox.Location = new Point(150, 281);
+            LnametxtBox.Location = new Point(246, 252);
             LnametxtBox.Margin = new Padding(4, 3, 4, 3);
             LnametxtBox.Multiline = false;
             LnametxtBox.Name = "LnametxtBox";
@@ -203,7 +204,7 @@
             MnametxtBox.Image = null;
             MnametxtBox.ImageExpand = new Point(0, 0);
             MnametxtBox.ImageOffset = new Point(0, 0);
-            MnametxtBox.Location = new Point(150, 197);
+            MnametxtBox.Location = new Point(246, 180);
             MnametxtBox.Margin = new Padding(4, 3, 4, 3);
             MnametxtBox.Multiline = false;
             MnametxtBox.Name = "MnametxtBox";
@@ -233,7 +234,7 @@
             FnametxtBox.Image = null;
             FnametxtBox.ImageExpand = new Point(0, 0);
             FnametxtBox.ImageOffset = new Point(0, 0);
-            FnametxtBox.Location = new Point(150, 121);
+            FnametxtBox.Location = new Point(246, 113);
             FnametxtBox.Margin = new Padding(4, 3, 4, 3);
             FnametxtBox.Multiline = false;
             FnametxtBox.Name = "FnametxtBox";
@@ -257,7 +258,7 @@
             cuiLabel4.Font = new Font("Microsoft Sans Serif", 9.75F);
             cuiLabel4.ForeColor = Color.MidnightBlue;
             cuiLabel4.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel4.Location = new Point(150, 341);
+            cuiLabel4.Location = new Point(246, 302);
             cuiLabel4.Margin = new Padding(4);
             cuiLabel4.Name = "cuiLabel4";
             cuiLabel4.Size = new Size(122, 24);
@@ -271,7 +272,7 @@
             cuiLabel3.Font = new Font("Microsoft Sans Serif", 9.75F);
             cuiLabel3.ForeColor = Color.MidnightBlue;
             cuiLabel3.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel3.Location = new Point(150, 248);
+            cuiLabel3.Location = new Point(246, 230);
             cuiLabel3.Margin = new Padding(4);
             cuiLabel3.Name = "cuiLabel3";
             cuiLabel3.Size = new Size(122, 24);
@@ -285,7 +286,7 @@
             cuiLabel2.Font = new Font("Microsoft Sans Serif", 9.75F);
             cuiLabel2.ForeColor = Color.MidnightBlue;
             cuiLabel2.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel2.Location = new Point(150, 173);
+            cuiLabel2.Location = new Point(246, 158);
             cuiLabel2.Margin = new Padding(4);
             cuiLabel2.Name = "cuiLabel2";
             cuiLabel2.Size = new Size(122, 24);
@@ -299,7 +300,7 @@
             cuiLabel1.Font = new Font("Microsoft Sans Serif", 9.75F);
             cuiLabel1.ForeColor = Color.MidnightBlue;
             cuiLabel1.HorizontalAlignment = StringAlignment.Near;
-            cuiLabel1.Location = new Point(150, 98);
+            cuiLabel1.Location = new Point(246, 91);
             cuiLabel1.Margin = new Padding(4);
             cuiLabel1.Name = "cuiLabel1";
             cuiLabel1.Size = new Size(122, 24);
@@ -310,7 +311,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(618, 520);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Center;
+            ClientSize = new Size(774, 483);
             Controls.Add(NextBtn);
             Controls.Add(CancelBtn);
             Controls.Add(suffixCbox);
@@ -322,7 +325,9 @@
             Controls.Add(cuiLabel2);
             Controls.Add(cuiLabel1);
             Controls.Add(CustomerNameLabel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AddVetName";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddVeterinarian";
             Load += AddVeterinarian_Load;
             ResumeLayout(false);

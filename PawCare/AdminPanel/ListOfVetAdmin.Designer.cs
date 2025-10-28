@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListOfVetAdmin));
             BackBtn = new CuoreUI.Controls.cuiButton();
             ColumnSortCbx = new CuoreUI.Controls.cuiComboBox();
             SortCbx = new CuoreUI.Controls.cuiComboBox();
@@ -226,7 +227,9 @@
             Controls.Add(SortCbx);
             Controls.Add(SearchBtn);
             Controls.Add(SearchtxtBox);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ListOfVetAdmin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ListOfVetAdmin";
             Load += ListOfVetAdmin_Load;
             ((System.ComponentModel.ISupportInitialize)VetTableData).EndInit();

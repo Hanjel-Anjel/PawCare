@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddVetInfo));
             cuiLabel1 = new CuoreUI.Controls.cuiLabel();
             cuiLabel4 = new CuoreUI.Controls.cuiLabel();
             EmailtxtBox = new CuoreUI.Controls.cuiTextBox();
@@ -267,7 +268,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Center;
+            ClientSize = new Size(790, 450);
             Controls.Add(SaveBtn);
             Controls.Add(BackBtn);
             Controls.Add(CustomerNameLabel);
@@ -277,6 +280,7 @@
             Controls.Add(cuiLabel4);
             Controls.Add(EmailtxtBox);
             Controls.Add(ContactNumbertxtBox);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AddVetInfo";
             Text = "AddVetInfo";
             Load += AddVetInfo_Load;
